@@ -1,0 +1,47 @@
+/*
+ * Copyright OpenSearch Contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.resthandler
+
+import org.apache.logging.log4j.LogManager
+import com.colasoft.opensearch.client.node.NodeClient
+import com.colasoft.opensearch.common.Strings
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.SM_POLICIES_URI
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.explain.ExplainSMPolicyRequest
+import com.colasoft.opensearch.rest.BaseRestHandler
+import com.colasoft.opensearch.rest.RestHandler.Route
+import com.colasoft.opensearch.rest.RestRequest
+import com.colasoft.opensearch.rest.RestRequest.Method.GET
+import com.colasoft.opensearch.rest.action.RestToXContentListener
+
+class RestExplainSMPolicyHandler : BaseRestHandler() {
+
+    private val log = LogManager.getLogger(RestExplainSMPolicyHandler::class.java)
+
+    override fun getName(): String {
+        return "snapshot_management_explain_policy_rest_handler"
+    }
+
+    override fun routes(): List<Route> {
+        return listOf(
+            Route(GET, "$SM_POLICIES_URI/{policyName}/_explain")
+        )
+    }
+
+    override fun prepareRequest(request: RestRequest, client: NodeClient): RestChannelConsumer {
+        var policyNames: Array<String> = Strings.splitStringByCommaToArray(request.param("policyName", ""))
+        if (policyNames.isEmpty()) policyNames = arrayOf("*")
+        log.debug("Explain snapshot management policy request received with policy name(s) [$policyNames]")
+
+        return RestChannelConsumer {
+            client.execute(
+                SMActions.EXPLAIN_SM_POLICY_ACTION_TYPE,
+                ExplainSMPolicyRequest(policyNames),
+                RestToXContentListener(it)
+            )
+        }
+    }
+}
