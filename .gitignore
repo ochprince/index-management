@@ -16,3 +16,5 @@ src/test/resources/bwc/
 bin/
 spi/bin/
 src/test/resources/notifications*
+
+gradle/wrapper/gradle*.zip
