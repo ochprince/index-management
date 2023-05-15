@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.action.index
+package com.colasoft.opensearch.indexmanagement.rollup.action.index
 
-import org.opensearch.action.ActionType
+import com.colasoft.opensearch.action.ActionType
 
 class IndexRollupAction private constructor() : ActionType<IndexRollupResponse>(NAME, ::IndexRollupResponse) {
     companion object {

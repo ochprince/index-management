@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.step
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.step
 
 import com.nhaarman.mockitokotlin2.any
 import com.nhaarman.mockitokotlin2.doAnswer
@@ -11,28 +11,28 @@ import com.nhaarman.mockitokotlin2.doReturn
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.whenever
 import kotlinx.coroutines.runBlocking
-import org.opensearch.action.ActionListener
-import org.opensearch.action.admin.cluster.snapshots.status.SnapshotStatus
-import org.opensearch.action.admin.cluster.snapshots.status.SnapshotsStatusResponse
-import org.opensearch.client.AdminClient
-import org.opensearch.client.Client
-import org.opensearch.client.ClusterAdminClient
-import org.opensearch.cluster.SnapshotsInProgress
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.settings.Settings
-import org.opensearch.indexmanagement.indexstatemanagement.action.SnapshotAction
-import org.opensearch.indexmanagement.indexstatemanagement.step.snapshot.WaitForSnapshotStep
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Step
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionProperties
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
-import org.opensearch.jobscheduler.spi.utils.LockService
-import org.opensearch.script.ScriptService
-import org.opensearch.snapshots.Snapshot
-import org.opensearch.snapshots.SnapshotId
-import org.opensearch.test.OpenSearchTestCase
-import org.opensearch.transport.RemoteTransportException
+import com.colasoft.opensearch.action.ActionListener
+import com.colasoft.opensearch.action.admin.cluster.snapshots.status.SnapshotStatus
+import com.colasoft.opensearch.action.admin.cluster.snapshots.status.SnapshotsStatusResponse
+import com.colasoft.opensearch.client.AdminClient
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.client.ClusterAdminClient
+import com.colasoft.opensearch.cluster.SnapshotsInProgress
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.SnapshotAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.snapshot.WaitForSnapshotStep
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Step
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionProperties
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
+import com.colasoft.opensearch.jobscheduler.spi.utils.LockService
+import com.colasoft.opensearch.script.ScriptService
+import com.colasoft.opensearch.snapshots.Snapshot
+import com.colasoft.opensearch.snapshots.SnapshotId
+import com.colasoft.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.transport.RemoteTransportException
 
 class WaitForSnapshotStepTests : OpenSearchTestCase() {
 

@@ -3,35 +3,35 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.transform
+package com.colasoft.opensearch.indexmanagement.transform
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.apache.logging.log4j.LogManager
-import org.opensearch.ExceptionsHelper
-import org.opensearch.action.DocWriteRequest
-import org.opensearch.action.DocWriteResponse
-import org.opensearch.action.get.GetRequest
-import org.opensearch.action.get.GetResponse
-import org.opensearch.action.index.IndexRequest
-import org.opensearch.action.index.IndexResponse
-import org.opensearch.client.Client
-import org.opensearch.common.xcontent.LoggingDeprecationHandler
-import org.opensearch.core.xcontent.NamedXContentRegistry
-import org.opensearch.core.xcontent.ToXContent
-import org.opensearch.common.xcontent.XContentFactory
-import org.opensearch.common.xcontent.XContentHelper
-import org.opensearch.common.xcontent.XContentType
-import org.opensearch.indexmanagement.IndexManagementPlugin
-import org.opensearch.indexmanagement.opensearchapi.parseWithType
-import org.opensearch.indexmanagement.opensearchapi.suspendUntil
-import org.opensearch.indexmanagement.transform.exceptions.TransformMetadataException
-import org.opensearch.indexmanagement.transform.model.ContinuousTransformStats
-import org.opensearch.indexmanagement.transform.model.Transform
-import org.opensearch.indexmanagement.transform.model.TransformMetadata
-import org.opensearch.indexmanagement.transform.model.TransformStats
-import org.opensearch.indexmanagement.util.IndexUtils.Companion.hashToFixedSize
-import org.opensearch.transport.RemoteTransportException
+import com.colasoft.opensearch.ExceptionsHelper
+import com.colasoft.opensearch.action.DocWriteRequest
+import com.colasoft.opensearch.action.DocWriteResponse
+import com.colasoft.opensearch.action.get.GetRequest
+import com.colasoft.opensearch.action.get.GetResponse
+import com.colasoft.opensearch.action.index.IndexRequest
+import com.colasoft.opensearch.action.index.IndexResponse
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.common.xcontent.LoggingDeprecationHandler
+import com.colasoft.opensearch.core.xcontent.NamedXContentRegistry
+import com.colasoft.opensearch.core.xcontent.ToXContent
+import com.colasoft.opensearch.common.xcontent.XContentFactory
+import com.colasoft.opensearch.common.xcontent.XContentHelper
+import com.colasoft.opensearch.common.xcontent.XContentType
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin
+import com.colasoft.opensearch.indexmanagement.opensearchapi.parseWithType
+import com.colasoft.opensearch.indexmanagement.opensearchapi.suspendUntil
+import com.colasoft.opensearch.indexmanagement.transform.exceptions.TransformMetadataException
+import com.colasoft.opensearch.indexmanagement.transform.model.ContinuousTransformStats
+import com.colasoft.opensearch.indexmanagement.transform.model.Transform
+import com.colasoft.opensearch.indexmanagement.transform.model.TransformMetadata
+import com.colasoft.opensearch.indexmanagement.transform.model.TransformStats
+import com.colasoft.opensearch.indexmanagement.util.IndexUtils.Companion.hashToFixedSize
+import com.colasoft.opensearch.transport.RemoteTransportException
 import java.time.Instant
 
 @SuppressWarnings("ReturnCount")

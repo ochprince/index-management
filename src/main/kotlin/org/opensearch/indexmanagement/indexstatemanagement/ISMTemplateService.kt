@@ -3,15 +3,15 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement
 
 import org.apache.lucene.util.automaton.Operations
-import org.opensearch.OpenSearchException
-import org.opensearch.common.Strings
-import org.opensearch.common.ValidationException
-import org.opensearch.common.regex.Regex
-import org.opensearch.indexmanagement.indexstatemanagement.model.ISMTemplate
-import org.opensearch.indexmanagement.util.IndexManagementException
+import com.colasoft.opensearch.OpenSearchException
+import com.colasoft.opensearch.common.Strings
+import com.colasoft.opensearch.common.ValidationException
+import com.colasoft.opensearch.common.regex.Regex
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.ISMTemplate
+import com.colasoft.opensearch.indexmanagement.util.IndexManagementException
 
 /**
  * validate the template Name and indexPattern provided in the template

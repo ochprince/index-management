@@ -3,15 +3,15 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.transport.action.explain
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.explain
 
-import org.opensearch.common.io.stream.BytesStreamOutput
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.indexmanagement.indexstatemanagement.randomPolicy
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Validate
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ValidationResult
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.common.io.stream.BytesStreamOutput
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomPolicy
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Validate
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ValidationResult
+import com.colasoft.opensearch.test.OpenSearchTestCase
 
 class ExplainResponseTests : OpenSearchTestCase() {
 

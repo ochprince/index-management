@@ -3,20 +3,20 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement
+package com.colasoft.opensearch.indexmanagement
 
 import org.apache.logging.log4j.LogManager
-import org.opensearch.indexmanagement.indexstatemanagement.ManagedIndexRunner
-import org.opensearch.indexmanagement.indexstatemanagement.model.ManagedIndexConfig
-import org.opensearch.indexmanagement.rollup.RollupRunner
-import org.opensearch.indexmanagement.rollup.model.Rollup
-import org.opensearch.indexmanagement.snapshotmanagement.SMRunner
-import org.opensearch.indexmanagement.snapshotmanagement.model.SMPolicy
-import org.opensearch.indexmanagement.transform.TransformRunner
-import org.opensearch.indexmanagement.transform.model.Transform
-import org.opensearch.jobscheduler.spi.JobExecutionContext
-import org.opensearch.jobscheduler.spi.ScheduledJobParameter
-import org.opensearch.jobscheduler.spi.ScheduledJobRunner
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.ManagedIndexRunner
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.ManagedIndexConfig
+import com.colasoft.opensearch.indexmanagement.rollup.RollupRunner
+import com.colasoft.opensearch.indexmanagement.rollup.model.Rollup
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.SMRunner
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.model.SMPolicy
+import com.colasoft.opensearch.indexmanagement.transform.TransformRunner
+import com.colasoft.opensearch.indexmanagement.transform.model.Transform
+import com.colasoft.opensearch.jobscheduler.spi.JobExecutionContext
+import com.colasoft.opensearch.jobscheduler.spi.ScheduledJobParameter
+import com.colasoft.opensearch.jobscheduler.spi.ScheduledJobRunner
 
 object IndexManagementRunner : ScheduledJobRunner {
 

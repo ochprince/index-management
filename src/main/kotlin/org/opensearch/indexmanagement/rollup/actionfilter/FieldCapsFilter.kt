@@ -3,31 +3,31 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.actionfilter
+package com.colasoft.opensearch.indexmanagement.rollup.actionfilter
 
 import org.apache.logging.log4j.LogManager
-import org.opensearch.action.ActionListener
-import org.opensearch.action.ActionRequest
-import org.opensearch.action.ActionResponse
-import org.opensearch.action.fieldcaps.FieldCapabilities
-import org.opensearch.action.fieldcaps.FieldCapabilitiesRequest
-import org.opensearch.action.fieldcaps.FieldCapabilitiesResponse
-import org.opensearch.action.support.ActionFilter
-import org.opensearch.action.support.ActionFilterChain
-import org.opensearch.action.support.IndicesOptions
-import org.opensearch.cluster.metadata.IndexNameExpressionResolver
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.settings.Settings
-import org.opensearch.indexmanagement.GuiceHolder
-import org.opensearch.indexmanagement.rollup.model.Rollup
-import org.opensearch.indexmanagement.rollup.model.RollupFieldMapping
-import org.opensearch.indexmanagement.rollup.settings.RollupSettings
-import org.opensearch.indexmanagement.rollup.util.getRollupJobs
-import org.opensearch.indexmanagement.rollup.util.isRollupIndex
-import org.opensearch.indexmanagement.rollup.util.populateFieldMappings
-import org.opensearch.indexmanagement.util.IndexUtils.Companion.getFieldFromMappings
-import org.opensearch.tasks.Task
-import org.opensearch.transport.RemoteClusterAware
+import com.colasoft.opensearch.action.ActionListener
+import com.colasoft.opensearch.action.ActionRequest
+import com.colasoft.opensearch.action.ActionResponse
+import com.colasoft.opensearch.action.fieldcaps.FieldCapabilities
+import com.colasoft.opensearch.action.fieldcaps.FieldCapabilitiesRequest
+import com.colasoft.opensearch.action.fieldcaps.FieldCapabilitiesResponse
+import com.colasoft.opensearch.action.support.ActionFilter
+import com.colasoft.opensearch.action.support.ActionFilterChain
+import com.colasoft.opensearch.action.support.IndicesOptions
+import com.colasoft.opensearch.cluster.metadata.IndexNameExpressionResolver
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.indexmanagement.GuiceHolder
+import com.colasoft.opensearch.indexmanagement.rollup.model.Rollup
+import com.colasoft.opensearch.indexmanagement.rollup.model.RollupFieldMapping
+import com.colasoft.opensearch.indexmanagement.rollup.settings.RollupSettings
+import com.colasoft.opensearch.indexmanagement.rollup.util.getRollupJobs
+import com.colasoft.opensearch.indexmanagement.rollup.util.isRollupIndex
+import com.colasoft.opensearch.indexmanagement.rollup.util.populateFieldMappings
+import com.colasoft.opensearch.indexmanagement.util.IndexUtils.Companion.getFieldFromMappings
+import com.colasoft.opensearch.tasks.Task
+import com.colasoft.opensearch.transport.RemoteClusterAware
 
 private val logger = LogManager.getLogger(FieldCapsFilter::class.java)
 

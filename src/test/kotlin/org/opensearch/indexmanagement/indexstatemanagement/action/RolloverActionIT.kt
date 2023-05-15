@@ -3,31 +3,31 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.action
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.action
 
 import org.apache.http.entity.ContentType
 import org.apache.http.entity.StringEntity
 import org.junit.Assert
-import org.opensearch.cluster.metadata.DataStream
-import org.opensearch.common.settings.Settings
-import org.opensearch.common.unit.ByteSizeUnit
-import org.opensearch.common.unit.ByteSizeValue
-import org.opensearch.common.unit.TimeValue
-import org.opensearch.indexmanagement.indexstatemanagement.IndexStateManagementRestTestCase
-import org.opensearch.indexmanagement.indexstatemanagement.model.ISMTemplate
-import org.opensearch.indexmanagement.indexstatemanagement.model.Policy
-import org.opensearch.indexmanagement.indexstatemanagement.model.State
-import org.opensearch.indexmanagement.indexstatemanagement.randomErrorNotification
-import org.opensearch.indexmanagement.indexstatemanagement.resthandler.RestRetryFailedManagedIndexAction
-import org.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
-import org.opensearch.indexmanagement.indexstatemanagement.step.rollover.AttemptRolloverStep
-import org.opensearch.indexmanagement.makeRequest
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Step
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionRetry
-import org.opensearch.indexmanagement.waitFor
-import org.opensearch.rest.RestRequest
-import org.opensearch.rest.RestStatus
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.cluster.metadata.DataStream
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.common.unit.ByteSizeUnit
+import com.colasoft.opensearch.common.unit.ByteSizeValue
+import com.colasoft.opensearch.common.unit.TimeValue
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.IndexStateManagementRestTestCase
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.ISMTemplate
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.Policy
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.State
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomErrorNotification
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.resthandler.RestRetryFailedManagedIndexAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.rollover.AttemptRolloverStep
+import com.colasoft.opensearch.indexmanagement.makeRequest
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Step
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionRetry
+import com.colasoft.opensearch.indexmanagement.waitFor
+import com.colasoft.opensearch.rest.RestRequest
+import com.colasoft.opensearch.rest.RestStatus
+import com.colasoft.opensearch.test.OpenSearchTestCase
 import java.time.Instant
 import java.time.temporal.ChronoUnit
 import java.util.Locale

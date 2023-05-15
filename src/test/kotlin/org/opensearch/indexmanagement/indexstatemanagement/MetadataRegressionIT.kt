@@ -3,26 +3,26 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement
 
 import com.carrotsearch.randomizedtesting.RandomizedTest.sleep
 import org.junit.After
 import org.junit.Assume
 import org.junit.Before
-import org.opensearch.action.support.master.AcknowledgedResponse
-import org.opensearch.cluster.metadata.IndexMetadata
-import org.opensearch.common.settings.Settings
-import org.opensearch.index.Index
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
-import org.opensearch.indexmanagement.indexstatemanagement.action.ReplicaCountAction
-import org.opensearch.indexmanagement.indexstatemanagement.model.Policy
-import org.opensearch.indexmanagement.indexstatemanagement.model.State
-import org.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
-import org.opensearch.indexmanagement.indexstatemanagement.transport.action.explain.TransportExplainAction.Companion.METADATA_CORRUPT_WARNING
-import org.opensearch.indexmanagement.indexstatemanagement.transport.action.explain.TransportExplainAction.Companion.METADATA_MOVING_WARNING
-import org.opensearch.indexmanagement.indexstatemanagement.transport.action.updateindexmetadata.UpdateManagedIndexMetaDataAction
-import org.opensearch.indexmanagement.indexstatemanagement.transport.action.updateindexmetadata.UpdateManagedIndexMetaDataRequest
-import org.opensearch.indexmanagement.waitFor
+import com.colasoft.opensearch.action.support.master.AcknowledgedResponse
+import com.colasoft.opensearch.cluster.metadata.IndexMetadata
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.index.Index
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.ReplicaCountAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.Policy
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.State
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.explain.TransportExplainAction.Companion.METADATA_CORRUPT_WARNING
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.explain.TransportExplainAction.Companion.METADATA_MOVING_WARNING
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.updateindexmetadata.UpdateManagedIndexMetaDataAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.updateindexmetadata.UpdateManagedIndexMetaDataRequest
+import com.colasoft.opensearch.indexmanagement.waitFor
 import java.time.Instant
 import java.time.temporal.ChronoUnit
 import java.util.Locale

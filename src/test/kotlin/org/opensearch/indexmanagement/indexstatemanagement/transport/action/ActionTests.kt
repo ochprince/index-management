@@ -3,18 +3,18 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.transport.action
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action
 
-import org.opensearch.indexmanagement.indexstatemanagement.transport.action.addpolicy.AddPolicyAction
-import org.opensearch.indexmanagement.indexstatemanagement.transport.action.changepolicy.ChangePolicyAction
-import org.opensearch.indexmanagement.indexstatemanagement.transport.action.deletepolicy.DeletePolicyAction
-import org.opensearch.indexmanagement.indexstatemanagement.transport.action.explain.ExplainAction
-import org.opensearch.indexmanagement.indexstatemanagement.transport.action.getpolicy.GetPoliciesAction
-import org.opensearch.indexmanagement.indexstatemanagement.transport.action.getpolicy.GetPolicyAction
-import org.opensearch.indexmanagement.indexstatemanagement.transport.action.indexpolicy.IndexPolicyAction
-import org.opensearch.indexmanagement.indexstatemanagement.transport.action.removepolicy.RemovePolicyAction
-import org.opensearch.indexmanagement.indexstatemanagement.transport.action.retryfailedmanagedindex.RetryFailedManagedIndexAction
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.addpolicy.AddPolicyAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.changepolicy.ChangePolicyAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.deletepolicy.DeletePolicyAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.explain.ExplainAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.getpolicy.GetPoliciesAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.getpolicy.GetPolicyAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.indexpolicy.IndexPolicyAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.removepolicy.RemovePolicyAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.retryfailedmanagedindex.RetryFailedManagedIndexAction
+import com.colasoft.opensearch.test.OpenSearchTestCase
 
 class ActionTests : OpenSearchTestCase() {
     fun `test add policy action name`() {

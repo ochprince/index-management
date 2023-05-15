@@ -3,34 +3,34 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.resthandler
+package com.colasoft.opensearch.indexmanagement.rollup.resthandler
 
-import org.opensearch.client.ResponseException
-import org.opensearch.common.xcontent.XContentType
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.ROLLUP_JOBS_BASE_URI
-import org.opensearch.indexmanagement.common.model.dimension.DateHistogram
-import org.opensearch.indexmanagement.common.model.dimension.Dimension
-import org.opensearch.indexmanagement.common.model.dimension.Histogram
-import org.opensearch.indexmanagement.common.model.dimension.Terms
-import org.opensearch.indexmanagement.makeRequest
-import org.opensearch.indexmanagement.rollup.RollupRestTestCase
-import org.opensearch.indexmanagement.rollup.model.RollupMetrics
-import org.opensearch.indexmanagement.rollup.model.metric.Average
-import org.opensearch.indexmanagement.rollup.model.metric.Max
-import org.opensearch.indexmanagement.rollup.model.metric.Metric
-import org.opensearch.indexmanagement.rollup.model.metric.Min
-import org.opensearch.indexmanagement.rollup.model.metric.Sum
-import org.opensearch.indexmanagement.rollup.model.metric.ValueCount
-import org.opensearch.indexmanagement.rollup.randomRollup
-import org.opensearch.indexmanagement.rollup.randomRollupDimensions
-import org.opensearch.indexmanagement.rollup.randomRollupMetrics
-import org.opensearch.indexmanagement.util.NO_ID
-import org.opensearch.indexmanagement.util._ID
-import org.opensearch.indexmanagement.util._SEQ_NO
-import org.opensearch.rest.RestStatus
-import org.opensearch.test.OpenSearchTestCase
-import org.opensearch.test.junit.annotations.TestLogging
+import com.colasoft.opensearch.client.ResponseException
+import com.colasoft.opensearch.common.xcontent.XContentType
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.ROLLUP_JOBS_BASE_URI
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.DateHistogram
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.Dimension
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.Histogram
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.Terms
+import com.colasoft.opensearch.indexmanagement.makeRequest
+import com.colasoft.opensearch.indexmanagement.rollup.RollupRestTestCase
+import com.colasoft.opensearch.indexmanagement.rollup.model.RollupMetrics
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.Average
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.Max
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.Metric
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.Min
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.Sum
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.ValueCount
+import com.colasoft.opensearch.indexmanagement.rollup.randomRollup
+import com.colasoft.opensearch.indexmanagement.rollup.randomRollupDimensions
+import com.colasoft.opensearch.indexmanagement.rollup.randomRollupMetrics
+import com.colasoft.opensearch.indexmanagement.util.NO_ID
+import com.colasoft.opensearch.indexmanagement.util._ID
+import com.colasoft.opensearch.indexmanagement.util._SEQ_NO
+import com.colasoft.opensearch.rest.RestStatus
+import com.colasoft.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.test.junit.annotations.TestLogging
 
 @TestLogging(value = "level:DEBUG", reason = "Debugging tests")
 @Suppress("UNCHECKED_CAST")

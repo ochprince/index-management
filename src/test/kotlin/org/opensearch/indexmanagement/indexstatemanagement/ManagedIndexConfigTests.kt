@@ -3,14 +3,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement
 
-import org.opensearch.common.xcontent.LoggingDeprecationHandler
-import org.opensearch.core.xcontent.XContentParser
-import org.opensearch.common.xcontent.XContentType
-import org.opensearch.indexmanagement.indexstatemanagement.model.ManagedIndexConfig
-import org.opensearch.indexmanagement.opensearchapi.parseWithType
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.common.xcontent.LoggingDeprecationHandler
+import com.colasoft.opensearch.core.xcontent.XContentParser
+import com.colasoft.opensearch.common.xcontent.XContentType
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.ManagedIndexConfig
+import com.colasoft.opensearch.indexmanagement.opensearchapi.parseWithType
+import com.colasoft.opensearch.test.OpenSearchTestCase
 import kotlin.test.assertFailsWith
 
 class ManagedIndexConfigTests : OpenSearchTestCase() {

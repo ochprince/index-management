@@ -3,19 +3,19 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement
 
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.coroutineScope
-import org.opensearch.client.Client
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.settings.Settings
-import org.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
-import org.opensearch.indexmanagement.indexstatemanagement.util.DEFAULT_INDEX_TYPE
-import org.opensearch.indexmanagement.spi.indexstatemanagement.IndexMetadataService
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ISMIndexMetadata
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.DEFAULT_INDEX_TYPE
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.IndexMetadataService
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ISMIndexMetadata
 
 /**
  * Consolidates IndexMetadataServices from all extensions to delegate the index metadata provider based on index type.

@@ -3,19 +3,19 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.util
+package com.colasoft.opensearch.indexmanagement.rollup.util
 
-import org.opensearch.cluster.metadata.IndexAbstraction
-import org.opensearch.cluster.metadata.IndexMetadata
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.xcontent.XContentFactory
-import org.opensearch.indexmanagement.indexstatemanagement.util.XCONTENT_WITHOUT_TYPE
-import org.opensearch.indexmanagement.opensearchapi.toMap
-import org.opensearch.indexmanagement.rollup.model.Rollup
-import org.opensearch.script.Script
-import org.opensearch.script.ScriptService
-import org.opensearch.script.ScriptType
-import org.opensearch.script.TemplateScript
+import com.colasoft.opensearch.cluster.metadata.IndexAbstraction
+import com.colasoft.opensearch.cluster.metadata.IndexMetadata
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.xcontent.XContentFactory
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.XCONTENT_WITHOUT_TYPE
+import com.colasoft.opensearch.indexmanagement.opensearchapi.toMap
+import com.colasoft.opensearch.indexmanagement.rollup.model.Rollup
+import com.colasoft.opensearch.script.Script
+import com.colasoft.opensearch.script.ScriptService
+import com.colasoft.opensearch.script.ScriptType
+import com.colasoft.opensearch.script.TemplateScript
 
 object RollupFieldValueExpressionResolver {
 

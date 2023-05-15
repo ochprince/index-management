@@ -3,19 +3,19 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.step.notification
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.notification
 
 import org.apache.logging.log4j.LogManager
-import org.opensearch.indexmanagement.indexstatemanagement.action.NotificationAction
-import org.opensearch.indexmanagement.indexstatemanagement.util.publishLegacyNotification
-import org.opensearch.indexmanagement.indexstatemanagement.util.sendNotification
-import org.opensearch.indexmanagement.opensearchapi.convertToMap
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Step
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StepMetaData
-import org.opensearch.script.Script
-import org.opensearch.script.ScriptService
-import org.opensearch.script.TemplateScript
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.NotificationAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.publishLegacyNotification
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.sendNotification
+import com.colasoft.opensearch.indexmanagement.opensearchapi.convertToMap
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Step
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StepMetaData
+import com.colasoft.opensearch.script.Script
+import com.colasoft.opensearch.script.ScriptService
+import com.colasoft.opensearch.script.TemplateScript
 
 class AttemptNotificationStep(private val action: NotificationAction) : Step(name) {
 

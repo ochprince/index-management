@@ -3,17 +3,17 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.action
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.action
 
-import org.opensearch.common.unit.TimeValue
-import org.opensearch.indexmanagement.indexstatemanagement.IndexStateManagementRestTestCase
-import org.opensearch.indexmanagement.indexstatemanagement.model.Conditions
-import org.opensearch.indexmanagement.indexstatemanagement.model.Policy
-import org.opensearch.indexmanagement.indexstatemanagement.model.State
-import org.opensearch.indexmanagement.indexstatemanagement.model.Transition
-import org.opensearch.indexmanagement.indexstatemanagement.randomErrorNotification
-import org.opensearch.indexmanagement.indexstatemanagement.step.transition.AttemptTransitionStep
-import org.opensearch.indexmanagement.waitFor
+import com.colasoft.opensearch.common.unit.TimeValue
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.IndexStateManagementRestTestCase
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.Conditions
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.Policy
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.State
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.Transition
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomErrorNotification
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.transition.AttemptTransitionStep
+import com.colasoft.opensearch.indexmanagement.waitFor
 import java.time.Instant
 import java.time.temporal.ChronoUnit
 import java.util.Locale

@@ -3,19 +3,19 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.snapshotmanagement.engine.states.creation
+package com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.creation
 
-import org.opensearch.indexmanagement.snapshotmanagement.SnapshotManagementException
-import org.opensearch.indexmanagement.snapshotmanagement.engine.SMStateMachine
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.SMResult
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.State
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.WorkflowType
-import org.opensearch.indexmanagement.snapshotmanagement.getSnapshots
-import org.opensearch.indexmanagement.snapshotmanagement.isExceed
-import org.opensearch.indexmanagement.snapshotmanagement.model.SMMetadata
-import org.opensearch.indexmanagement.snapshotmanagement.timeLimitExceeded
-import org.opensearch.indexmanagement.snapshotmanagement.tryUpdatingNextExecutionTime
-import org.opensearch.snapshots.SnapshotState
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.SnapshotManagementException
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.SMStateMachine
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.SMResult
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.State
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.WorkflowType
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.getSnapshots
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.isExceed
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.model.SMMetadata
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.timeLimitExceeded
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.tryUpdatingNextExecutionTime
+import com.colasoft.opensearch.snapshots.SnapshotState
 import java.time.Instant.now
 
 object CreationFinishedState : State {

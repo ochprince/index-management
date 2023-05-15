@@ -3,33 +3,33 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.resthandler
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.resthandler
 
 import org.apache.http.entity.ContentType.APPLICATION_JSON
 import org.apache.http.entity.StringEntity
-import org.opensearch.action.search.SearchResponse
-import org.opensearch.client.ResponseException
-import org.opensearch.common.xcontent.XContentType
-import org.opensearch.common.xcontent.json.JsonXContent.jsonXContent
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.POLICY_BASE_URI
-import org.opensearch.indexmanagement.indexstatemanagement.ISMActionsParser
-import org.opensearch.indexmanagement.indexstatemanagement.IndexStateManagementRestTestCase
-import org.opensearch.indexmanagement.indexstatemanagement.action.ReadOnlyAction
-import org.opensearch.indexmanagement.indexstatemanagement.model.Policy
-import org.opensearch.indexmanagement.indexstatemanagement.randomPolicy
-import org.opensearch.indexmanagement.indexstatemanagement.randomReadOnlyActionConfig
-import org.opensearch.indexmanagement.indexstatemanagement.randomState
-import org.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
-import org.opensearch.indexmanagement.makeRequest
-import org.opensearch.indexmanagement.util.NO_ID
-import org.opensearch.indexmanagement.util._ID
-import org.opensearch.indexmanagement.util._PRIMARY_TERM
-import org.opensearch.indexmanagement.util._SEQ_NO
-import org.opensearch.rest.RestRequest
-import org.opensearch.rest.RestStatus
-import org.opensearch.test.OpenSearchTestCase
-import org.opensearch.test.junit.annotations.TestLogging
+import com.colasoft.opensearch.action.search.SearchResponse
+import com.colasoft.opensearch.client.ResponseException
+import com.colasoft.opensearch.common.xcontent.XContentType
+import com.colasoft.opensearch.common.xcontent.json.JsonXContent.jsonXContent
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.POLICY_BASE_URI
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.ISMActionsParser
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.IndexStateManagementRestTestCase
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.ReadOnlyAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.Policy
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomPolicy
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomReadOnlyActionConfig
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomState
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
+import com.colasoft.opensearch.indexmanagement.makeRequest
+import com.colasoft.opensearch.indexmanagement.util.NO_ID
+import com.colasoft.opensearch.indexmanagement.util._ID
+import com.colasoft.opensearch.indexmanagement.util._PRIMARY_TERM
+import com.colasoft.opensearch.indexmanagement.util._SEQ_NO
+import com.colasoft.opensearch.rest.RestRequest
+import com.colasoft.opensearch.rest.RestStatus
+import com.colasoft.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.test.junit.annotations.TestLogging
 
 @TestLogging(value = "level:DEBUG", reason = "Debugging tests")
 @Suppress("UNCHECKED_CAST")

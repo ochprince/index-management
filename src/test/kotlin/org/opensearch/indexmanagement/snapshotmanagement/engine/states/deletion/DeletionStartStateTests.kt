@@ -3,15 +3,15 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.snapshotmanagement.engine.states.deletion
+package com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.deletion
 
 import kotlinx.coroutines.runBlocking
-import org.opensearch.indexmanagement.MocksTestCase
-import org.opensearch.indexmanagement.snapshotmanagement.engine.SMStateMachine
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.SMResult
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.SMState
-import org.opensearch.indexmanagement.snapshotmanagement.randomSMMetadata
-import org.opensearch.indexmanagement.snapshotmanagement.randomSMPolicy
+import com.colasoft.opensearch.indexmanagement.MocksTestCase
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.SMStateMachine
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.SMResult
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.SMState
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.randomSMMetadata
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.randomSMPolicy
 
 class DeletionStartStateTests : MocksTestCase() {
 

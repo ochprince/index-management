@@ -3,11 +3,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.spi.indexstatemanagement
+package com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement
 
-import org.opensearch.client.Client
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ISMIndexMetadata
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ISMIndexMetadata
 
 /**
  * ISM by default considers all the index metadata to be part of the cluster state,

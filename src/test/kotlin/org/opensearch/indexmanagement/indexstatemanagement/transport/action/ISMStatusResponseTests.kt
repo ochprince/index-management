@@ -3,12 +3,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.transport.action
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action
 
-import org.opensearch.common.io.stream.BytesStreamOutput
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.indexmanagement.indexstatemanagement.util.FailedIndex
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.common.io.stream.BytesStreamOutput
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.FailedIndex
+import com.colasoft.opensearch.test.OpenSearchTestCase
 
 class ISMStatusResponseTests : OpenSearchTestCase() {
 

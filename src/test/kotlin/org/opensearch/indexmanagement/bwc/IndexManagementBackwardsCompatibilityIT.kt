@@ -3,23 +3,23 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.bwc
+package com.colasoft.opensearch.indexmanagement.bwc
 
 import org.apache.http.entity.ContentType.APPLICATION_JSON
 import org.apache.http.entity.StringEntity
-import org.opensearch.common.settings.Settings
-import org.opensearch.common.xcontent.XContentFactory
-import org.opensearch.index.query.QueryBuilders
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.LEGACY_ISM_BASE_URI
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.LEGACY_POLICY_BASE_URI
-import org.opensearch.indexmanagement.IndexManagementRestTestCase
-import org.opensearch.indexmanagement.indexstatemanagement.randomPolicy
-import org.opensearch.indexmanagement.indexstatemanagement.util.XCONTENT_WITHOUT_USER
-import org.opensearch.indexmanagement.makeRequest
-import org.opensearch.indexmanagement.opensearchapi.string
-import org.opensearch.indexmanagement.util.NO_ID
-import org.opensearch.rest.RestStatus
-import org.opensearch.search.builder.SearchSourceBuilder
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.common.xcontent.XContentFactory
+import com.colasoft.opensearch.index.query.QueryBuilders
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.LEGACY_ISM_BASE_URI
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.LEGACY_POLICY_BASE_URI
+import com.colasoft.opensearch.indexmanagement.IndexManagementRestTestCase
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomPolicy
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.XCONTENT_WITHOUT_USER
+import com.colasoft.opensearch.indexmanagement.makeRequest
+import com.colasoft.opensearch.indexmanagement.opensearchapi.string
+import com.colasoft.opensearch.indexmanagement.util.NO_ID
+import com.colasoft.opensearch.rest.RestStatus
+import com.colasoft.opensearch.search.builder.SearchSourceBuilder
 
 class IndexManagementBackwardsCompatibilityIT : IndexManagementRestTestCase() {
 

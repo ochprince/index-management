@@ -3,45 +3,45 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup
+package com.colasoft.opensearch.indexmanagement.rollup
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.apache.logging.log4j.LogManager
-import org.opensearch.ExceptionsHelper
-import org.opensearch.OpenSearchSecurityException
-import org.opensearch.action.admin.indices.create.CreateIndexRequest
-import org.opensearch.action.admin.indices.create.CreateIndexResponse
-import org.opensearch.action.admin.indices.mapping.get.GetMappingsRequest
-import org.opensearch.action.admin.indices.mapping.get.GetMappingsResponse
-import org.opensearch.action.admin.indices.mapping.put.PutMappingRequest
-import org.opensearch.action.admin.indices.settings.put.UpdateSettingsRequest
-import org.opensearch.action.support.IndicesOptions
-import org.opensearch.action.support.master.AcknowledgedResponse
-import org.opensearch.client.Client
-import org.opensearch.cluster.metadata.IndexNameExpressionResolver
-import org.opensearch.cluster.metadata.MappingMetadata
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.settings.Settings
-import org.opensearch.common.xcontent.XContentType
-import org.opensearch.indexmanagement.IndexManagementIndices
-import org.opensearch.indexmanagement.common.model.dimension.DateHistogram
-import org.opensearch.indexmanagement.common.model.dimension.Histogram
-import org.opensearch.indexmanagement.common.model.dimension.Terms
-import org.opensearch.indexmanagement.opensearchapi.suspendUntil
-import org.opensearch.indexmanagement.rollup.action.mapping.UpdateRollupMappingAction
-import org.opensearch.indexmanagement.rollup.action.mapping.UpdateRollupMappingRequest
-import org.opensearch.indexmanagement.rollup.model.Rollup
-import org.opensearch.indexmanagement.rollup.model.RollupJobValidationResult
-import org.opensearch.indexmanagement.rollup.settings.LegacyOpenDistroRollupSettings
-import org.opensearch.indexmanagement.rollup.settings.RollupSettings
-import org.opensearch.indexmanagement.rollup.util.RollupFieldValueExpressionResolver
-import org.opensearch.indexmanagement.rollup.util.getRollupJobs
-import org.opensearch.indexmanagement.rollup.util.isRollupIndex
-import org.opensearch.indexmanagement.rollup.util.isTargetIndexAlias
-import org.opensearch.indexmanagement.util.IndexUtils.Companion._META
-import org.opensearch.indexmanagement.util.IndexUtils.Companion.getFieldFromMappings
-import org.opensearch.transport.RemoteTransportException
+import com.colasoft.opensearch.ExceptionsHelper
+import com.colasoft.opensearch.OpenSearchSecurityException
+import com.colasoft.opensearch.action.admin.indices.create.CreateIndexRequest
+import com.colasoft.opensearch.action.admin.indices.create.CreateIndexResponse
+import com.colasoft.opensearch.action.admin.indices.mapping.get.GetMappingsRequest
+import com.colasoft.opensearch.action.admin.indices.mapping.get.GetMappingsResponse
+import com.colasoft.opensearch.action.admin.indices.mapping.put.PutMappingRequest
+import com.colasoft.opensearch.action.admin.indices.settings.put.UpdateSettingsRequest
+import com.colasoft.opensearch.action.support.IndicesOptions
+import com.colasoft.opensearch.action.support.master.AcknowledgedResponse
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.cluster.metadata.IndexNameExpressionResolver
+import com.colasoft.opensearch.cluster.metadata.MappingMetadata
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.common.xcontent.XContentType
+import com.colasoft.opensearch.indexmanagement.IndexManagementIndices
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.DateHistogram
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.Histogram
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.Terms
+import com.colasoft.opensearch.indexmanagement.opensearchapi.suspendUntil
+import com.colasoft.opensearch.indexmanagement.rollup.action.mapping.UpdateRollupMappingAction
+import com.colasoft.opensearch.indexmanagement.rollup.action.mapping.UpdateRollupMappingRequest
+import com.colasoft.opensearch.indexmanagement.rollup.model.Rollup
+import com.colasoft.opensearch.indexmanagement.rollup.model.RollupJobValidationResult
+import com.colasoft.opensearch.indexmanagement.rollup.settings.LegacyOpenDistroRollupSettings
+import com.colasoft.opensearch.indexmanagement.rollup.settings.RollupSettings
+import com.colasoft.opensearch.indexmanagement.rollup.util.RollupFieldValueExpressionResolver
+import com.colasoft.opensearch.indexmanagement.rollup.util.getRollupJobs
+import com.colasoft.opensearch.indexmanagement.rollup.util.isRollupIndex
+import com.colasoft.opensearch.indexmanagement.rollup.util.isTargetIndexAlias
+import com.colasoft.opensearch.indexmanagement.util.IndexUtils.Companion._META
+import com.colasoft.opensearch.indexmanagement.util.IndexUtils.Companion.getFieldFromMappings
+import com.colasoft.opensearch.transport.RemoteTransportException
 
 // TODO: Validation of fields across source and target indices overwriting existing rollup data
 //  and type validation using mappings from source index

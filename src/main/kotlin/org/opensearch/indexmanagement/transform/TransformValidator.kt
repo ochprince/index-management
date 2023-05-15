@@ -3,27 +3,27 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.transform
+package com.colasoft.opensearch.indexmanagement.transform
 
-import org.opensearch.ExceptionsHelper
-import org.opensearch.OpenSearchSecurityException
-import org.opensearch.action.admin.cluster.health.ClusterHealthAction
-import org.opensearch.action.admin.cluster.health.ClusterHealthRequest
-import org.opensearch.action.admin.cluster.health.ClusterHealthResponse
-import org.opensearch.action.admin.indices.mapping.get.GetMappingsRequest
-import org.opensearch.action.admin.indices.mapping.get.GetMappingsResponse
-import org.opensearch.action.support.IndicesOptions
-import org.opensearch.client.Client
-import org.opensearch.cluster.metadata.IndexNameExpressionResolver
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.settings.Settings
-import org.opensearch.indexmanagement.opensearchapi.suspendUntil
-import org.opensearch.indexmanagement.transform.exceptions.TransformValidationException
-import org.opensearch.indexmanagement.transform.model.Transform
-import org.opensearch.indexmanagement.transform.model.TransformValidationResult
-import org.opensearch.indexmanagement.transform.settings.TransformSettings
-import org.opensearch.monitor.jvm.JvmService
-import org.opensearch.transport.RemoteTransportException
+import com.colasoft.opensearch.ExceptionsHelper
+import com.colasoft.opensearch.OpenSearchSecurityException
+import com.colasoft.opensearch.action.admin.cluster.health.ClusterHealthAction
+import com.colasoft.opensearch.action.admin.cluster.health.ClusterHealthRequest
+import com.colasoft.opensearch.action.admin.cluster.health.ClusterHealthResponse
+import com.colasoft.opensearch.action.admin.indices.mapping.get.GetMappingsRequest
+import com.colasoft.opensearch.action.admin.indices.mapping.get.GetMappingsResponse
+import com.colasoft.opensearch.action.support.IndicesOptions
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.cluster.metadata.IndexNameExpressionResolver
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.indexmanagement.opensearchapi.suspendUntil
+import com.colasoft.opensearch.indexmanagement.transform.exceptions.TransformValidationException
+import com.colasoft.opensearch.indexmanagement.transform.model.Transform
+import com.colasoft.opensearch.indexmanagement.transform.model.TransformValidationResult
+import com.colasoft.opensearch.indexmanagement.transform.settings.TransformSettings
+import com.colasoft.opensearch.monitor.jvm.JvmService
+import com.colasoft.opensearch.transport.RemoteTransportException
 
 @Suppress("SpreadOperator", "ReturnCount", "ThrowsCount")
 class TransformValidator(

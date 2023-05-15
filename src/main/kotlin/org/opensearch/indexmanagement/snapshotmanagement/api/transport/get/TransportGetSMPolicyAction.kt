@@ -3,29 +3,29 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.snapshotmanagement.api.transport.get
+package com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.get
 
 import org.apache.logging.log4j.LogManager
-import org.opensearch.OpenSearchStatusException
-import org.opensearch.action.get.GetRequest
-import org.opensearch.action.get.GetResponse
-import org.opensearch.action.support.ActionFilters
-import org.opensearch.client.Client
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.inject.Inject
-import org.opensearch.common.settings.Settings
-import org.opensearch.common.util.concurrent.ThreadContext
-import org.opensearch.commons.authuser.User
-import org.opensearch.index.IndexNotFoundException
-import org.opensearch.indexmanagement.IndexManagementPlugin
-import org.opensearch.indexmanagement.opensearchapi.suspendUntil
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.BaseTransportAction
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.GET_SM_POLICY_ACTION_NAME
-import org.opensearch.indexmanagement.snapshotmanagement.parseSMPolicy
-import org.opensearch.indexmanagement.snapshotmanagement.settings.SnapshotManagementSettings.Companion.FILTER_BY_BACKEND_ROLES
-import org.opensearch.indexmanagement.util.SecurityUtils.Companion.verifyUserHasPermissionForResource
-import org.opensearch.rest.RestStatus
-import org.opensearch.transport.TransportService
+import com.colasoft.opensearch.OpenSearchStatusException
+import com.colasoft.opensearch.action.get.GetRequest
+import com.colasoft.opensearch.action.get.GetResponse
+import com.colasoft.opensearch.action.support.ActionFilters
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.inject.Inject
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.common.util.concurrent.ThreadContext
+import com.colasoft.opensearch.commons.authuser.User
+import com.colasoft.opensearch.index.IndexNotFoundException
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin
+import com.colasoft.opensearch.indexmanagement.opensearchapi.suspendUntil
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.BaseTransportAction
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.GET_SM_POLICY_ACTION_NAME
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.parseSMPolicy
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.settings.SnapshotManagementSettings.Companion.FILTER_BY_BACKEND_ROLES
+import com.colasoft.opensearch.indexmanagement.util.SecurityUtils.Companion.verifyUserHasPermissionForResource
+import com.colasoft.opensearch.rest.RestStatus
+import com.colasoft.opensearch.transport.TransportService
 
 class TransportGetSMPolicyAction @Inject constructor(
     client: Client,

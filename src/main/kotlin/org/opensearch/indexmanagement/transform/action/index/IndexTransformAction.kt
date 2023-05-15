@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.transform.action.index
+package com.colasoft.opensearch.indexmanagement.transform.action.index
 
-import org.opensearch.action.ActionType
+import com.colasoft.opensearch.action.ActionType
 
 class IndexTransformAction private constructor() : ActionType<IndexTransformResponse>(NAME, ::IndexTransformResponse) {
     companion object {

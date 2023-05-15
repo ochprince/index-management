@@ -3,19 +3,19 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.snapshotmanagement.api.resthandler
+package com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.resthandler
 
 import org.apache.logging.log4j.LogManager
-import org.opensearch.client.node.NodeClient
-import org.opensearch.common.Strings
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.SM_POLICIES_URI
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.explain.ExplainSMPolicyRequest
-import org.opensearch.rest.BaseRestHandler
-import org.opensearch.rest.RestHandler.Route
-import org.opensearch.rest.RestRequest
-import org.opensearch.rest.RestRequest.Method.GET
-import org.opensearch.rest.action.RestToXContentListener
+import com.colasoft.opensearch.client.node.NodeClient
+import com.colasoft.opensearch.common.Strings
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.SM_POLICIES_URI
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.explain.ExplainSMPolicyRequest
+import com.colasoft.opensearch.rest.BaseRestHandler
+import com.colasoft.opensearch.rest.RestHandler.Route
+import com.colasoft.opensearch.rest.RestRequest
+import com.colasoft.opensearch.rest.RestRequest.Method.GET
+import com.colasoft.opensearch.rest.action.RestToXContentListener
 
 class RestExplainSMPolicyHandler : BaseRestHandler() {
 

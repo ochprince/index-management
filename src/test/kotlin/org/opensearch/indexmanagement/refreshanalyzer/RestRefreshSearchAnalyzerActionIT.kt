@@ -3,16 +3,16 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.refreshanalyzer
+package com.colasoft.opensearch.indexmanagement.refreshanalyzer
 
 import org.junit.AfterClass
-import org.opensearch.client.ResponseException
-import org.opensearch.common.settings.Settings
-import org.opensearch.indexmanagement.IndexManagementRestTestCase
-import org.opensearch.indexmanagement.makeRequest
-import org.opensearch.indexmanagement.refreshanalyzer.RestRefreshSearchAnalyzerAction.Companion.REFRESH_SEARCH_ANALYZER_BASE_URI
-import org.opensearch.rest.RestRequest.Method.POST
-import org.opensearch.rest.RestStatus
+import com.colasoft.opensearch.client.ResponseException
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.indexmanagement.IndexManagementRestTestCase
+import com.colasoft.opensearch.indexmanagement.makeRequest
+import com.colasoft.opensearch.indexmanagement.refreshanalyzer.RestRefreshSearchAnalyzerAction.Companion.REFRESH_SEARCH_ANALYZER_BASE_URI
+import com.colasoft.opensearch.rest.RestRequest.Method.POST
+import com.colasoft.opensearch.rest.RestStatus
 
 class RestRefreshSearchAnalyzerActionIT : IndexManagementRestTestCase() {
 

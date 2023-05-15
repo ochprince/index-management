@@ -3,12 +3,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.common.model.dimension
+package com.colasoft.opensearch.indexmanagement.common.model.dimension
 
 import org.junit.Assert
-import org.opensearch.index.query.TermsQueryBuilder
-import org.opensearch.indexmanagement.rollup.randomTerms
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.index.query.TermsQueryBuilder
+import com.colasoft.opensearch.indexmanagement.rollup.randomTerms
+import com.colasoft.opensearch.test.OpenSearchTestCase
 
 class TermsTests : OpenSearchTestCase() {
     fun `test terms to bucket query has correct values`() {

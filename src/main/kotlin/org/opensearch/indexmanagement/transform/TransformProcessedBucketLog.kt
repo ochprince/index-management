@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.transform
+package com.colasoft.opensearch.indexmanagement.transform
 
 import java.math.BigInteger
 import java.security.MessageDigest

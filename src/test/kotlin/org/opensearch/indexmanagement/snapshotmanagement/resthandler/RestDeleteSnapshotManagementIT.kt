@@ -3,15 +3,15 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.snapshotmanagement.resthandler
+package com.colasoft.opensearch.indexmanagement.snapshotmanagement.resthandler
 
-import org.opensearch.client.ResponseException
-import org.opensearch.indexmanagement.IndexManagementPlugin
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
-import org.opensearch.indexmanagement.makeRequest
-import org.opensearch.indexmanagement.snapshotmanagement.SnapshotManagementRestTestCase
-import org.opensearch.indexmanagement.snapshotmanagement.randomSMPolicy
-import org.opensearch.rest.RestStatus
+import com.colasoft.opensearch.client.ResponseException
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
+import com.colasoft.opensearch.indexmanagement.makeRequest
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.SnapshotManagementRestTestCase
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.randomSMPolicy
+import com.colasoft.opensearch.rest.RestStatus
 
 class RestDeleteSnapshotManagementIT : SnapshotManagementRestTestCase() {
 

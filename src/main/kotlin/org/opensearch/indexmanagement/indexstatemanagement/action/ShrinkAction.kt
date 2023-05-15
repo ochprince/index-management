@@ -3,23 +3,23 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.action
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.action
 
-import org.opensearch.action.admin.indices.alias.Alias
-import org.opensearch.common.io.stream.StreamOutput
-import org.opensearch.common.unit.ByteSizeValue
-import org.opensearch.core.xcontent.ToXContent
-import org.opensearch.core.xcontent.XContentBuilder
-import org.opensearch.indexmanagement.indexstatemanagement.action.NotificationAction.Companion.MUSTACHE
-import org.opensearch.indexmanagement.indexstatemanagement.step.shrink.AttemptMoveShardsStep
-import org.opensearch.indexmanagement.indexstatemanagement.step.shrink.AttemptShrinkStep
-import org.opensearch.indexmanagement.indexstatemanagement.step.shrink.WaitForMoveShardsStep
-import org.opensearch.indexmanagement.indexstatemanagement.step.shrink.WaitForShrinkStep
-import org.opensearch.indexmanagement.opensearchapi.aliasesField
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Action
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Step
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
-import org.opensearch.script.Script
+import com.colasoft.opensearch.action.admin.indices.alias.Alias
+import com.colasoft.opensearch.common.io.stream.StreamOutput
+import com.colasoft.opensearch.common.unit.ByteSizeValue
+import com.colasoft.opensearch.core.xcontent.ToXContent
+import com.colasoft.opensearch.core.xcontent.XContentBuilder
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.NotificationAction.Companion.MUSTACHE
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.shrink.AttemptMoveShardsStep
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.shrink.AttemptShrinkStep
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.shrink.WaitForMoveShardsStep
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.shrink.WaitForShrinkStep
+import com.colasoft.opensearch.indexmanagement.opensearchapi.aliasesField
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Action
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Step
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
+import com.colasoft.opensearch.script.Script
 
 @Suppress("LongParameterList")
 class ShrinkAction(

@@ -3,16 +3,16 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.model
+package com.colasoft.opensearch.indexmanagement.rollup.model
 
 import org.apache.commons.codec.digest.DigestUtils
-import org.opensearch.index.seqno.SequenceNumbers
-import org.opensearch.indexmanagement.rollup.randomDateHistogram
-import org.opensearch.indexmanagement.rollup.randomISMRollup
-import org.opensearch.indexmanagement.rollup.randomTerms
-import org.opensearch.indexmanagement.util.IndexUtils
-import org.opensearch.jobscheduler.spi.schedule.IntervalSchedule
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.index.seqno.SequenceNumbers
+import com.colasoft.opensearch.indexmanagement.rollup.randomDateHistogram
+import com.colasoft.opensearch.indexmanagement.rollup.randomISMRollup
+import com.colasoft.opensearch.indexmanagement.rollup.randomTerms
+import com.colasoft.opensearch.indexmanagement.util.IndexUtils
+import com.colasoft.opensearch.jobscheduler.spi.schedule.IntervalSchedule
+import com.colasoft.opensearch.test.OpenSearchTestCase
 import java.time.temporal.ChronoUnit
 import kotlin.test.assertFailsWith
 

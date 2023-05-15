@@ -3,28 +3,28 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.util
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.util
 
-import org.opensearch.common.bytes.BytesReference
-import org.opensearch.common.unit.ByteSizeValue
-import org.opensearch.common.unit.TimeValue
-import org.opensearch.common.xcontent.LoggingDeprecationHandler
-import org.opensearch.common.xcontent.XContentHelper
-import org.opensearch.core.xcontent.XContentParser
-import org.opensearch.common.xcontent.XContentType
-import org.opensearch.commons.destination.message.LegacyBaseMessage
-import org.opensearch.commons.destination.message.LegacyCustomWebhookMessage
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
-import org.opensearch.indexmanagement.indexstatemanagement.action.RolloverAction
-import org.opensearch.indexmanagement.indexstatemanagement.model.Conditions
-import org.opensearch.indexmanagement.indexstatemanagement.model.ManagedIndexConfig
-import org.opensearch.indexmanagement.indexstatemanagement.model.Transition
-import org.opensearch.indexmanagement.indexstatemanagement.model.coordinator.SweptManagedIndexConfig
-import org.opensearch.indexmanagement.indexstatemanagement.randomChangePolicy
-import org.opensearch.indexmanagement.indexstatemanagement.randomClusterStateManagedIndexConfig
-import org.opensearch.indexmanagement.indexstatemanagement.randomSweptManagedIndexConfig
-import org.opensearch.indexmanagement.opensearchapi.parseWithType
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.common.bytes.BytesReference
+import com.colasoft.opensearch.common.unit.ByteSizeValue
+import com.colasoft.opensearch.common.unit.TimeValue
+import com.colasoft.opensearch.common.xcontent.LoggingDeprecationHandler
+import com.colasoft.opensearch.common.xcontent.XContentHelper
+import com.colasoft.opensearch.core.xcontent.XContentParser
+import com.colasoft.opensearch.common.xcontent.XContentType
+import com.colasoft.opensearch.commons.destination.message.LegacyBaseMessage
+import com.colasoft.opensearch.commons.destination.message.LegacyCustomWebhookMessage
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.RolloverAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.Conditions
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.ManagedIndexConfig
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.Transition
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.coordinator.SweptManagedIndexConfig
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomChangePolicy
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomClusterStateManagedIndexConfig
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomSweptManagedIndexConfig
+import com.colasoft.opensearch.indexmanagement.opensearchapi.parseWithType
+import com.colasoft.opensearch.test.OpenSearchTestCase
 import java.time.Instant
 
 @Suppress("UnusedPrivateMember")

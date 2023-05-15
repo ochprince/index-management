@@ -3,17 +3,17 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.model.destination
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.destination
 
-import org.opensearch.common.Strings
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.common.io.stream.StreamOutput
-import org.opensearch.common.io.stream.Writeable
-import org.opensearch.core.xcontent.ToXContent
-import org.opensearch.core.xcontent.XContentBuilder
-import org.opensearch.core.xcontent.XContentParser
-import org.opensearch.core.xcontent.XContentParser.Token
-import org.opensearch.common.xcontent.XContentParserUtils.ensureExpectedToken
+import com.colasoft.opensearch.common.Strings
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.common.io.stream.StreamOutput
+import com.colasoft.opensearch.common.io.stream.Writeable
+import com.colasoft.opensearch.core.xcontent.ToXContent
+import com.colasoft.opensearch.core.xcontent.XContentBuilder
+import com.colasoft.opensearch.core.xcontent.XContentParser
+import com.colasoft.opensearch.core.xcontent.XContentParser.Token
+import com.colasoft.opensearch.common.xcontent.XContentParserUtils.ensureExpectedToken
 import java.io.IOException
 
 /**

@@ -3,22 +3,22 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.resthandler
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.resthandler
 
-import org.opensearch.client.ResponseException
-import org.opensearch.common.settings.Settings
-import org.opensearch.indexmanagement.indexstatemanagement.IndexStateManagementRestTestCase
-import org.opensearch.indexmanagement.indexstatemanagement.action.ReadOnlyAction
-import org.opensearch.indexmanagement.indexstatemanagement.model.ISMTemplate
-import org.opensearch.indexmanagement.indexstatemanagement.model.Policy
-import org.opensearch.indexmanagement.indexstatemanagement.model.State
-import org.opensearch.indexmanagement.indexstatemanagement.randomErrorNotification
-import org.opensearch.indexmanagement.indexstatemanagement.randomPolicy
-import org.opensearch.indexmanagement.indexstatemanagement.util.INDEX_HIDDEN
-import org.opensearch.indexmanagement.randomInstant
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
-import org.opensearch.indexmanagement.waitFor
-import org.opensearch.rest.RestStatus
+import com.colasoft.opensearch.client.ResponseException
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.IndexStateManagementRestTestCase
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.ReadOnlyAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.ISMTemplate
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.Policy
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.State
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomErrorNotification
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomPolicy
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.INDEX_HIDDEN
+import com.colasoft.opensearch.indexmanagement.randomInstant
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.indexmanagement.waitFor
+import com.colasoft.opensearch.rest.RestStatus
 import java.time.Instant
 import java.time.temporal.ChronoUnit
 import java.util.Locale

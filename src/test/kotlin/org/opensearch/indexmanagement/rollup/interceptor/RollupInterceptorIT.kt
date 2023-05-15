@@ -3,26 +3,26 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.interceptor
+package com.colasoft.opensearch.indexmanagement.rollup.interceptor
 
 import org.apache.http.entity.ContentType
 import org.apache.http.entity.StringEntity
-import org.opensearch.client.ResponseException
-import org.opensearch.indexmanagement.common.model.dimension.DateHistogram
-import org.opensearch.indexmanagement.common.model.dimension.Terms
-import org.opensearch.indexmanagement.makeRequest
-import org.opensearch.indexmanagement.rollup.RollupRestTestCase
-import org.opensearch.indexmanagement.rollup.model.Rollup
-import org.opensearch.indexmanagement.rollup.model.RollupMetadata
-import org.opensearch.indexmanagement.rollup.model.RollupMetrics
-import org.opensearch.indexmanagement.rollup.model.metric.Average
-import org.opensearch.indexmanagement.rollup.model.metric.Max
-import org.opensearch.indexmanagement.rollup.model.metric.Min
-import org.opensearch.indexmanagement.rollup.model.metric.Sum
-import org.opensearch.indexmanagement.rollup.model.metric.ValueCount
-import org.opensearch.indexmanagement.waitFor
-import org.opensearch.jobscheduler.spi.schedule.IntervalSchedule
-import org.opensearch.rest.RestStatus
+import com.colasoft.opensearch.client.ResponseException
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.DateHistogram
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.Terms
+import com.colasoft.opensearch.indexmanagement.makeRequest
+import com.colasoft.opensearch.indexmanagement.rollup.RollupRestTestCase
+import com.colasoft.opensearch.indexmanagement.rollup.model.Rollup
+import com.colasoft.opensearch.indexmanagement.rollup.model.RollupMetadata
+import com.colasoft.opensearch.indexmanagement.rollup.model.RollupMetrics
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.Average
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.Max
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.Min
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.Sum
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.ValueCount
+import com.colasoft.opensearch.indexmanagement.waitFor
+import com.colasoft.opensearch.jobscheduler.spi.schedule.IntervalSchedule
+import com.colasoft.opensearch.rest.RestStatus
 import java.time.Instant
 import java.time.temporal.ChronoUnit
 

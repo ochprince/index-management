@@ -3,10 +3,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.model
+package com.colasoft.opensearch.indexmanagement.rollup.model
 
-import org.opensearch.indexmanagement.rollup.model.Rollup.Companion.DIMENSIONS_FIELD
-import org.opensearch.indexmanagement.rollup.model.Rollup.Companion.METRICS_FIELD
+import com.colasoft.opensearch.indexmanagement.rollup.model.Rollup.Companion.DIMENSIONS_FIELD
+import com.colasoft.opensearch.indexmanagement.rollup.model.Rollup.Companion.METRICS_FIELD
 
 data class RollupFieldMapping(val fieldType: FieldType, val fieldName: String, val mappingType: String, var sourceType: String? = null) {
 

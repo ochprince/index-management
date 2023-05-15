@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.snapshotmanagement
+package com.colasoft.opensearch.indexmanagement.snapshotmanagement
 
 import org.apache.http.HttpEntity
 import org.apache.http.HttpHeaders
@@ -12,24 +12,24 @@ import org.apache.http.entity.StringEntity
 import org.apache.http.message.BasicHeader
 import org.junit.After
 import org.junit.Before
-import org.opensearch.client.Response
-import org.opensearch.client.ResponseException
-import org.opensearch.core.xcontent.XContentParser
-import org.opensearch.common.xcontent.XContentParserUtils.ensureExpectedToken
-import org.opensearch.common.xcontent.XContentType
-import org.opensearch.index.seqno.SequenceNumbers
-import org.opensearch.indexmanagement.IndexManagementPlugin
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
-import org.opensearch.indexmanagement.IndexManagementRestTestCase
-import org.opensearch.indexmanagement.makeRequest
-import org.opensearch.indexmanagement.snapshotmanagement.model.SMMetadata
-import org.opensearch.indexmanagement.snapshotmanagement.model.SMPolicy
-import org.opensearch.indexmanagement.util._ID
-import org.opensearch.indexmanagement.util._PRIMARY_TERM
-import org.opensearch.indexmanagement.util._SEQ_NO
-import org.opensearch.indexmanagement.waitFor
-import org.opensearch.jobscheduler.spi.schedule.IntervalSchedule
-import org.opensearch.rest.RestStatus
+import com.colasoft.opensearch.client.Response
+import com.colasoft.opensearch.client.ResponseException
+import com.colasoft.opensearch.core.xcontent.XContentParser
+import com.colasoft.opensearch.common.xcontent.XContentParserUtils.ensureExpectedToken
+import com.colasoft.opensearch.common.xcontent.XContentType
+import com.colasoft.opensearch.index.seqno.SequenceNumbers
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
+import com.colasoft.opensearch.indexmanagement.IndexManagementRestTestCase
+import com.colasoft.opensearch.indexmanagement.makeRequest
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.model.SMMetadata
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.model.SMPolicy
+import com.colasoft.opensearch.indexmanagement.util._ID
+import com.colasoft.opensearch.indexmanagement.util._PRIMARY_TERM
+import com.colasoft.opensearch.indexmanagement.util._SEQ_NO
+import com.colasoft.opensearch.indexmanagement.waitFor
+import com.colasoft.opensearch.jobscheduler.spi.schedule.IntervalSchedule
+import com.colasoft.opensearch.rest.RestStatus
 import java.io.InputStream
 import java.time.Duration
 import java.time.Instant

@@ -3,21 +3,21 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.step.forcemerge
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.forcemerge
 
 import org.apache.logging.log4j.LogManager
-import org.opensearch.ExceptionsHelper
-import org.opensearch.action.admin.indices.settings.put.UpdateSettingsRequest
-import org.opensearch.action.support.master.AcknowledgedResponse
-import org.opensearch.cluster.metadata.IndexMetadata.SETTING_BLOCKS_WRITE
-import org.opensearch.common.settings.Settings
-import org.opensearch.indexmanagement.indexstatemanagement.action.ForceMergeAction
-import org.opensearch.indexmanagement.opensearchapi.suspendUntil
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Step
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StepMetaData
-import org.opensearch.transport.RemoteTransportException
+import com.colasoft.opensearch.ExceptionsHelper
+import com.colasoft.opensearch.action.admin.indices.settings.put.UpdateSettingsRequest
+import com.colasoft.opensearch.action.support.master.AcknowledgedResponse
+import com.colasoft.opensearch.cluster.metadata.IndexMetadata.SETTING_BLOCKS_WRITE
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.ForceMergeAction
+import com.colasoft.opensearch.indexmanagement.opensearchapi.suspendUntil
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Step
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StepMetaData
+import com.colasoft.opensearch.transport.RemoteTransportException
 
 class AttemptSetReadOnlyStep(private val action: ForceMergeAction) : Step(name) {
 

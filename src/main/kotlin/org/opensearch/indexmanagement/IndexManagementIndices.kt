@@ -4,32 +4,32 @@
  */
 
 @file:Suppress("ReturnCount")
-package org.opensearch.indexmanagement
+package com.colasoft.opensearch.indexmanagement
 
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
-import org.opensearch.OpenSearchStatusException
-import org.opensearch.ResourceAlreadyExistsException
-import org.opensearch.action.ActionListener
-import org.opensearch.action.admin.indices.alias.Alias
-import org.opensearch.action.admin.indices.create.CreateIndexRequest
-import org.opensearch.action.admin.indices.create.CreateIndexResponse
-import org.opensearch.action.admin.indices.exists.indices.IndicesExistsRequest
-import org.opensearch.action.admin.indices.exists.indices.IndicesExistsResponse
-import org.opensearch.action.support.master.AcknowledgedResponse
-import org.opensearch.client.Client
-import org.opensearch.client.IndicesAdminClient
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.settings.Settings
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
-import org.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
-import org.opensearch.indexmanagement.indexstatemanagement.util.INDEX_HIDDEN
-import org.opensearch.indexmanagement.indexstatemanagement.util.INDEX_NUMBER_OF_REPLICAS
-import org.opensearch.indexmanagement.indexstatemanagement.util.INDEX_NUMBER_OF_SHARDS
-import org.opensearch.indexmanagement.opensearchapi.suspendUntil
-import org.opensearch.indexmanagement.util.IndexUtils
-import org.opensearch.indexmanagement.util.OpenForTesting
-import org.opensearch.rest.RestStatus
+import com.colasoft.opensearch.OpenSearchStatusException
+import com.colasoft.opensearch.ResourceAlreadyExistsException
+import com.colasoft.opensearch.action.ActionListener
+import com.colasoft.opensearch.action.admin.indices.alias.Alias
+import com.colasoft.opensearch.action.admin.indices.create.CreateIndexRequest
+import com.colasoft.opensearch.action.admin.indices.create.CreateIndexResponse
+import com.colasoft.opensearch.action.admin.indices.exists.indices.IndicesExistsRequest
+import com.colasoft.opensearch.action.admin.indices.exists.indices.IndicesExistsResponse
+import com.colasoft.opensearch.action.support.master.AcknowledgedResponse
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.client.IndicesAdminClient
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.INDEX_HIDDEN
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.INDEX_NUMBER_OF_REPLICAS
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.INDEX_NUMBER_OF_SHARDS
+import com.colasoft.opensearch.indexmanagement.opensearchapi.suspendUntil
+import com.colasoft.opensearch.indexmanagement.util.IndexUtils
+import com.colasoft.opensearch.indexmanagement.util.OpenForTesting
+import com.colasoft.opensearch.rest.RestStatus
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine

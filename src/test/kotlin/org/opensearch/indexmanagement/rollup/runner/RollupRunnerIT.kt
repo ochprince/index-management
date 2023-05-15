@@ -3,34 +3,34 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.runner
+package com.colasoft.opensearch.indexmanagement.rollup.runner
 
 import org.apache.http.entity.ContentType
 import org.apache.http.entity.StringEntity
-import org.opensearch.common.settings.Settings
-import org.opensearch.indexmanagement.IndexManagementPlugin
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.ROLLUP_JOBS_BASE_URI
-import org.opensearch.indexmanagement.common.model.dimension.DateHistogram
-import org.opensearch.indexmanagement.common.model.dimension.Terms
-import org.opensearch.indexmanagement.indexstatemanagement.util.INDEX_NUMBER_OF_REPLICAS
-import org.opensearch.indexmanagement.indexstatemanagement.util.INDEX_NUMBER_OF_SHARDS
-import org.opensearch.indexmanagement.makeRequest
-import org.opensearch.indexmanagement.rollup.RollupRestTestCase
-import org.opensearch.indexmanagement.rollup.model.Rollup
-import org.opensearch.indexmanagement.rollup.model.RollupMetadata
-import org.opensearch.indexmanagement.rollup.model.RollupMetrics
-import org.opensearch.indexmanagement.rollup.model.metric.Average
-import org.opensearch.indexmanagement.rollup.model.metric.Max
-import org.opensearch.indexmanagement.rollup.model.metric.Min
-import org.opensearch.indexmanagement.rollup.model.metric.Sum
-import org.opensearch.indexmanagement.rollup.model.metric.ValueCount
-import org.opensearch.indexmanagement.rollup.randomCalendarDateHistogram
-import org.opensearch.indexmanagement.rollup.randomRollup
-import org.opensearch.indexmanagement.rollup.settings.RollupSettings.Companion.ROLLUP_SEARCH_BACKOFF_COUNT
-import org.opensearch.indexmanagement.waitFor
-import org.opensearch.jobscheduler.spi.schedule.IntervalSchedule
-import org.opensearch.rest.RestRequest
-import org.opensearch.rest.RestStatus
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.ROLLUP_JOBS_BASE_URI
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.DateHistogram
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.Terms
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.INDEX_NUMBER_OF_REPLICAS
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.INDEX_NUMBER_OF_SHARDS
+import com.colasoft.opensearch.indexmanagement.makeRequest
+import com.colasoft.opensearch.indexmanagement.rollup.RollupRestTestCase
+import com.colasoft.opensearch.indexmanagement.rollup.model.Rollup
+import com.colasoft.opensearch.indexmanagement.rollup.model.RollupMetadata
+import com.colasoft.opensearch.indexmanagement.rollup.model.RollupMetrics
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.Average
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.Max
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.Min
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.Sum
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.ValueCount
+import com.colasoft.opensearch.indexmanagement.rollup.randomCalendarDateHistogram
+import com.colasoft.opensearch.indexmanagement.rollup.randomRollup
+import com.colasoft.opensearch.indexmanagement.rollup.settings.RollupSettings.Companion.ROLLUP_SEARCH_BACKOFF_COUNT
+import com.colasoft.opensearch.indexmanagement.waitFor
+import com.colasoft.opensearch.jobscheduler.spi.schedule.IntervalSchedule
+import com.colasoft.opensearch.rest.RestRequest
+import com.colasoft.opensearch.rest.RestStatus
 import java.time.Instant
 import java.time.temporal.ChronoUnit
 

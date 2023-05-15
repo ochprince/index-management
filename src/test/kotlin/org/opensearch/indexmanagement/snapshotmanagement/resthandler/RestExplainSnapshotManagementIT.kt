@@ -3,20 +3,20 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.snapshotmanagement.resthandler
+package com.colasoft.opensearch.indexmanagement.snapshotmanagement.resthandler
 
-import org.opensearch.client.ResponseException
-import org.opensearch.common.xcontent.XContentType
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
-import org.opensearch.indexmanagement.snapshotmanagement.SnapshotManagementRestTestCase
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.explain.ExplainSMPolicyResponse
-import org.opensearch.indexmanagement.snapshotmanagement.model.SMMetadata
-import org.opensearch.indexmanagement.snapshotmanagement.model.SMMetadata.WorkflowMetadata.Companion.TRIGGER_FIELD
-import org.opensearch.indexmanagement.snapshotmanagement.model.SMPolicy
-import org.opensearch.indexmanagement.snapshotmanagement.randomSMPolicy
-import org.opensearch.indexmanagement.waitFor
-import org.opensearch.jobscheduler.spi.schedule.IntervalSchedule
-import org.opensearch.rest.RestStatus
+import com.colasoft.opensearch.client.ResponseException
+import com.colasoft.opensearch.common.xcontent.XContentType
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.SnapshotManagementRestTestCase
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.explain.ExplainSMPolicyResponse
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.model.SMMetadata
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.model.SMMetadata.WorkflowMetadata.Companion.TRIGGER_FIELD
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.model.SMPolicy
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.randomSMPolicy
+import com.colasoft.opensearch.indexmanagement.waitFor
+import com.colasoft.opensearch.jobscheduler.spi.schedule.IntervalSchedule
+import com.colasoft.opensearch.rest.RestStatus
 import java.time.Instant.now
 import java.time.temporal.ChronoUnit
 

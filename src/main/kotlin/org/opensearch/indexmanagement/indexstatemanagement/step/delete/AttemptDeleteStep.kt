@@ -3,18 +3,18 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.step.delete
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.delete
 
 import org.apache.logging.log4j.LogManager
-import org.opensearch.ExceptionsHelper
-import org.opensearch.action.admin.indices.delete.DeleteIndexRequest
-import org.opensearch.action.support.master.AcknowledgedResponse
-import org.opensearch.indexmanagement.opensearchapi.suspendUntil
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Step
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StepMetaData
-import org.opensearch.snapshots.SnapshotInProgressException
-import org.opensearch.transport.RemoteTransportException
+import com.colasoft.opensearch.ExceptionsHelper
+import com.colasoft.opensearch.action.admin.indices.delete.DeleteIndexRequest
+import com.colasoft.opensearch.action.support.master.AcknowledgedResponse
+import com.colasoft.opensearch.indexmanagement.opensearchapi.suspendUntil
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Step
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StepMetaData
+import com.colasoft.opensearch.snapshots.SnapshotInProgressException
+import com.colasoft.opensearch.transport.RemoteTransportException
 
 class AttemptDeleteStep : Step(name) {
 

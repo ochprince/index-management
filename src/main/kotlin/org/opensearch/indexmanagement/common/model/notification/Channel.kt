@@ -3,25 +3,25 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.common.model.notification
+package com.colasoft.opensearch.indexmanagement.common.model.notification
 
-import org.opensearch.client.Client
-import org.opensearch.client.node.NodeClient
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.common.io.stream.StreamOutput
-import org.opensearch.common.io.stream.Writeable
-import org.opensearch.core.xcontent.ToXContent
-import org.opensearch.core.xcontent.XContentBuilder
-import org.opensearch.core.xcontent.XContentParser
-import org.opensearch.common.xcontent.XContentParserUtils.ensureExpectedToken
-import org.opensearch.commons.ConfigConstants
-import org.opensearch.commons.authuser.User
-import org.opensearch.commons.notifications.NotificationsPluginInterface
-import org.opensearch.commons.notifications.action.SendNotificationResponse
-import org.opensearch.commons.notifications.model.ChannelMessage
-import org.opensearch.commons.notifications.model.EventSource
-import org.opensearch.indexmanagement.opensearchapi.suspendUntil
-import org.opensearch.indexmanagement.util.SecurityUtils.Companion.generateUserString
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.client.node.NodeClient
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.common.io.stream.StreamOutput
+import com.colasoft.opensearch.common.io.stream.Writeable
+import com.colasoft.opensearch.core.xcontent.ToXContent
+import com.colasoft.opensearch.core.xcontent.XContentBuilder
+import com.colasoft.opensearch.core.xcontent.XContentParser
+import com.colasoft.opensearch.common.xcontent.XContentParserUtils.ensureExpectedToken
+import com.colasoft.opensearch.commons.ConfigConstants
+import com.colasoft.opensearch.commons.authuser.User
+import com.colasoft.opensearch.commons.notifications.NotificationsPluginInterface
+import com.colasoft.opensearch.commons.notifications.action.SendNotificationResponse
+import com.colasoft.opensearch.commons.notifications.model.ChannelMessage
+import com.colasoft.opensearch.commons.notifications.model.EventSource
+import com.colasoft.opensearch.indexmanagement.opensearchapi.suspendUntil
+import com.colasoft.opensearch.indexmanagement.util.SecurityUtils.Companion.generateUserString
 import java.io.IOException
 
 data class Channel(val id: String) : ToXContent, Writeable {

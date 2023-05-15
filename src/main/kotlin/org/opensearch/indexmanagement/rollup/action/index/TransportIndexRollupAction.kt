@@ -3,41 +3,41 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.action.index
+package com.colasoft.opensearch.indexmanagement.rollup.action.index
 
 import org.apache.logging.log4j.LogManager
-import org.opensearch.OpenSearchStatusException
-import org.opensearch.action.ActionListener
-import org.opensearch.action.DocWriteRequest
-import org.opensearch.action.get.GetRequest
-import org.opensearch.action.get.GetResponse
-import org.opensearch.action.index.IndexRequest
-import org.opensearch.action.index.IndexResponse
-import org.opensearch.action.support.ActionFilters
-import org.opensearch.action.support.HandledTransportAction
-import org.opensearch.action.support.master.AcknowledgedResponse
-import org.opensearch.client.Client
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.inject.Inject
-import org.opensearch.common.settings.Settings
-import org.opensearch.core.xcontent.NamedXContentRegistry
-import org.opensearch.core.xcontent.ToXContent
-import org.opensearch.common.xcontent.XContentFactory.jsonBuilder
-import org.opensearch.commons.ConfigConstants
-import org.opensearch.commons.authuser.User
-import org.opensearch.indexmanagement.IndexManagementIndices
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
-import org.opensearch.indexmanagement.rollup.model.Rollup
-import org.opensearch.indexmanagement.rollup.util.RollupFieldValueExpressionResolver
-import org.opensearch.indexmanagement.rollup.util.parseRollup
-import org.opensearch.indexmanagement.settings.IndexManagementSettings
-import org.opensearch.indexmanagement.util.IndexUtils
-import org.opensearch.indexmanagement.util.SecurityUtils
-import org.opensearch.indexmanagement.util.SecurityUtils.Companion.buildUser
-import org.opensearch.indexmanagement.util.SecurityUtils.Companion.validateUserConfiguration
-import org.opensearch.rest.RestStatus
-import org.opensearch.tasks.Task
-import org.opensearch.transport.TransportService
+import com.colasoft.opensearch.OpenSearchStatusException
+import com.colasoft.opensearch.action.ActionListener
+import com.colasoft.opensearch.action.DocWriteRequest
+import com.colasoft.opensearch.action.get.GetRequest
+import com.colasoft.opensearch.action.get.GetResponse
+import com.colasoft.opensearch.action.index.IndexRequest
+import com.colasoft.opensearch.action.index.IndexResponse
+import com.colasoft.opensearch.action.support.ActionFilters
+import com.colasoft.opensearch.action.support.HandledTransportAction
+import com.colasoft.opensearch.action.support.master.AcknowledgedResponse
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.inject.Inject
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.core.xcontent.NamedXContentRegistry
+import com.colasoft.opensearch.core.xcontent.ToXContent
+import com.colasoft.opensearch.common.xcontent.XContentFactory.jsonBuilder
+import com.colasoft.opensearch.commons.ConfigConstants
+import com.colasoft.opensearch.commons.authuser.User
+import com.colasoft.opensearch.indexmanagement.IndexManagementIndices
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
+import com.colasoft.opensearch.indexmanagement.rollup.model.Rollup
+import com.colasoft.opensearch.indexmanagement.rollup.util.RollupFieldValueExpressionResolver
+import com.colasoft.opensearch.indexmanagement.rollup.util.parseRollup
+import com.colasoft.opensearch.indexmanagement.settings.IndexManagementSettings
+import com.colasoft.opensearch.indexmanagement.util.IndexUtils
+import com.colasoft.opensearch.indexmanagement.util.SecurityUtils
+import com.colasoft.opensearch.indexmanagement.util.SecurityUtils.Companion.buildUser
+import com.colasoft.opensearch.indexmanagement.util.SecurityUtils.Companion.validateUserConfiguration
+import com.colasoft.opensearch.rest.RestStatus
+import com.colasoft.opensearch.tasks.Task
+import com.colasoft.opensearch.transport.TransportService
 
 // TODO: Field and mappings validations of source and target index, i.e. reject a histogram agg on example_field if its not possible
 @Suppress("LongParameterList")

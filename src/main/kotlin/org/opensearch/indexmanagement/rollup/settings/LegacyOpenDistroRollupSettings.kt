@@ -3,10 +3,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.settings
+package com.colasoft.opensearch.indexmanagement.rollup.settings
 
-import org.opensearch.common.settings.Setting
-import org.opensearch.common.unit.TimeValue
+import com.colasoft.opensearch.common.settings.Setting
+import com.colasoft.opensearch.common.unit.TimeValue
 
 @Suppress("UtilityClassWithPublicConstructor")
 class LegacyOpenDistroRollupSettings {

@@ -3,11 +3,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.settings
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.settings
 
-import org.opensearch.common.settings.Setting
-import org.opensearch.common.unit.TimeValue
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
+import com.colasoft.opensearch.common.settings.Setting
+import com.colasoft.opensearch.common.unit.TimeValue
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
 import java.util.function.Function
 
 @Suppress("UtilityClassWithPublicConstructor")

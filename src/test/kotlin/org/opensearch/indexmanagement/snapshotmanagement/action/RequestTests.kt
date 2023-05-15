@@ -3,24 +3,24 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.snapshotmanagement.action
+package com.colasoft.opensearch.indexmanagement.snapshotmanagement.action
 
-import org.opensearch.action.DocWriteRequest
-import org.opensearch.action.support.WriteRequest
-import org.opensearch.common.io.stream.BytesStreamOutput
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.index.seqno.SequenceNumbers
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
-import org.opensearch.indexmanagement.common.model.rest.SearchParams
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.delete.DeleteSMPolicyRequest
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.explain.ExplainSMPolicyRequest
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.get.GetSMPoliciesRequest
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.get.GetSMPolicyRequest
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.index.IndexSMPolicyRequest
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.start.StartSMRequest
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.stop.StopSMRequest
-import org.opensearch.indexmanagement.snapshotmanagement.randomSMPolicy
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.action.DocWriteRequest
+import com.colasoft.opensearch.action.support.WriteRequest
+import com.colasoft.opensearch.common.io.stream.BytesStreamOutput
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.index.seqno.SequenceNumbers
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
+import com.colasoft.opensearch.indexmanagement.common.model.rest.SearchParams
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.delete.DeleteSMPolicyRequest
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.explain.ExplainSMPolicyRequest
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.get.GetSMPoliciesRequest
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.get.GetSMPolicyRequest
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.index.IndexSMPolicyRequest
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.start.StartSMRequest
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.stop.StopSMRequest
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.randomSMPolicy
+import com.colasoft.opensearch.test.OpenSearchTestCase
 
 class RequestTests : OpenSearchTestCase() {
 

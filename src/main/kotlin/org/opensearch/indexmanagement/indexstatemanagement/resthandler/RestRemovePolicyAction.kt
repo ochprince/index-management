@@ -3,22 +3,22 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.resthandler
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.resthandler
 
-import org.opensearch.client.node.NodeClient
-import org.opensearch.common.Strings
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.ISM_BASE_URI
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.LEGACY_ISM_BASE_URI
-import org.opensearch.indexmanagement.indexstatemanagement.transport.action.removepolicy.RemovePolicyAction
-import org.opensearch.indexmanagement.indexstatemanagement.transport.action.removepolicy.RemovePolicyRequest
-import org.opensearch.indexmanagement.indexstatemanagement.util.DEFAULT_INDEX_TYPE
-import org.opensearch.indexmanagement.indexstatemanagement.util.TYPE_PARAM_KEY
-import org.opensearch.rest.BaseRestHandler
-import org.opensearch.rest.RestHandler.ReplacedRoute
-import org.opensearch.rest.RestHandler.Route
-import org.opensearch.rest.RestRequest
-import org.opensearch.rest.RestRequest.Method.POST
-import org.opensearch.rest.action.RestToXContentListener
+import com.colasoft.opensearch.client.node.NodeClient
+import com.colasoft.opensearch.common.Strings
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.ISM_BASE_URI
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.LEGACY_ISM_BASE_URI
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.removepolicy.RemovePolicyAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.removepolicy.RemovePolicyRequest
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.DEFAULT_INDEX_TYPE
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.TYPE_PARAM_KEY
+import com.colasoft.opensearch.rest.BaseRestHandler
+import com.colasoft.opensearch.rest.RestHandler.ReplacedRoute
+import com.colasoft.opensearch.rest.RestHandler.Route
+import com.colasoft.opensearch.rest.RestRequest
+import com.colasoft.opensearch.rest.RestRequest.Method.POST
+import com.colasoft.opensearch.rest.action.RestToXContentListener
 import java.io.IOException
 
 class RestRemovePolicyAction : BaseRestHandler() {

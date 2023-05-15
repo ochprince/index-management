@@ -3,12 +3,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.spi
+package com.colasoft.opensearch.indexmanagement.spi
 
-import org.opensearch.indexmanagement.spi.indexstatemanagement.ActionParser
-import org.opensearch.indexmanagement.spi.indexstatemanagement.DefaultStatusChecker
-import org.opensearch.indexmanagement.spi.indexstatemanagement.IndexMetadataService
-import org.opensearch.indexmanagement.spi.indexstatemanagement.StatusChecker
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.ActionParser
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.DefaultStatusChecker
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.IndexMetadataService
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.StatusChecker
 
 /**
  * SPI for IndexManagement

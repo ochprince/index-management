@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.snapshotmanagement
+package com.colasoft.opensearch.indexmanagement.snapshotmanagement
 
-import org.opensearch.OpenSearchException
+import com.colasoft.opensearch.OpenSearchException
 
 /**
  * Wrap snapshot management related exception with a user facing error message

@@ -3,36 +3,36 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.util
+package com.colasoft.opensearch.indexmanagement.rollup.util
 
-import org.opensearch.index.query.BoolQueryBuilder
-import org.opensearch.index.query.ConstantScoreQueryBuilder
-import org.opensearch.index.query.DisMaxQueryBuilder
-import org.opensearch.index.query.MatchAllQueryBuilder
-import org.opensearch.index.query.MatchPhraseQueryBuilder
-import org.opensearch.index.query.RangeQueryBuilder
-import org.opensearch.index.query.TermQueryBuilder
-import org.opensearch.index.query.TermsQueryBuilder
-import org.opensearch.index.search.MatchQuery
-import org.opensearch.indexmanagement.common.model.dimension.DateHistogram
-import org.opensearch.indexmanagement.common.model.dimension.Dimension
-import org.opensearch.indexmanagement.common.model.dimension.Histogram
-import org.opensearch.indexmanagement.common.model.dimension.Terms
-import org.opensearch.indexmanagement.opensearchapi.convertToMap
-import org.opensearch.indexmanagement.rollup.model.RollupFieldMapping
-import org.opensearch.indexmanagement.rollup.model.RollupMetrics
-import org.opensearch.indexmanagement.rollup.randomAverage
-import org.opensearch.indexmanagement.rollup.randomMax
-import org.opensearch.indexmanagement.rollup.randomMin
-import org.opensearch.indexmanagement.rollup.randomRollup
-import org.opensearch.indexmanagement.rollup.randomSum
-import org.opensearch.indexmanagement.rollup.randomTermQuery
-import org.opensearch.indexmanagement.rollup.randomValueCount
-import org.opensearch.indexmanagement.transform.randomAggregationBuilder
-import org.opensearch.search.aggregations.metrics.AvgAggregationBuilder
-import org.opensearch.search.aggregations.metrics.ValueCountAggregationBuilder
-import org.opensearch.test.OpenSearchTestCase
-import org.opensearch.test.rest.OpenSearchRestTestCase
+import com.colasoft.opensearch.index.query.BoolQueryBuilder
+import com.colasoft.opensearch.index.query.ConstantScoreQueryBuilder
+import com.colasoft.opensearch.index.query.DisMaxQueryBuilder
+import com.colasoft.opensearch.index.query.MatchAllQueryBuilder
+import com.colasoft.opensearch.index.query.MatchPhraseQueryBuilder
+import com.colasoft.opensearch.index.query.RangeQueryBuilder
+import com.colasoft.opensearch.index.query.TermQueryBuilder
+import com.colasoft.opensearch.index.query.TermsQueryBuilder
+import com.colasoft.opensearch.index.search.MatchQuery
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.DateHistogram
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.Dimension
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.Histogram
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.Terms
+import com.colasoft.opensearch.indexmanagement.opensearchapi.convertToMap
+import com.colasoft.opensearch.indexmanagement.rollup.model.RollupFieldMapping
+import com.colasoft.opensearch.indexmanagement.rollup.model.RollupMetrics
+import com.colasoft.opensearch.indexmanagement.rollup.randomAverage
+import com.colasoft.opensearch.indexmanagement.rollup.randomMax
+import com.colasoft.opensearch.indexmanagement.rollup.randomMin
+import com.colasoft.opensearch.indexmanagement.rollup.randomRollup
+import com.colasoft.opensearch.indexmanagement.rollup.randomSum
+import com.colasoft.opensearch.indexmanagement.rollup.randomTermQuery
+import com.colasoft.opensearch.indexmanagement.rollup.randomValueCount
+import com.colasoft.opensearch.indexmanagement.transform.randomAggregationBuilder
+import com.colasoft.opensearch.search.aggregations.metrics.AvgAggregationBuilder
+import com.colasoft.opensearch.search.aggregations.metrics.ValueCountAggregationBuilder
+import com.colasoft.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.test.rest.OpenSearchRestTestCase
 
 class RollupUtilsTests : OpenSearchTestCase() {
 

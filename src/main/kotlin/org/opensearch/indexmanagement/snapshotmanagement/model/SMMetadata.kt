@@ -3,33 +3,33 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.snapshotmanagement.model
+package com.colasoft.opensearch.indexmanagement.snapshotmanagement.model
 
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.common.io.stream.StreamOutput
-import org.opensearch.common.io.stream.Writeable
-import org.opensearch.core.xcontent.ToXContent
-import org.opensearch.core.xcontent.ToXContentObject
-import org.opensearch.core.xcontent.XContentBuilder
-import org.opensearch.core.xcontent.XContentParser
-import org.opensearch.core.xcontent.XContentParser.Token
-import org.opensearch.common.xcontent.XContentParserUtils.ensureExpectedToken
-import org.opensearch.index.seqno.SequenceNumbers
-import org.opensearch.indexmanagement.indexstatemanagement.util.WITH_TYPE
-import org.opensearch.indexmanagement.opensearchapi.instant
-import org.opensearch.indexmanagement.opensearchapi.nullValueHandler
-import org.opensearch.indexmanagement.opensearchapi.optionalField
-import org.opensearch.indexmanagement.opensearchapi.optionalInfoField
-import org.opensearch.indexmanagement.opensearchapi.optionalTimeField
-import org.opensearch.indexmanagement.opensearchapi.parseArray
-import org.opensearch.indexmanagement.snapshotmanagement.SnapshotManagementException
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.SMState
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.WorkflowType
-import org.opensearch.indexmanagement.snapshotmanagement.model.SMMetadata.Retry.Companion.RETRY_FIELD
-import org.opensearch.indexmanagement.snapshotmanagement.model.SMPolicy.Companion.NAME_FIELD
-import org.opensearch.indexmanagement.snapshotmanagement.preFixTimeStamp
-import org.opensearch.indexmanagement.snapshotmanagement.smMetadataDocIdToPolicyName
-import org.opensearch.indexmanagement.util.NO_ID
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.common.io.stream.StreamOutput
+import com.colasoft.opensearch.common.io.stream.Writeable
+import com.colasoft.opensearch.core.xcontent.ToXContent
+import com.colasoft.opensearch.core.xcontent.ToXContentObject
+import com.colasoft.opensearch.core.xcontent.XContentBuilder
+import com.colasoft.opensearch.core.xcontent.XContentParser
+import com.colasoft.opensearch.core.xcontent.XContentParser.Token
+import com.colasoft.opensearch.common.xcontent.XContentParserUtils.ensureExpectedToken
+import com.colasoft.opensearch.index.seqno.SequenceNumbers
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.WITH_TYPE
+import com.colasoft.opensearch.indexmanagement.opensearchapi.instant
+import com.colasoft.opensearch.indexmanagement.opensearchapi.nullValueHandler
+import com.colasoft.opensearch.indexmanagement.opensearchapi.optionalField
+import com.colasoft.opensearch.indexmanagement.opensearchapi.optionalInfoField
+import com.colasoft.opensearch.indexmanagement.opensearchapi.optionalTimeField
+import com.colasoft.opensearch.indexmanagement.opensearchapi.parseArray
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.SnapshotManagementException
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.SMState
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.WorkflowType
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.model.SMMetadata.Retry.Companion.RETRY_FIELD
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.model.SMPolicy.Companion.NAME_FIELD
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.preFixTimeStamp
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.smMetadataDocIdToPolicyName
+import com.colasoft.opensearch.indexmanagement.util.NO_ID
 import java.time.Instant
 import java.time.Instant.now
 

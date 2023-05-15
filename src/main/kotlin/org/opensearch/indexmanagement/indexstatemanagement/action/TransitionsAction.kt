@@ -3,14 +3,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.action
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.action
 
-import org.opensearch.indexmanagement.indexstatemanagement.IndexMetadataProvider
-import org.opensearch.indexmanagement.indexstatemanagement.model.Transition
-import org.opensearch.indexmanagement.indexstatemanagement.step.transition.AttemptTransitionStep
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Action
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Step
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.IndexMetadataProvider
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.Transition
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.transition.AttemptTransitionStep
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Action
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Step
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
 
 class TransitionsAction(
     val transitions: List<Transition>,

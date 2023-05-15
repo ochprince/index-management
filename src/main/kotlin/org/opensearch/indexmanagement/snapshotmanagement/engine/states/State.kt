@@ -3,10 +3,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.snapshotmanagement.engine.states
+package com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states
 
-import org.opensearch.indexmanagement.snapshotmanagement.engine.SMStateMachine
-import org.opensearch.jobscheduler.spi.ScheduledJobParameter
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.SMStateMachine
+import com.colasoft.opensearch.jobscheduler.spi.ScheduledJobParameter
 
 /**
  * States contain the action to execute

@@ -3,15 +3,15 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.coordinator
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.coordinator
 
 import org.junit.Before
 import org.mockito.Mockito
-import org.opensearch.action.admin.cluster.node.info.NodesInfoAction
-import org.opensearch.client.Client
-import org.opensearch.cluster.ClusterChangedEvent
-import org.opensearch.cluster.OpenSearchAllocationTestCase
-import org.opensearch.indexmanagement.indexstatemanagement.SkipExecution
+import com.colasoft.opensearch.action.admin.cluster.node.info.NodesInfoAction
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.cluster.ClusterChangedEvent
+import com.colasoft.opensearch.cluster.OpenSearchAllocationTestCase
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.SkipExecution
 
 class SkipExecutionTests : OpenSearchAllocationTestCase() {
 

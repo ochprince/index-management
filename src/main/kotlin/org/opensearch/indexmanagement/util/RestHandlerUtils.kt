@@ -4,14 +4,14 @@
  */
 
 @file:Suppress("TopLevelPropertyNaming", "MatchingDeclarationName")
-package org.opensearch.indexmanagement.util
+package com.colasoft.opensearch.indexmanagement.util
 
-import org.opensearch.indexmanagement.common.model.rest.DEFAULT_PAGINATION_FROM
-import org.opensearch.indexmanagement.common.model.rest.DEFAULT_PAGINATION_SIZE
-import org.opensearch.indexmanagement.common.model.rest.DEFAULT_QUERY_STRING
-import org.opensearch.indexmanagement.common.model.rest.DEFAULT_SORT_ORDER
-import org.opensearch.indexmanagement.common.model.rest.SearchParams
-import org.opensearch.rest.RestRequest
+import com.colasoft.opensearch.indexmanagement.common.model.rest.DEFAULT_PAGINATION_FROM
+import com.colasoft.opensearch.indexmanagement.common.model.rest.DEFAULT_PAGINATION_SIZE
+import com.colasoft.opensearch.indexmanagement.common.model.rest.DEFAULT_QUERY_STRING
+import com.colasoft.opensearch.indexmanagement.common.model.rest.DEFAULT_SORT_ORDER
+import com.colasoft.opensearch.indexmanagement.common.model.rest.SearchParams
+import com.colasoft.opensearch.rest.RestRequest
 
 const val _ID = "_id"
 const val NO_ID = ""

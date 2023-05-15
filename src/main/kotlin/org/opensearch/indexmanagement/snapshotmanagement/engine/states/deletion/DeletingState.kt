@@ -3,26 +3,26 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.snapshotmanagement.engine.states.deletion
+package com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.deletion
 
 import org.apache.logging.log4j.Logger
-import org.opensearch.ExceptionsHelper
-import org.opensearch.action.admin.cluster.snapshots.delete.DeleteSnapshotRequest
-import org.opensearch.action.support.master.AcknowledgedResponse
-import org.opensearch.client.ClusterAdminClient
-import org.opensearch.indexmanagement.opensearchapi.suspendUntil
-import org.opensearch.indexmanagement.snapshotmanagement.engine.SMStateMachine
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.SMResult
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.State
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.WorkflowType
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.creation.CreatingState
-import org.opensearch.indexmanagement.snapshotmanagement.getSnapshots
-import org.opensearch.indexmanagement.snapshotmanagement.model.SMMetadata
-import org.opensearch.indexmanagement.snapshotmanagement.model.SMPolicy
-import org.opensearch.snapshots.ConcurrentSnapshotExecutionException
-import org.opensearch.snapshots.SnapshotInfo
-import org.opensearch.snapshots.SnapshotState
-import org.opensearch.transport.RemoteTransportException
+import com.colasoft.opensearch.ExceptionsHelper
+import com.colasoft.opensearch.action.admin.cluster.snapshots.delete.DeleteSnapshotRequest
+import com.colasoft.opensearch.action.support.master.AcknowledgedResponse
+import com.colasoft.opensearch.client.ClusterAdminClient
+import com.colasoft.opensearch.indexmanagement.opensearchapi.suspendUntil
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.SMStateMachine
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.SMResult
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.State
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.WorkflowType
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.creation.CreatingState
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.getSnapshots
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.model.SMMetadata
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.model.SMPolicy
+import com.colasoft.opensearch.snapshots.ConcurrentSnapshotExecutionException
+import com.colasoft.opensearch.snapshots.SnapshotInfo
+import com.colasoft.opensearch.snapshots.SnapshotState
+import com.colasoft.opensearch.transport.RemoteTransportException
 import java.time.Instant
 import java.time.Instant.now
 

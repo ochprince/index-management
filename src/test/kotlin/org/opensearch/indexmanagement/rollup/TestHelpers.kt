@@ -3,37 +3,37 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup
+package com.colasoft.opensearch.indexmanagement.rollup
 
-import org.opensearch.core.xcontent.ToXContent
-import org.opensearch.common.xcontent.XContentFactory
-import org.opensearch.index.query.TermQueryBuilder
-import org.opensearch.indexmanagement.common.model.dimension.DateHistogram
-import org.opensearch.indexmanagement.common.model.dimension.Dimension
-import org.opensearch.indexmanagement.common.model.dimension.Histogram
-import org.opensearch.indexmanagement.common.model.dimension.Terms
-import org.opensearch.indexmanagement.opensearchapi.string
-import org.opensearch.indexmanagement.randomInstant
-import org.opensearch.indexmanagement.randomSchedule
-import org.opensearch.indexmanagement.randomUser
-import org.opensearch.indexmanagement.rollup.actionfilter.ISMFieldCapabilities
-import org.opensearch.indexmanagement.rollup.actionfilter.ISMFieldCapabilitiesIndexResponse
-import org.opensearch.indexmanagement.rollup.actionfilter.ISMFieldCapabilitiesResponse
-import org.opensearch.indexmanagement.rollup.actionfilter.ISMIndexFieldCapabilities
-import org.opensearch.indexmanagement.rollup.model.ContinuousMetadata
-import org.opensearch.indexmanagement.rollup.model.ExplainRollup
-import org.opensearch.indexmanagement.rollup.model.ISMRollup
-import org.opensearch.indexmanagement.rollup.model.Rollup
-import org.opensearch.indexmanagement.rollup.model.RollupMetadata
-import org.opensearch.indexmanagement.rollup.model.RollupMetrics
-import org.opensearch.indexmanagement.rollup.model.RollupStats
-import org.opensearch.indexmanagement.rollup.model.metric.Average
-import org.opensearch.indexmanagement.rollup.model.metric.Max
-import org.opensearch.indexmanagement.rollup.model.metric.Metric
-import org.opensearch.indexmanagement.rollup.model.metric.Min
-import org.opensearch.indexmanagement.rollup.model.metric.Sum
-import org.opensearch.indexmanagement.rollup.model.metric.ValueCount
-import org.opensearch.test.rest.OpenSearchRestTestCase
+import com.colasoft.opensearch.core.xcontent.ToXContent
+import com.colasoft.opensearch.common.xcontent.XContentFactory
+import com.colasoft.opensearch.index.query.TermQueryBuilder
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.DateHistogram
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.Dimension
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.Histogram
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.Terms
+import com.colasoft.opensearch.indexmanagement.opensearchapi.string
+import com.colasoft.opensearch.indexmanagement.randomInstant
+import com.colasoft.opensearch.indexmanagement.randomSchedule
+import com.colasoft.opensearch.indexmanagement.randomUser
+import com.colasoft.opensearch.indexmanagement.rollup.actionfilter.ISMFieldCapabilities
+import com.colasoft.opensearch.indexmanagement.rollup.actionfilter.ISMFieldCapabilitiesIndexResponse
+import com.colasoft.opensearch.indexmanagement.rollup.actionfilter.ISMFieldCapabilitiesResponse
+import com.colasoft.opensearch.indexmanagement.rollup.actionfilter.ISMIndexFieldCapabilities
+import com.colasoft.opensearch.indexmanagement.rollup.model.ContinuousMetadata
+import com.colasoft.opensearch.indexmanagement.rollup.model.ExplainRollup
+import com.colasoft.opensearch.indexmanagement.rollup.model.ISMRollup
+import com.colasoft.opensearch.indexmanagement.rollup.model.Rollup
+import com.colasoft.opensearch.indexmanagement.rollup.model.RollupMetadata
+import com.colasoft.opensearch.indexmanagement.rollup.model.RollupMetrics
+import com.colasoft.opensearch.indexmanagement.rollup.model.RollupStats
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.Average
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.Max
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.Metric
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.Min
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.Sum
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.ValueCount
+import com.colasoft.opensearch.test.rest.OpenSearchRestTestCase
 import java.util.Locale
 
 fun randomInterval(): String = if (OpenSearchRestTestCase.randomBoolean()) randomFixedInterval() else randomCalendarInterval()

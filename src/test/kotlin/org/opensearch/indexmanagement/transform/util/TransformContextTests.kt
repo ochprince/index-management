@@ -3,12 +3,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.transform.util
+package com.colasoft.opensearch.indexmanagement.transform.util
 
 import org.junit.Assert
 import org.junit.Before
 import org.mockito.Mockito
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.test.OpenSearchTestCase
 
 class TransformContextTests : OpenSearchTestCase() {
     private lateinit var transformLockManager: TransformLockManager

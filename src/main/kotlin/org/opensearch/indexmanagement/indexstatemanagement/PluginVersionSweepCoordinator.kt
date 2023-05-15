@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement
 
 import kotlinx.coroutines.CoroutineName
 import kotlinx.coroutines.CoroutineScope
@@ -11,15 +11,15 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 import org.apache.logging.log4j.LogManager
-import org.opensearch.cluster.ClusterChangedEvent
-import org.opensearch.cluster.ClusterStateListener
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.component.LifecycleListener
-import org.opensearch.common.settings.Settings
-import org.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
-import org.opensearch.indexmanagement.util.OpenForTesting
-import org.opensearch.threadpool.Scheduler
-import org.opensearch.threadpool.ThreadPool
+import com.colasoft.opensearch.cluster.ClusterChangedEvent
+import com.colasoft.opensearch.cluster.ClusterStateListener
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.component.LifecycleListener
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
+import com.colasoft.opensearch.indexmanagement.util.OpenForTesting
+import com.colasoft.opensearch.threadpool.Scheduler
+import com.colasoft.opensearch.threadpool.ThreadPool
 
 class PluginVersionSweepCoordinator(
     private val skipExecution: SkipExecution,

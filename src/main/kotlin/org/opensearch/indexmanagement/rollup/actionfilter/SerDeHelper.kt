@@ -3,13 +3,13 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.actionfilter
+package com.colasoft.opensearch.indexmanagement.rollup.actionfilter
 
-import org.opensearch.action.fieldcaps.FieldCapabilitiesResponse
-import org.opensearch.common.io.stream.BytesStreamOutput
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.common.io.stream.StreamOutput
-import org.opensearch.common.io.stream.Writeable
+import com.colasoft.opensearch.action.fieldcaps.FieldCapabilitiesResponse
+import com.colasoft.opensearch.common.io.stream.BytesStreamOutput
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.common.io.stream.StreamOutput
+import com.colasoft.opensearch.common.io.stream.Writeable
 
 /**
  * To support rollup indices being returned in correct format in FieldCaps API we have to rewrite the FieldCapabilitiesResponse

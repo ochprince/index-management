@@ -3,15 +3,15 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.spi.indexstatemanagement
+package com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement
 
 import org.apache.logging.log4j.Logger
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.common.io.stream.StreamOutput
-import org.opensearch.common.io.stream.Writeable
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StepMetaData
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.common.io.stream.StreamOutput
+import com.colasoft.opensearch.common.io.stream.Writeable
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StepMetaData
 import java.time.Instant
 import java.util.Locale
 

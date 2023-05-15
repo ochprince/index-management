@@ -3,24 +3,24 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.step
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.step
 
 import com.nhaarman.mockitokotlin2.mock
 import kotlinx.coroutines.runBlocking
-import org.opensearch.client.Client
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.settings.Settings
-import org.opensearch.indexmanagement.indexstatemanagement.step.rollup.WaitForRollupCompletionStep
-import org.opensearch.indexmanagement.rollup.model.RollupMetadata
-import org.opensearch.indexmanagement.rollup.model.RollupStats
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Step
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionProperties
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
-import org.opensearch.jobscheduler.spi.utils.LockService
-import org.opensearch.script.ScriptService
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.rollup.WaitForRollupCompletionStep
+import com.colasoft.opensearch.indexmanagement.rollup.model.RollupMetadata
+import com.colasoft.opensearch.indexmanagement.rollup.model.RollupStats
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Step
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionProperties
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
+import com.colasoft.opensearch.jobscheduler.spi.utils.LockService
+import com.colasoft.opensearch.script.ScriptService
+import com.colasoft.opensearch.test.OpenSearchTestCase
 import java.time.Instant
 
 class WaitForRollupCompletionStepTests : OpenSearchTestCase() {

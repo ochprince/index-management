@@ -3,18 +3,18 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement
 
-import org.opensearch.action.admin.cluster.state.ClusterStateRequest
-import org.opensearch.action.admin.cluster.state.ClusterStateResponse
-import org.opensearch.action.support.IndicesOptions
-import org.opensearch.client.Client
-import org.opensearch.cluster.metadata.IndexMetadata
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.unit.TimeValue
-import org.opensearch.indexmanagement.opensearchapi.suspendUntil
-import org.opensearch.indexmanagement.spi.indexstatemanagement.IndexMetadataService
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ISMIndexMetadata
+import com.colasoft.opensearch.action.admin.cluster.state.ClusterStateRequest
+import com.colasoft.opensearch.action.admin.cluster.state.ClusterStateResponse
+import com.colasoft.opensearch.action.support.IndicesOptions
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.cluster.metadata.IndexMetadata
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.unit.TimeValue
+import com.colasoft.opensearch.indexmanagement.opensearchapi.suspendUntil
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.IndexMetadataService
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ISMIndexMetadata
 
 class DefaultIndexMetadataService(val customUUIDSetting: String? = null) : IndexMetadataService {
 

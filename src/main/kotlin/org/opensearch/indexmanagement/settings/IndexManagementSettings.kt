@@ -2,9 +2,9 @@
  * Copyright OpenSearch Contributors
  * SPDX-License-Identifier: Apache-2.0
  */
-package org.opensearch.indexmanagement.settings
+package com.colasoft.opensearch.indexmanagement.settings
 
-import org.opensearch.common.settings.Setting
+import com.colasoft.opensearch.common.settings.Setting
 
 @Suppress("UtilityClassWithPublicConstructor")
 class IndexManagementSettings {

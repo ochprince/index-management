@@ -3,11 +3,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.util
+package com.colasoft.opensearch.indexmanagement.util
 
-import org.opensearch.cluster.metadata.IndexMetadata
-import org.opensearch.common.xcontent.XContentType
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.cluster.metadata.IndexMetadata
+import com.colasoft.opensearch.common.xcontent.XContentType
+import com.colasoft.opensearch.test.OpenSearchTestCase
 import kotlin.test.assertFailsWith
 
 class IndexUtilsTests : OpenSearchTestCase() {

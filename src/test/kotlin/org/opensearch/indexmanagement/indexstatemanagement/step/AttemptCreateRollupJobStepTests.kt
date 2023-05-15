@@ -3,15 +3,15 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.step
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.step
 
-import org.opensearch.indexmanagement.indexstatemanagement.randomRollupActionConfig
-import org.opensearch.indexmanagement.indexstatemanagement.step.rollup.AttemptCreateRollupJobStep
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Step
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionProperties
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomRollupActionConfig
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.rollup.AttemptCreateRollupJobStep
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Step
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionProperties
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.test.OpenSearchTestCase
 
 class AttemptCreateRollupJobStepTests : OpenSearchTestCase() {
 

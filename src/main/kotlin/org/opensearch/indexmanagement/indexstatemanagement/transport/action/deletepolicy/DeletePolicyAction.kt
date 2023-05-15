@@ -3,10 +3,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.transport.action.deletepolicy
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.deletepolicy
 
-import org.opensearch.action.ActionType
-import org.opensearch.action.delete.DeleteResponse
+import com.colasoft.opensearch.action.ActionType
+import com.colasoft.opensearch.action.delete.DeleteResponse
 
 class DeletePolicyAction private constructor() : ActionType<DeleteResponse>(NAME, ::DeleteResponse) {
     companion object {

@@ -15,7 +15,7 @@ Compatible with OpenSearch 2.4.0
 * Bugfix/538 Adding timeout and retry to Transform '_search' API calls ([#576](https://github.com/opensearch-project/index-management/pull/576))
 
 ### Infrastructure
-* add group = org.opensearch.plugin ([#571](https://github.com/opensearch-project/index-management/pull/571))
+* add group = com.colasoft.opensearch.plugin ([#571](https://github.com/opensearch-project/index-management/pull/571))
 
 ### Maintenance
 * Fix kotlin warnings ([#551](https://github.com/opensearch-project/index-management/pull/551))

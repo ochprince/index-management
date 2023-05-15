@@ -3,19 +3,19 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement
+package com.colasoft.opensearch.indexmanagement
 
 import org.apache.http.HttpHost
-import org.opensearch.client.RestClient
-import org.opensearch.common.io.PathUtils
-import org.opensearch.common.settings.Settings
-import org.opensearch.commons.ConfigConstants.OPENSEARCH_SECURITY_SSL_HTTP_ENABLED
-import org.opensearch.commons.ConfigConstants.OPENSEARCH_SECURITY_SSL_HTTP_KEYSTORE_FILEPATH
-import org.opensearch.commons.ConfigConstants.OPENSEARCH_SECURITY_SSL_HTTP_KEYSTORE_KEYPASSWORD
-import org.opensearch.commons.ConfigConstants.OPENSEARCH_SECURITY_SSL_HTTP_KEYSTORE_PASSWORD
-import org.opensearch.commons.ConfigConstants.OPENSEARCH_SECURITY_SSL_HTTP_PEMCERT_FILEPATH
-import org.opensearch.commons.rest.SecureRestClientBuilder
-import org.opensearch.test.rest.OpenSearchRestTestCase
+import com.colasoft.opensearch.client.RestClient
+import com.colasoft.opensearch.common.io.PathUtils
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.commons.ConfigConstants.OPENSEARCH_SECURITY_SSL_HTTP_ENABLED
+import com.colasoft.opensearch.commons.ConfigConstants.OPENSEARCH_SECURITY_SSL_HTTP_KEYSTORE_FILEPATH
+import com.colasoft.opensearch.commons.ConfigConstants.OPENSEARCH_SECURITY_SSL_HTTP_KEYSTORE_KEYPASSWORD
+import com.colasoft.opensearch.commons.ConfigConstants.OPENSEARCH_SECURITY_SSL_HTTP_KEYSTORE_PASSWORD
+import com.colasoft.opensearch.commons.ConfigConstants.OPENSEARCH_SECURITY_SSL_HTTP_PEMCERT_FILEPATH
+import com.colasoft.opensearch.commons.rest.SecureRestClientBuilder
+import com.colasoft.opensearch.test.rest.OpenSearchRestTestCase
 import java.io.IOException
 
 abstract class ODFERestTestCase : OpenSearchRestTestCase() {

@@ -3,14 +3,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.transform.model
+package com.colasoft.opensearch.indexmanagement.transform.model
 
-import org.opensearch.common.io.stream.BytesStreamOutput
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.indexmanagement.transform.buildStreamInputForTransforms
-import org.opensearch.indexmanagement.transform.randomTransform
-import org.opensearch.indexmanagement.transform.randomTransformMetadata
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.common.io.stream.BytesStreamOutput
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.indexmanagement.transform.buildStreamInputForTransforms
+import com.colasoft.opensearch.indexmanagement.transform.randomTransform
+import com.colasoft.opensearch.indexmanagement.transform.randomTransformMetadata
+import com.colasoft.opensearch.test.OpenSearchTestCase
 
 class WriteableTests : OpenSearchTestCase() {
 

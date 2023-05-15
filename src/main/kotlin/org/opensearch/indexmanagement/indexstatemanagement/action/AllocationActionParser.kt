@@ -3,19 +3,19 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.action
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.action
 
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.core.xcontent.XContentParser
-import org.opensearch.core.xcontent.XContentParser.Token
-import org.opensearch.common.xcontent.XContentParserUtils.ensureExpectedToken
-import org.opensearch.indexmanagement.indexstatemanagement.action.AllocationAction.Companion.EXCLUDE
-import org.opensearch.indexmanagement.indexstatemanagement.action.AllocationAction.Companion.INCLUDE
-import org.opensearch.indexmanagement.indexstatemanagement.action.AllocationAction.Companion.REQUIRE
-import org.opensearch.indexmanagement.indexstatemanagement.action.AllocationAction.Companion.WAIT_FOR
-import org.opensearch.indexmanagement.indexstatemanagement.model.destination.CustomWebhook.Companion.suppressWarning
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Action
-import org.opensearch.indexmanagement.spi.indexstatemanagement.ActionParser
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.core.xcontent.XContentParser
+import com.colasoft.opensearch.core.xcontent.XContentParser.Token
+import com.colasoft.opensearch.common.xcontent.XContentParserUtils.ensureExpectedToken
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.AllocationAction.Companion.EXCLUDE
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.AllocationAction.Companion.INCLUDE
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.AllocationAction.Companion.REQUIRE
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.AllocationAction.Companion.WAIT_FOR
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.destination.CustomWebhook.Companion.suppressWarning
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Action
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.ActionParser
 
 class AllocationActionParser : ActionParser() {
     override fun fromStreamInput(sin: StreamInput): Action {

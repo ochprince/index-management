@@ -5,7 +5,7 @@
 
 @file:Suppress("TooManyFunctions", "MatchingDeclarationName")
 
-package org.opensearch.indexmanagement.opensearchapi
+package com.colasoft.opensearch.indexmanagement.opensearchapi
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.ThreadContextElement
@@ -13,48 +13,48 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
-import org.opensearch.ExceptionsHelper
-import org.opensearch.OpenSearchException
-import org.opensearch.action.ActionListener
-import org.opensearch.action.admin.indices.alias.Alias
-import org.opensearch.action.bulk.BackoffPolicy
-import org.opensearch.action.get.GetResponse
-import org.opensearch.action.search.SearchResponse
-import org.opensearch.action.support.DefaultShardOperationFailedException
-import org.opensearch.client.OpenSearchClient
-import org.opensearch.common.bytes.BytesReference
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.common.io.stream.StreamOutput
-import org.opensearch.common.io.stream.Writeable
-import org.opensearch.common.settings.Settings
-import org.opensearch.common.unit.TimeValue
-import org.opensearch.common.util.concurrent.ThreadContext
-import org.opensearch.common.xcontent.LoggingDeprecationHandler
-import org.opensearch.core.xcontent.MediaType
-import org.opensearch.core.xcontent.NamedXContentRegistry
-import org.opensearch.core.xcontent.ToXContent
-import org.opensearch.core.xcontent.XContentBuilder
-import org.opensearch.common.xcontent.XContentFactory
-import org.opensearch.common.xcontent.XContentHelper
-import org.opensearch.core.xcontent.XContentParser
-import org.opensearch.core.xcontent.XContentParser.Token
-import org.opensearch.common.xcontent.XContentParserUtils
-import org.opensearch.common.xcontent.XContentParserUtils.ensureExpectedToken
-import org.opensearch.common.xcontent.XContentType
-import org.opensearch.commons.InjectSecurity
-import org.opensearch.commons.authuser.User
-import org.opensearch.commons.notifications.NotificationsPluginInterface
-import org.opensearch.index.seqno.SequenceNumbers
-import org.opensearch.indexmanagement.indexstatemanagement.action.ShrinkAction
-import org.opensearch.indexmanagement.indexstatemanagement.model.ISMTemplate
-import org.opensearch.indexmanagement.indexstatemanagement.model.Policy
-import org.opensearch.indexmanagement.snapshotmanagement.model.SMMetadata
-import org.opensearch.indexmanagement.util.NO_ID
-import org.opensearch.indexmanagement.util.SecurityUtils.Companion.DEFAULT_INJECT_ROLES
-import org.opensearch.indexmanagement.util.SecurityUtils.Companion.INTERNAL_REQUEST
-import org.opensearch.jobscheduler.spi.utils.LockService
-import org.opensearch.rest.RestStatus
-import org.opensearch.transport.RemoteTransportException
+import com.colasoft.opensearch.ExceptionsHelper
+import com.colasoft.opensearch.OpenSearchException
+import com.colasoft.opensearch.action.ActionListener
+import com.colasoft.opensearch.action.admin.indices.alias.Alias
+import com.colasoft.opensearch.action.bulk.BackoffPolicy
+import com.colasoft.opensearch.action.get.GetResponse
+import com.colasoft.opensearch.action.search.SearchResponse
+import com.colasoft.opensearch.action.support.DefaultShardOperationFailedException
+import com.colasoft.opensearch.client.OpenSearchClient
+import com.colasoft.opensearch.common.bytes.BytesReference
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.common.io.stream.StreamOutput
+import com.colasoft.opensearch.common.io.stream.Writeable
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.common.unit.TimeValue
+import com.colasoft.opensearch.common.util.concurrent.ThreadContext
+import com.colasoft.opensearch.common.xcontent.LoggingDeprecationHandler
+import com.colasoft.opensearch.core.xcontent.MediaType
+import com.colasoft.opensearch.core.xcontent.NamedXContentRegistry
+import com.colasoft.opensearch.core.xcontent.ToXContent
+import com.colasoft.opensearch.core.xcontent.XContentBuilder
+import com.colasoft.opensearch.common.xcontent.XContentFactory
+import com.colasoft.opensearch.common.xcontent.XContentHelper
+import com.colasoft.opensearch.core.xcontent.XContentParser
+import com.colasoft.opensearch.core.xcontent.XContentParser.Token
+import com.colasoft.opensearch.common.xcontent.XContentParserUtils
+import com.colasoft.opensearch.common.xcontent.XContentParserUtils.ensureExpectedToken
+import com.colasoft.opensearch.common.xcontent.XContentType
+import com.colasoft.opensearch.commons.InjectSecurity
+import com.colasoft.opensearch.commons.authuser.User
+import com.colasoft.opensearch.commons.notifications.NotificationsPluginInterface
+import com.colasoft.opensearch.index.seqno.SequenceNumbers
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.ShrinkAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.ISMTemplate
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.Policy
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.model.SMMetadata
+import com.colasoft.opensearch.indexmanagement.util.NO_ID
+import com.colasoft.opensearch.indexmanagement.util.SecurityUtils.Companion.DEFAULT_INJECT_ROLES
+import com.colasoft.opensearch.indexmanagement.util.SecurityUtils.Companion.INTERNAL_REQUEST
+import com.colasoft.opensearch.jobscheduler.spi.utils.LockService
+import com.colasoft.opensearch.rest.RestStatus
+import com.colasoft.opensearch.transport.RemoteTransportException
 import java.io.IOException
 import java.time.Instant
 import kotlin.coroutines.CoroutineContext
@@ -156,7 +156,7 @@ fun <T> parseFromGetResponse(
  * if [block] throws an [OpenSearchException] that is retriable (502, 503, 504).
  *
  * If all retries fail the final exception will be rethrown. Exceptions caught during intermediate retries are
- * logged as warnings to [logger]. Similar to [org.opensearch.action.bulk.Retry], except this retries on
+ * logged as warnings to [logger]. Similar to [com.colasoft.opensearch.action.bulk.Retry], except this retries on
  * 502, 503, 504 error codes as well as 429.
  *
  * @param logger - logger used to log intermediate failures

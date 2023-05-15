@@ -9,20 +9,20 @@
  * GitHub history for details.
  */
 
-package org.opensearch.indexmanagement
+package com.colasoft.opensearch.indexmanagement
 
 import org.junit.After
 import org.junit.Before
-import org.opensearch.client.RestClient
-import org.opensearch.commons.rest.SecureRestClientBuilder
-import org.opensearch.indexmanagement.common.model.dimension.Terms
-import org.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
-import org.opensearch.indexmanagement.transform.model.Transform
-import org.opensearch.indexmanagement.transform.model.TransformMetadata
-import org.opensearch.indexmanagement.transform.randomTransform
-import org.opensearch.jobscheduler.spi.schedule.IntervalSchedule
-import org.opensearch.rest.RestStatus
-import org.opensearch.test.junit.annotations.TestLogging
+import com.colasoft.opensearch.client.RestClient
+import com.colasoft.opensearch.commons.rest.SecureRestClientBuilder
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.Terms
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
+import com.colasoft.opensearch.indexmanagement.transform.model.Transform
+import com.colasoft.opensearch.indexmanagement.transform.model.TransformMetadata
+import com.colasoft.opensearch.indexmanagement.transform.randomTransform
+import com.colasoft.opensearch.jobscheduler.spi.schedule.IntervalSchedule
+import com.colasoft.opensearch.rest.RestStatus
+import com.colasoft.opensearch.test.junit.annotations.TestLogging
 import java.time.Instant
 import java.time.temporal.ChronoUnit
 

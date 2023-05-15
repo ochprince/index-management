@@ -3,28 +3,28 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.step.rollover
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.rollover
 
 import org.apache.logging.log4j.LogManager
-import org.opensearch.ExceptionsHelper
-import org.opensearch.action.admin.indices.rollover.RolloverRequest
-import org.opensearch.action.admin.indices.rollover.RolloverResponse
-import org.opensearch.action.admin.indices.stats.IndicesStatsRequest
-import org.opensearch.action.admin.indices.stats.IndicesStatsResponse
-import org.opensearch.common.unit.ByteSizeValue
-import org.opensearch.common.unit.TimeValue
-import org.opensearch.indexmanagement.indexstatemanagement.action.RolloverAction
-import org.opensearch.indexmanagement.indexstatemanagement.opensearchapi.getRolloverAlias
-import org.opensearch.indexmanagement.indexstatemanagement.opensearchapi.getRolloverSkip
-import org.opensearch.indexmanagement.indexstatemanagement.util.evaluateConditions
-import org.opensearch.indexmanagement.opensearchapi.getUsefulCauseString
-import org.opensearch.indexmanagement.opensearchapi.suspendUntil
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Step
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StepMetaData
-import org.opensearch.rest.RestStatus
-import org.opensearch.transport.RemoteTransportException
+import com.colasoft.opensearch.ExceptionsHelper
+import com.colasoft.opensearch.action.admin.indices.rollover.RolloverRequest
+import com.colasoft.opensearch.action.admin.indices.rollover.RolloverResponse
+import com.colasoft.opensearch.action.admin.indices.stats.IndicesStatsRequest
+import com.colasoft.opensearch.action.admin.indices.stats.IndicesStatsResponse
+import com.colasoft.opensearch.common.unit.ByteSizeValue
+import com.colasoft.opensearch.common.unit.TimeValue
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.RolloverAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.opensearchapi.getRolloverAlias
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.opensearchapi.getRolloverSkip
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.evaluateConditions
+import com.colasoft.opensearch.indexmanagement.opensearchapi.getUsefulCauseString
+import com.colasoft.opensearch.indexmanagement.opensearchapi.suspendUntil
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Step
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StepMetaData
+import com.colasoft.opensearch.rest.RestStatus
+import com.colasoft.opensearch.transport.RemoteTransportException
 import java.time.Instant
 
 @Suppress("ReturnCount")

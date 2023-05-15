@@ -3,30 +3,30 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement
 
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.core.xcontent.XContentParser
-import org.opensearch.common.xcontent.XContentParserUtils
-import org.opensearch.indexmanagement.indexstatemanagement.action.AliasActionParser
-import org.opensearch.indexmanagement.indexstatemanagement.action.AllocationActionParser
-import org.opensearch.indexmanagement.indexstatemanagement.action.CloseActionParser
-import org.opensearch.indexmanagement.indexstatemanagement.action.DeleteActionParser
-import org.opensearch.indexmanagement.indexstatemanagement.action.ForceMergeActionParser
-import org.opensearch.indexmanagement.indexstatemanagement.action.IndexPriorityActionParser
-import org.opensearch.indexmanagement.indexstatemanagement.action.NotificationActionParser
-import org.opensearch.indexmanagement.indexstatemanagement.action.OpenActionParser
-import org.opensearch.indexmanagement.indexstatemanagement.action.ReadOnlyActionParser
-import org.opensearch.indexmanagement.indexstatemanagement.action.ReadWriteActionParser
-import org.opensearch.indexmanagement.indexstatemanagement.action.ReplicaCountActionParser
-import org.opensearch.indexmanagement.indexstatemanagement.action.RolloverActionParser
-import org.opensearch.indexmanagement.indexstatemanagement.action.RollupActionParser
-import org.opensearch.indexmanagement.indexstatemanagement.action.ShrinkActionParser
-import org.opensearch.indexmanagement.indexstatemanagement.action.SnapshotActionParser
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Action
-import org.opensearch.indexmanagement.spi.indexstatemanagement.ActionParser
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionRetry
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionTimeout
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.core.xcontent.XContentParser
+import com.colasoft.opensearch.common.xcontent.XContentParserUtils
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.AliasActionParser
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.AllocationActionParser
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.CloseActionParser
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.DeleteActionParser
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.ForceMergeActionParser
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.IndexPriorityActionParser
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.NotificationActionParser
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.OpenActionParser
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.ReadOnlyActionParser
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.ReadWriteActionParser
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.ReplicaCountActionParser
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.RolloverActionParser
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.RollupActionParser
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.ShrinkActionParser
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.SnapshotActionParser
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Action
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.ActionParser
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionRetry
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionTimeout
 
 class ISMActionsParser private constructor() {
 

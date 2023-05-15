@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup
+package com.colasoft.opensearch.indexmanagement.rollup
 
 import kotlinx.coroutines.CoroutineName
 import kotlinx.coroutines.CoroutineScope
@@ -11,41 +11,41 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 import org.apache.logging.log4j.LogManager
-import org.opensearch.action.ActionListener
-import org.opensearch.action.bulk.BackoffPolicy
-import org.opensearch.action.support.WriteRequest
-import org.opensearch.client.Client
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.settings.Settings
-import org.opensearch.common.unit.TimeValue
-import org.opensearch.core.xcontent.NamedXContentRegistry
-import org.opensearch.indexmanagement.indexstatemanagement.SkipExecution
-import org.opensearch.indexmanagement.opensearchapi.IndexManagementSecurityContext
-import org.opensearch.indexmanagement.opensearchapi.suspendUntil
-import org.opensearch.indexmanagement.opensearchapi.withClosableContext
-import org.opensearch.indexmanagement.rollup.action.get.GetRollupAction
-import org.opensearch.indexmanagement.rollup.action.get.GetRollupRequest
-import org.opensearch.indexmanagement.rollup.action.get.GetRollupResponse
-import org.opensearch.indexmanagement.rollup.action.index.IndexRollupAction
-import org.opensearch.indexmanagement.rollup.action.index.IndexRollupRequest
-import org.opensearch.indexmanagement.rollup.action.index.IndexRollupResponse
-import org.opensearch.indexmanagement.rollup.model.Rollup
-import org.opensearch.indexmanagement.rollup.model.RollupJobValidationResult
-import org.opensearch.indexmanagement.rollup.model.RollupMetadata
-import org.opensearch.indexmanagement.rollup.model.RollupStats
-import org.opensearch.indexmanagement.rollup.model.incrementStats
-import org.opensearch.indexmanagement.rollup.model.mergeStats
-import org.opensearch.indexmanagement.rollup.settings.RollupSettings
-import org.opensearch.indexmanagement.util.acquireLockForScheduledJob
-import org.opensearch.indexmanagement.util.releaseLockForScheduledJob
-import org.opensearch.indexmanagement.util.renewLockForScheduledJob
-import org.opensearch.jobscheduler.spi.JobExecutionContext
-import org.opensearch.jobscheduler.spi.LockModel
-import org.opensearch.jobscheduler.spi.ScheduledJobParameter
-import org.opensearch.jobscheduler.spi.ScheduledJobRunner
-import org.opensearch.script.ScriptService
-import org.opensearch.search.aggregations.bucket.composite.InternalComposite
-import org.opensearch.threadpool.ThreadPool
+import com.colasoft.opensearch.action.ActionListener
+import com.colasoft.opensearch.action.bulk.BackoffPolicy
+import com.colasoft.opensearch.action.support.WriteRequest
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.common.unit.TimeValue
+import com.colasoft.opensearch.core.xcontent.NamedXContentRegistry
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.SkipExecution
+import com.colasoft.opensearch.indexmanagement.opensearchapi.IndexManagementSecurityContext
+import com.colasoft.opensearch.indexmanagement.opensearchapi.suspendUntil
+import com.colasoft.opensearch.indexmanagement.opensearchapi.withClosableContext
+import com.colasoft.opensearch.indexmanagement.rollup.action.get.GetRollupAction
+import com.colasoft.opensearch.indexmanagement.rollup.action.get.GetRollupRequest
+import com.colasoft.opensearch.indexmanagement.rollup.action.get.GetRollupResponse
+import com.colasoft.opensearch.indexmanagement.rollup.action.index.IndexRollupAction
+import com.colasoft.opensearch.indexmanagement.rollup.action.index.IndexRollupRequest
+import com.colasoft.opensearch.indexmanagement.rollup.action.index.IndexRollupResponse
+import com.colasoft.opensearch.indexmanagement.rollup.model.Rollup
+import com.colasoft.opensearch.indexmanagement.rollup.model.RollupJobValidationResult
+import com.colasoft.opensearch.indexmanagement.rollup.model.RollupMetadata
+import com.colasoft.opensearch.indexmanagement.rollup.model.RollupStats
+import com.colasoft.opensearch.indexmanagement.rollup.model.incrementStats
+import com.colasoft.opensearch.indexmanagement.rollup.model.mergeStats
+import com.colasoft.opensearch.indexmanagement.rollup.settings.RollupSettings
+import com.colasoft.opensearch.indexmanagement.util.acquireLockForScheduledJob
+import com.colasoft.opensearch.indexmanagement.util.releaseLockForScheduledJob
+import com.colasoft.opensearch.indexmanagement.util.renewLockForScheduledJob
+import com.colasoft.opensearch.jobscheduler.spi.JobExecutionContext
+import com.colasoft.opensearch.jobscheduler.spi.LockModel
+import com.colasoft.opensearch.jobscheduler.spi.ScheduledJobParameter
+import com.colasoft.opensearch.jobscheduler.spi.ScheduledJobRunner
+import com.colasoft.opensearch.script.ScriptService
+import com.colasoft.opensearch.search.aggregations.bucket.composite.InternalComposite
+import com.colasoft.opensearch.threadpool.ThreadPool
 
 @Suppress("TooManyFunctions")
 object RollupRunner :

@@ -3,20 +3,20 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.step.shrink
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.shrink
 
-import org.opensearch.action.admin.indices.stats.IndicesStatsRequest
-import org.opensearch.action.admin.indices.stats.IndicesStatsResponse
-import org.opensearch.action.admin.indices.stats.ShardStats
-import org.opensearch.client.Client
-import org.opensearch.cluster.ClusterState
-import org.opensearch.indexmanagement.indexstatemanagement.action.ShrinkAction
-import org.opensearch.indexmanagement.indexstatemanagement.util.getActionStartTime
-import org.opensearch.indexmanagement.opensearchapi.suspendUntil
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionProperties
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StepMetaData
+import com.colasoft.opensearch.action.admin.indices.stats.IndicesStatsRequest
+import com.colasoft.opensearch.action.admin.indices.stats.IndicesStatsResponse
+import com.colasoft.opensearch.action.admin.indices.stats.ShardStats
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.cluster.ClusterState
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.ShrinkAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.getActionStartTime
+import com.colasoft.opensearch.indexmanagement.opensearchapi.suspendUntil
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionProperties
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StepMetaData
 import java.time.Duration
 import java.time.Instant
 

@@ -3,10 +3,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.transform.action.delete
+package com.colasoft.opensearch.indexmanagement.transform.action.delete
 
-import org.opensearch.action.ActionType
-import org.opensearch.action.bulk.BulkResponse
+import com.colasoft.opensearch.action.ActionType
+import com.colasoft.opensearch.action.bulk.BulkResponse
 
 class DeleteTransformsAction private constructor() : ActionType<BulkResponse>(NAME, ::BulkResponse) {
     companion object {

@@ -3,19 +3,19 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.resthandler
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.resthandler
 
-import org.opensearch.client.ResponseException
-import org.opensearch.cluster.metadata.IndexMetadata
-import org.opensearch.indexmanagement.indexstatemanagement.IndexStateManagementRestTestCase
-import org.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
-import org.opensearch.indexmanagement.indexstatemanagement.util.FAILED_INDICES
-import org.opensearch.indexmanagement.indexstatemanagement.util.FAILURES
-import org.opensearch.indexmanagement.indexstatemanagement.util.UPDATED_INDICES
-import org.opensearch.indexmanagement.makeRequest
-import org.opensearch.indexmanagement.waitFor
-import org.opensearch.rest.RestRequest.Method.POST
-import org.opensearch.rest.RestStatus
+import com.colasoft.opensearch.client.ResponseException
+import com.colasoft.opensearch.cluster.metadata.IndexMetadata
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.IndexStateManagementRestTestCase
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.FAILED_INDICES
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.FAILURES
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.UPDATED_INDICES
+import com.colasoft.opensearch.indexmanagement.makeRequest
+import com.colasoft.opensearch.indexmanagement.waitFor
+import com.colasoft.opensearch.rest.RestRequest.Method.POST
+import com.colasoft.opensearch.rest.RestStatus
 
 class RestRemovePolicyActionIT : IndexStateManagementRestTestCase() {
 

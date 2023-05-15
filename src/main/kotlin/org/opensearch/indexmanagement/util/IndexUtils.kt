@@ -3,23 +3,23 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.util
+package com.colasoft.opensearch.indexmanagement.util
 
 import org.apache.logging.log4j.LogManager
-import org.opensearch.action.ActionListener
-import org.opensearch.action.admin.indices.mapping.put.PutMappingRequest
-import org.opensearch.action.support.master.AcknowledgedResponse
-import org.opensearch.client.IndicesAdminClient
-import org.opensearch.cluster.ClusterState
-import org.opensearch.cluster.metadata.IndexAbstraction
-import org.opensearch.cluster.metadata.IndexMetadata
-import org.opensearch.common.hash.MurmurHash3
-import org.opensearch.common.xcontent.LoggingDeprecationHandler
-import org.opensearch.core.xcontent.NamedXContentRegistry
-import org.opensearch.core.xcontent.XContentParser.Token
-import org.opensearch.common.xcontent.XContentType
-import org.opensearch.indexmanagement.IndexManagementIndices
-import org.opensearch.indexmanagement.IndexManagementPlugin
+import com.colasoft.opensearch.action.ActionListener
+import com.colasoft.opensearch.action.admin.indices.mapping.put.PutMappingRequest
+import com.colasoft.opensearch.action.support.master.AcknowledgedResponse
+import com.colasoft.opensearch.client.IndicesAdminClient
+import com.colasoft.opensearch.cluster.ClusterState
+import com.colasoft.opensearch.cluster.metadata.IndexAbstraction
+import com.colasoft.opensearch.cluster.metadata.IndexMetadata
+import com.colasoft.opensearch.common.hash.MurmurHash3
+import com.colasoft.opensearch.common.xcontent.LoggingDeprecationHandler
+import com.colasoft.opensearch.core.xcontent.NamedXContentRegistry
+import com.colasoft.opensearch.core.xcontent.XContentParser.Token
+import com.colasoft.opensearch.common.xcontent.XContentType
+import com.colasoft.opensearch.indexmanagement.IndexManagementIndices
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin
 import java.nio.ByteBuffer
 import java.util.Base64
 

@@ -3,22 +3,22 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.snapshotmanagement.action
+package com.colasoft.opensearch.indexmanagement.snapshotmanagement.action
 
-import org.opensearch.common.io.stream.BytesStreamOutput
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.indexmanagement.indexstatemanagement.util.XCONTENT_WITHOUT_TYPE_AND_USER
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.explain.ExplainSMPolicyResponse
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.get.GetSMPoliciesResponse
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.get.GetSMPolicyResponse
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.index.IndexSMPolicyResponse
-import org.opensearch.indexmanagement.snapshotmanagement.model.ExplainSMPolicy
-import org.opensearch.indexmanagement.snapshotmanagement.randomSMMetadata
-import org.opensearch.indexmanagement.snapshotmanagement.randomSMPolicy
-import org.opensearch.indexmanagement.snapshotmanagement.smDocIdToPolicyName
-import org.opensearch.indexmanagement.snapshotmanagement.toMap
-import org.opensearch.rest.RestStatus
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.common.io.stream.BytesStreamOutput
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.XCONTENT_WITHOUT_TYPE_AND_USER
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.explain.ExplainSMPolicyResponse
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.get.GetSMPoliciesResponse
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.get.GetSMPolicyResponse
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.index.IndexSMPolicyResponse
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.model.ExplainSMPolicy
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.randomSMMetadata
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.randomSMPolicy
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.smDocIdToPolicyName
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.toMap
+import com.colasoft.opensearch.rest.RestStatus
+import com.colasoft.opensearch.test.OpenSearchTestCase
 
 class ResponseTests : OpenSearchTestCase() {
 

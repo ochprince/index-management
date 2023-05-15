@@ -3,14 +3,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.transport.action.deletepolicy
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.deletepolicy
 
-import org.opensearch.action.ActionRequest
-import org.opensearch.action.ActionRequestValidationException
-import org.opensearch.action.ValidateActions
-import org.opensearch.action.support.WriteRequest
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.common.io.stream.StreamOutput
+import com.colasoft.opensearch.action.ActionRequest
+import com.colasoft.opensearch.action.ActionRequestValidationException
+import com.colasoft.opensearch.action.ValidateActions
+import com.colasoft.opensearch.action.support.WriteRequest
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.common.io.stream.StreamOutput
 import java.io.IOException
 
 class DeletePolicyRequest(val policyID: String, val refreshPolicy: WriteRequest.RefreshPolicy) : ActionRequest() {

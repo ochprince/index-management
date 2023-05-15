@@ -3,24 +3,24 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.util
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.util
 
 import com.nhaarman.mockitokotlin2.mock
 import org.mockito.Mockito
-import org.opensearch.action.admin.cluster.node.stats.NodeStats
-import org.opensearch.cluster.routing.allocation.DiskThresholdSettings
-import org.opensearch.common.settings.ClusterSettings
-import org.opensearch.common.settings.Settings
-import org.opensearch.common.unit.ByteSizeValue
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
-import org.opensearch.indexmanagement.indexstatemanagement.randomByteSizeValue
-import org.opensearch.indexmanagement.randomInstant
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ShrinkActionProperties
-import org.opensearch.jobscheduler.spi.LockModel
-import org.opensearch.monitor.fs.FsInfo
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.action.admin.cluster.node.stats.NodeStats
+import com.colasoft.opensearch.cluster.routing.allocation.DiskThresholdSettings
+import com.colasoft.opensearch.common.settings.ClusterSettings
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.common.unit.ByteSizeValue
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomByteSizeValue
+import com.colasoft.opensearch.indexmanagement.randomInstant
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ShrinkActionProperties
+import com.colasoft.opensearch.jobscheduler.spi.LockModel
+import com.colasoft.opensearch.monitor.fs.FsInfo
+import com.colasoft.opensearch.test.OpenSearchTestCase
 
 class StepUtilsTests : OpenSearchTestCase() {
 

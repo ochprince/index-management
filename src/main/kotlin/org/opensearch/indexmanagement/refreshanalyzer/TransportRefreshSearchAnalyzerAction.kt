@@ -3,27 +3,27 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.refreshanalyzer
+package com.colasoft.opensearch.indexmanagement.refreshanalyzer
 
 import org.apache.logging.log4j.LogManager
-import org.opensearch.action.support.ActionFilters
-import org.opensearch.action.support.DefaultShardOperationFailedException
-import org.opensearch.action.support.broadcast.node.TransportBroadcastByNodeAction
-import org.opensearch.cluster.ClusterState
-import org.opensearch.cluster.block.ClusterBlockException
-import org.opensearch.cluster.block.ClusterBlockLevel
-import org.opensearch.cluster.metadata.IndexNameExpressionResolver
-import org.opensearch.cluster.routing.ShardRouting
-import org.opensearch.cluster.routing.ShardsIterator
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.inject.Inject
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.common.io.stream.Writeable
-import org.opensearch.index.analysis.AnalysisRegistry
-import org.opensearch.index.shard.IndexShard
-import org.opensearch.indices.IndicesService
-import org.opensearch.threadpool.ThreadPool
-import org.opensearch.transport.TransportService
+import com.colasoft.opensearch.action.support.ActionFilters
+import com.colasoft.opensearch.action.support.DefaultShardOperationFailedException
+import com.colasoft.opensearch.action.support.broadcast.node.TransportBroadcastByNodeAction
+import com.colasoft.opensearch.cluster.ClusterState
+import com.colasoft.opensearch.cluster.block.ClusterBlockException
+import com.colasoft.opensearch.cluster.block.ClusterBlockLevel
+import com.colasoft.opensearch.cluster.metadata.IndexNameExpressionResolver
+import com.colasoft.opensearch.cluster.routing.ShardRouting
+import com.colasoft.opensearch.cluster.routing.ShardsIterator
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.inject.Inject
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.common.io.stream.Writeable
+import com.colasoft.opensearch.index.analysis.AnalysisRegistry
+import com.colasoft.opensearch.index.shard.IndexShard
+import com.colasoft.opensearch.indices.IndicesService
+import com.colasoft.opensearch.threadpool.ThreadPool
+import com.colasoft.opensearch.transport.TransportService
 import java.io.IOException
 
 class TransportRefreshSearchAnalyzerAction :

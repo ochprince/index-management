@@ -3,15 +3,15 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.action
+package com.colasoft.opensearch.indexmanagement.rollup.action
 
-import org.opensearch.indexmanagement.rollup.action.delete.DeleteRollupAction
-import org.opensearch.indexmanagement.rollup.action.get.GetRollupAction
-import org.opensearch.indexmanagement.rollup.action.get.GetRollupsAction
-import org.opensearch.indexmanagement.rollup.action.index.IndexRollupAction
-import org.opensearch.indexmanagement.rollup.action.start.StartRollupAction
-import org.opensearch.indexmanagement.rollup.action.stop.StopRollupAction
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.indexmanagement.rollup.action.delete.DeleteRollupAction
+import com.colasoft.opensearch.indexmanagement.rollup.action.get.GetRollupAction
+import com.colasoft.opensearch.indexmanagement.rollup.action.get.GetRollupsAction
+import com.colasoft.opensearch.indexmanagement.rollup.action.index.IndexRollupAction
+import com.colasoft.opensearch.indexmanagement.rollup.action.start.StartRollupAction
+import com.colasoft.opensearch.indexmanagement.rollup.action.stop.StopRollupAction
+import com.colasoft.opensearch.test.OpenSearchTestCase
 
 class ActionTests : OpenSearchTestCase() {
 

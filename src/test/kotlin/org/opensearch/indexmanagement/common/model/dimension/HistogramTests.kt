@@ -3,12 +3,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.common.model.dimension
+package com.colasoft.opensearch.indexmanagement.common.model.dimension
 
 import org.junit.Assert
-import org.opensearch.index.query.RangeQueryBuilder
-import org.opensearch.indexmanagement.rollup.randomHistogram
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.index.query.RangeQueryBuilder
+import com.colasoft.opensearch.indexmanagement.rollup.randomHistogram
+import com.colasoft.opensearch.test.OpenSearchTestCase
 import kotlin.test.assertFailsWith
 
 class HistogramTests : OpenSearchTestCase() {

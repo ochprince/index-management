@@ -3,36 +3,36 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement
 
 import org.apache.logging.log4j.LogManager
-import org.opensearch.ExceptionsHelper
-import org.opensearch.action.ActionListener
-import org.opensearch.action.DocWriteRequest
-import org.opensearch.action.admin.cluster.settings.ClusterUpdateSettingsRequest
-import org.opensearch.action.admin.cluster.settings.ClusterUpdateSettingsResponse
-import org.opensearch.action.bulk.BackoffPolicy
-import org.opensearch.action.bulk.BulkItemResponse
-import org.opensearch.action.bulk.BulkRequest
-import org.opensearch.action.bulk.BulkResponse
-import org.opensearch.action.support.master.AcknowledgedResponse
-import org.opensearch.client.Client
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.settings.Settings
-import org.opensearch.common.unit.TimeValue
-import org.opensearch.index.Index
-import org.opensearch.indexmanagement.IndexManagementIndices
-import org.opensearch.indexmanagement.indexstatemanagement.opensearchapi.getManagedIndexMetadata
-import org.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
-import org.opensearch.indexmanagement.indexstatemanagement.transport.action.updateindexmetadata.UpdateManagedIndexMetaDataAction
-import org.opensearch.indexmanagement.indexstatemanagement.transport.action.updateindexmetadata.UpdateManagedIndexMetaDataRequest
-import org.opensearch.indexmanagement.indexstatemanagement.util.managedIndexMetadataIndexRequest
-import org.opensearch.indexmanagement.indexstatemanagement.util.revertManagedIndexMetadataID
-import org.opensearch.indexmanagement.opensearchapi.retry
-import org.opensearch.indexmanagement.opensearchapi.suspendUntil
-import org.opensearch.indexmanagement.util.IndexManagementException
-import org.opensearch.indexmanagement.util.OpenForTesting
-import org.opensearch.rest.RestStatus
+import com.colasoft.opensearch.ExceptionsHelper
+import com.colasoft.opensearch.action.ActionListener
+import com.colasoft.opensearch.action.DocWriteRequest
+import com.colasoft.opensearch.action.admin.cluster.settings.ClusterUpdateSettingsRequest
+import com.colasoft.opensearch.action.admin.cluster.settings.ClusterUpdateSettingsResponse
+import com.colasoft.opensearch.action.bulk.BackoffPolicy
+import com.colasoft.opensearch.action.bulk.BulkItemResponse
+import com.colasoft.opensearch.action.bulk.BulkRequest
+import com.colasoft.opensearch.action.bulk.BulkResponse
+import com.colasoft.opensearch.action.support.master.AcknowledgedResponse
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.common.unit.TimeValue
+import com.colasoft.opensearch.index.Index
+import com.colasoft.opensearch.indexmanagement.IndexManagementIndices
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.opensearchapi.getManagedIndexMetadata
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.updateindexmetadata.UpdateManagedIndexMetaDataAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.updateindexmetadata.UpdateManagedIndexMetaDataRequest
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.managedIndexMetadataIndexRequest
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.revertManagedIndexMetadataID
+import com.colasoft.opensearch.indexmanagement.opensearchapi.retry
+import com.colasoft.opensearch.indexmanagement.opensearchapi.suspendUntil
+import com.colasoft.opensearch.indexmanagement.util.IndexManagementException
+import com.colasoft.opensearch.indexmanagement.util.OpenForTesting
+import com.colasoft.opensearch.rest.RestStatus
 import java.lang.Exception
 
 /**

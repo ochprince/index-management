@@ -3,11 +3,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.model
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.model
 
-import org.opensearch.common.xcontent.XContentType
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionProperties
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.common.xcontent.XContentType
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionProperties
+import com.colasoft.opensearch.test.OpenSearchTestCase
 
 class ActionPropertiesTests : OpenSearchTestCase() {
 

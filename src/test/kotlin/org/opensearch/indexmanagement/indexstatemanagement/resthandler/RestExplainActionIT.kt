@@ -3,23 +3,23 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.resthandler
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.resthandler
 
-import org.opensearch.common.xcontent.XContentFactory
-import org.opensearch.indexmanagement.IndexManagementPlugin
-import org.opensearch.indexmanagement.indexstatemanagement.IndexStateManagementRestTestCase
-import org.opensearch.indexmanagement.indexstatemanagement.model.ChangePolicy
-import org.opensearch.indexmanagement.indexstatemanagement.util.SHOW_POLICY_QUERY_PARAM
-import org.opensearch.indexmanagement.indexstatemanagement.util.TOTAL_MANAGED_INDICES
-import org.opensearch.indexmanagement.indexstatemanagement.util.XCONTENT_WITHOUT_TYPE_AND_USER
-import org.opensearch.indexmanagement.makeRequest
-import org.opensearch.indexmanagement.opensearchapi.toMap
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.PolicyRetryInfoMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StateMetaData
-import org.opensearch.indexmanagement.waitFor
-import org.opensearch.rest.RestRequest
-import org.opensearch.rest.RestStatus
+import com.colasoft.opensearch.common.xcontent.XContentFactory
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.IndexStateManagementRestTestCase
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.ChangePolicy
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.SHOW_POLICY_QUERY_PARAM
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.TOTAL_MANAGED_INDICES
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.XCONTENT_WITHOUT_TYPE_AND_USER
+import com.colasoft.opensearch.indexmanagement.makeRequest
+import com.colasoft.opensearch.indexmanagement.opensearchapi.toMap
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.PolicyRetryInfoMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StateMetaData
+import com.colasoft.opensearch.indexmanagement.waitFor
+import com.colasoft.opensearch.rest.RestRequest
+import com.colasoft.opensearch.rest.RestStatus
 import java.time.Instant
 import java.util.Locale
 

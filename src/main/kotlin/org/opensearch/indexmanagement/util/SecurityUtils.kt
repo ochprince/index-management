@@ -3,17 +3,17 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.util
+package com.colasoft.opensearch.indexmanagement.util
 
-import org.opensearch.OpenSearchStatusException
-import org.opensearch.action.ActionListener
-import org.opensearch.common.util.concurrent.ThreadContext
-import org.opensearch.commons.ConfigConstants
-import org.opensearch.commons.authuser.User
-import org.opensearch.index.query.BoolQueryBuilder
-import org.opensearch.index.query.ExistsQueryBuilder
-import org.opensearch.index.query.TermsQueryBuilder
-import org.opensearch.rest.RestStatus
+import com.colasoft.opensearch.OpenSearchStatusException
+import com.colasoft.opensearch.action.ActionListener
+import com.colasoft.opensearch.common.util.concurrent.ThreadContext
+import com.colasoft.opensearch.commons.ConfigConstants
+import com.colasoft.opensearch.commons.authuser.User
+import com.colasoft.opensearch.index.query.BoolQueryBuilder
+import com.colasoft.opensearch.index.query.ExistsQueryBuilder
+import com.colasoft.opensearch.index.query.TermsQueryBuilder
+import com.colasoft.opensearch.rest.RestStatus
 
 @Suppress("ReturnCount", "UtilityClassWithPublicConstructor")
 class SecurityUtils {

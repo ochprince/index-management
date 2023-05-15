@@ -3,16 +3,16 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.common.model.dimension
+package com.colasoft.opensearch.indexmanagement.common.model.dimension
 
 import org.junit.Assert
-import org.opensearch.index.query.RangeQueryBuilder
-import org.opensearch.indexmanagement.randomInstant
-import org.opensearch.indexmanagement.rollup.randomCalendarDateHistogram
-import org.opensearch.indexmanagement.rollup.randomDateHistogram
-import org.opensearch.indexmanagement.rollup.randomFixedDateHistogram
-import org.opensearch.search.aggregations.bucket.histogram.DateHistogramInterval
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.index.query.RangeQueryBuilder
+import com.colasoft.opensearch.indexmanagement.randomInstant
+import com.colasoft.opensearch.indexmanagement.rollup.randomCalendarDateHistogram
+import com.colasoft.opensearch.indexmanagement.rollup.randomDateHistogram
+import com.colasoft.opensearch.indexmanagement.rollup.randomFixedDateHistogram
+import com.colasoft.opensearch.search.aggregations.bucket.histogram.DateHistogramInterval
+import com.colasoft.opensearch.test.OpenSearchTestCase
 import kotlin.test.assertFailsWith
 
 class DateHistogramTests : OpenSearchTestCase() {

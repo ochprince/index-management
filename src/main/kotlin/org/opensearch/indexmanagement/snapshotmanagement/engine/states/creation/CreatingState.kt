@@ -3,25 +3,25 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.snapshotmanagement.engine.states.creation
+package com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.creation
 
 import org.apache.logging.log4j.Logger
-import org.opensearch.ExceptionsHelper
-import org.opensearch.action.admin.cluster.snapshots.create.CreateSnapshotRequest
-import org.opensearch.action.admin.cluster.snapshots.create.CreateSnapshotResponse
-import org.opensearch.client.ClusterAdminClient
-import org.opensearch.indexmanagement.opensearchapi.suspendUntil
-import org.opensearch.indexmanagement.snapshotmanagement.engine.SMStateMachine
-import org.opensearch.indexmanagement.snapshotmanagement.generateSnapshotName
-import org.opensearch.indexmanagement.snapshotmanagement.addSMPolicyInSnapshotMetadata
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.SMResult
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.State
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.WorkflowType
-import org.opensearch.indexmanagement.snapshotmanagement.getSnapshots
-import org.opensearch.indexmanagement.snapshotmanagement.model.SMMetadata
-import org.opensearch.snapshots.ConcurrentSnapshotExecutionException
-import org.opensearch.snapshots.SnapshotInfo
-import org.opensearch.transport.RemoteTransportException
+import com.colasoft.opensearch.ExceptionsHelper
+import com.colasoft.opensearch.action.admin.cluster.snapshots.create.CreateSnapshotRequest
+import com.colasoft.opensearch.action.admin.cluster.snapshots.create.CreateSnapshotResponse
+import com.colasoft.opensearch.client.ClusterAdminClient
+import com.colasoft.opensearch.indexmanagement.opensearchapi.suspendUntil
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.SMStateMachine
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.generateSnapshotName
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.addSMPolicyInSnapshotMetadata
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.SMResult
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.State
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.WorkflowType
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.getSnapshots
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.model.SMMetadata
+import com.colasoft.opensearch.snapshots.ConcurrentSnapshotExecutionException
+import com.colasoft.opensearch.snapshots.SnapshotInfo
+import com.colasoft.opensearch.transport.RemoteTransportException
 import java.time.Instant
 
 object CreatingState : State {

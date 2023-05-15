@@ -3,20 +3,20 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.snapshotmanagement.resthandler
+package com.colasoft.opensearch.indexmanagement.snapshotmanagement.resthandler
 
 import org.apache.http.HttpHeaders
 import org.apache.http.message.BasicHeader
-import org.opensearch.client.ResponseException
-import org.opensearch.indexmanagement.IndexManagementPlugin
-import org.opensearch.indexmanagement.makeRequest
-import org.opensearch.indexmanagement.opensearchapi.convertToMap
-import org.opensearch.indexmanagement.snapshotmanagement.SnapshotManagementRestTestCase
-import org.opensearch.indexmanagement.snapshotmanagement.model.SMPolicy
-import org.opensearch.indexmanagement.snapshotmanagement.model.SMPolicy.Companion.ENABLED_TIME_FIELD
-import org.opensearch.indexmanagement.snapshotmanagement.model.SMPolicy.Companion.SM_TYPE
-import org.opensearch.indexmanagement.snapshotmanagement.randomSMPolicy
-import org.opensearch.rest.RestStatus
+import com.colasoft.opensearch.client.ResponseException
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin
+import com.colasoft.opensearch.indexmanagement.makeRequest
+import com.colasoft.opensearch.indexmanagement.opensearchapi.convertToMap
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.SnapshotManagementRestTestCase
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.model.SMPolicy
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.model.SMPolicy.Companion.ENABLED_TIME_FIELD
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.model.SMPolicy.Companion.SM_TYPE
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.randomSMPolicy
+import com.colasoft.opensearch.rest.RestStatus
 
 class RestGetSnapshotManagementIT : SnapshotManagementRestTestCase() {
 

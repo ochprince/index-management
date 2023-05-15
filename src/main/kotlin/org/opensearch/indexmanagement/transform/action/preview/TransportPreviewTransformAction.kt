@@ -3,31 +3,31 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.transform.action.preview
+package com.colasoft.opensearch.indexmanagement.transform.action.preview
 
 import org.apache.logging.log4j.LogManager
-import org.opensearch.ExceptionsHelper
-import org.opensearch.OpenSearchStatusException
-import org.opensearch.action.ActionListener
-import org.opensearch.action.admin.indices.mapping.get.GetMappingsAction
-import org.opensearch.action.admin.indices.mapping.get.GetMappingsRequest
-import org.opensearch.action.admin.indices.mapping.get.GetMappingsResponse
-import org.opensearch.action.search.SearchRequest
-import org.opensearch.action.search.SearchResponse
-import org.opensearch.action.support.ActionFilters
-import org.opensearch.action.support.HandledTransportAction
-import org.opensearch.action.support.IndicesOptions
-import org.opensearch.client.Client
-import org.opensearch.cluster.metadata.IndexNameExpressionResolver
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.inject.Inject
-import org.opensearch.commons.ConfigConstants
-import org.opensearch.indexmanagement.transform.TransformSearchService
-import org.opensearch.indexmanagement.transform.TransformValidator
-import org.opensearch.indexmanagement.transform.model.Transform
-import org.opensearch.rest.RestStatus
-import org.opensearch.tasks.Task
-import org.opensearch.transport.TransportService
+import com.colasoft.opensearch.ExceptionsHelper
+import com.colasoft.opensearch.OpenSearchStatusException
+import com.colasoft.opensearch.action.ActionListener
+import com.colasoft.opensearch.action.admin.indices.mapping.get.GetMappingsAction
+import com.colasoft.opensearch.action.admin.indices.mapping.get.GetMappingsRequest
+import com.colasoft.opensearch.action.admin.indices.mapping.get.GetMappingsResponse
+import com.colasoft.opensearch.action.search.SearchRequest
+import com.colasoft.opensearch.action.search.SearchResponse
+import com.colasoft.opensearch.action.support.ActionFilters
+import com.colasoft.opensearch.action.support.HandledTransportAction
+import com.colasoft.opensearch.action.support.IndicesOptions
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.cluster.metadata.IndexNameExpressionResolver
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.inject.Inject
+import com.colasoft.opensearch.commons.ConfigConstants
+import com.colasoft.opensearch.indexmanagement.transform.TransformSearchService
+import com.colasoft.opensearch.indexmanagement.transform.TransformValidator
+import com.colasoft.opensearch.indexmanagement.transform.model.Transform
+import com.colasoft.opensearch.rest.RestStatus
+import com.colasoft.opensearch.tasks.Task
+import com.colasoft.opensearch.transport.TransportService
 
 class TransportPreviewTransformAction @Inject constructor(
     transportService: TransportService,

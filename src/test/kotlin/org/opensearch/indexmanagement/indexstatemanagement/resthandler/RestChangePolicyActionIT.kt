@@ -3,37 +3,37 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.resthandler
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.resthandler
 
 import org.junit.Before
-import org.opensearch.client.ResponseException
-import org.opensearch.common.settings.Settings
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
-import org.opensearch.indexmanagement.indexstatemanagement.IndexStateManagementRestTestCase
-import org.opensearch.indexmanagement.indexstatemanagement.action.DeleteAction
-import org.opensearch.indexmanagement.indexstatemanagement.action.OpenAction
-import org.opensearch.indexmanagement.indexstatemanagement.action.ReadOnlyAction
-import org.opensearch.indexmanagement.indexstatemanagement.action.RolloverAction
-import org.opensearch.indexmanagement.indexstatemanagement.action.TransitionsAction
-import org.opensearch.indexmanagement.indexstatemanagement.model.ChangePolicy
-import org.opensearch.indexmanagement.indexstatemanagement.model.ManagedIndexConfig
-import org.opensearch.indexmanagement.indexstatemanagement.model.StateFilter
-import org.opensearch.indexmanagement.indexstatemanagement.model.Transition
-import org.opensearch.indexmanagement.indexstatemanagement.randomPolicy
-import org.opensearch.indexmanagement.indexstatemanagement.randomReplicaCountActionConfig
-import org.opensearch.indexmanagement.indexstatemanagement.randomState
-import org.opensearch.indexmanagement.indexstatemanagement.resthandler.RestChangePolicyAction.Companion.INDEX_NOT_MANAGED
-import org.opensearch.indexmanagement.indexstatemanagement.step.rollover.AttemptRolloverStep
-import org.opensearch.indexmanagement.indexstatemanagement.util.FAILED_INDICES
-import org.opensearch.indexmanagement.indexstatemanagement.util.FAILURES
-import org.opensearch.indexmanagement.indexstatemanagement.util.UPDATED_INDICES
-import org.opensearch.indexmanagement.makeRequest
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StateMetaData
-import org.opensearch.indexmanagement.waitFor
-import org.opensearch.rest.RestRequest
-import org.opensearch.rest.RestStatus
+import com.colasoft.opensearch.client.ResponseException
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.IndexStateManagementRestTestCase
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.DeleteAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.OpenAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.ReadOnlyAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.RolloverAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.TransitionsAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.ChangePolicy
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.ManagedIndexConfig
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.StateFilter
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.Transition
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomPolicy
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomReplicaCountActionConfig
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomState
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.resthandler.RestChangePolicyAction.Companion.INDEX_NOT_MANAGED
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.rollover.AttemptRolloverStep
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.FAILED_INDICES
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.FAILURES
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.UPDATED_INDICES
+import com.colasoft.opensearch.indexmanagement.makeRequest
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StateMetaData
+import com.colasoft.opensearch.indexmanagement.waitFor
+import com.colasoft.opensearch.rest.RestRequest
+import com.colasoft.opensearch.rest.RestStatus
 import java.time.Instant
 import java.util.Locale
 

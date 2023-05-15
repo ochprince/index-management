@@ -3,10 +3,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.spi.indexstatemanagement
+package com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement
 
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.core.xcontent.XContentParser
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.core.xcontent.XContentParser
 
 abstract class ActionParser(var customAction: Boolean = false) {
 

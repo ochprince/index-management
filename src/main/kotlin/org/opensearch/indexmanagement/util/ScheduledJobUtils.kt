@@ -3,29 +3,29 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.util
+package com.colasoft.opensearch.indexmanagement.util
 
-import org.opensearch.ExceptionsHelper
-import org.opensearch.OpenSearchStatusException
-import org.opensearch.action.ActionListener
-import org.opensearch.action.ActionResponse
-import org.opensearch.action.search.SearchRequest
-import org.opensearch.action.search.SearchResponse
-import org.opensearch.client.Client
-import org.opensearch.common.bytes.BytesReference
-import org.opensearch.common.xcontent.LoggingDeprecationHandler
-import org.opensearch.core.xcontent.NamedXContentRegistry
-import org.opensearch.common.xcontent.XContentHelper
-import org.opensearch.core.xcontent.XContentParser
-import org.opensearch.common.xcontent.XContentType
-import org.opensearch.indexmanagement.IndexManagementPlugin
-import org.opensearch.indexmanagement.opensearchapi.parseWithType
-import org.opensearch.indexmanagement.rollup.action.get.GetRollupsResponse
-import org.opensearch.indexmanagement.rollup.model.Rollup
-import org.opensearch.indexmanagement.transform.action.get.GetTransformsResponse
-import org.opensearch.indexmanagement.transform.model.Transform
-import org.opensearch.rest.RestStatus
-import org.opensearch.search.builder.SearchSourceBuilder
+import com.colasoft.opensearch.ExceptionsHelper
+import com.colasoft.opensearch.OpenSearchStatusException
+import com.colasoft.opensearch.action.ActionListener
+import com.colasoft.opensearch.action.ActionResponse
+import com.colasoft.opensearch.action.search.SearchRequest
+import com.colasoft.opensearch.action.search.SearchResponse
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.common.bytes.BytesReference
+import com.colasoft.opensearch.common.xcontent.LoggingDeprecationHandler
+import com.colasoft.opensearch.core.xcontent.NamedXContentRegistry
+import com.colasoft.opensearch.common.xcontent.XContentHelper
+import com.colasoft.opensearch.core.xcontent.XContentParser
+import com.colasoft.opensearch.common.xcontent.XContentType
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin
+import com.colasoft.opensearch.indexmanagement.opensearchapi.parseWithType
+import com.colasoft.opensearch.indexmanagement.rollup.action.get.GetRollupsResponse
+import com.colasoft.opensearch.indexmanagement.rollup.model.Rollup
+import com.colasoft.opensearch.indexmanagement.transform.action.get.GetTransformsResponse
+import com.colasoft.opensearch.indexmanagement.transform.model.Transform
+import com.colasoft.opensearch.rest.RestStatus
+import com.colasoft.opensearch.search.builder.SearchSourceBuilder
 
 fun getJobs(
     client: Client,

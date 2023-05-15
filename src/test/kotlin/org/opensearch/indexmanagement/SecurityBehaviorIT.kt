@@ -9,15 +9,15 @@
  * GitHub history for details.
  */
 
-package org.opensearch.indexmanagement
+package com.colasoft.opensearch.indexmanagement
 
 import org.junit.After
 import org.junit.Before
-import org.opensearch.client.RestClient
-import org.opensearch.commons.rest.SecureRestClientBuilder
-import org.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
-import org.opensearch.rest.RestStatus
-import org.opensearch.test.junit.annotations.TestLogging
+import com.colasoft.opensearch.client.RestClient
+import com.colasoft.opensearch.commons.rest.SecureRestClientBuilder
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
+import com.colasoft.opensearch.rest.RestStatus
+import com.colasoft.opensearch.test.junit.annotations.TestLogging
 
 @TestLogging("level:DEBUG", reason = "Debug for tests.")
 class SecurityBehaviorIT : SecurityRestTestCase() {

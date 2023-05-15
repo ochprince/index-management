@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.step
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.step
 
 import com.nhaarman.mockitokotlin2.any
 import com.nhaarman.mockitokotlin2.doReturn
@@ -11,21 +11,21 @@ import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.whenever
 import kotlinx.coroutines.runBlocking
 import org.mockito.Mockito.doAnswer
-import org.opensearch.action.ActionListener
-import org.opensearch.action.support.master.AcknowledgedResponse
-import org.opensearch.client.AdminClient
-import org.opensearch.client.Client
-import org.opensearch.client.IndicesAdminClient
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.settings.Settings
-import org.opensearch.indexmanagement.indexstatemanagement.step.delete.AttemptDeleteStep
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Step
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
-import org.opensearch.jobscheduler.spi.utils.LockService
-import org.opensearch.script.ScriptService
-import org.opensearch.snapshots.SnapshotInProgressException
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.action.ActionListener
+import com.colasoft.opensearch.action.support.master.AcknowledgedResponse
+import com.colasoft.opensearch.client.AdminClient
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.client.IndicesAdminClient
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.delete.AttemptDeleteStep
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Step
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
+import com.colasoft.opensearch.jobscheduler.spi.utils.LockService
+import com.colasoft.opensearch.script.ScriptService
+import com.colasoft.opensearch.snapshots.SnapshotInProgressException
+import com.colasoft.opensearch.test.OpenSearchTestCase
 
 class AttemptDeleteStepTests : OpenSearchTestCase() {
 

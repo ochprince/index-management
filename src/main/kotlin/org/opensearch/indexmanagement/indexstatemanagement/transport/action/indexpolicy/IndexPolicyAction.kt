@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.transport.action.indexpolicy
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.indexpolicy
 
-import org.opensearch.action.ActionType
+import com.colasoft.opensearch.action.ActionType
 
 class IndexPolicyAction private constructor() : ActionType<IndexPolicyResponse>(NAME, ::IndexPolicyResponse) {
     companion object {

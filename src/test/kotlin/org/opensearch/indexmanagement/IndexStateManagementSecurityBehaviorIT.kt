@@ -9,32 +9,32 @@
  * GitHub history for details.
  */
 
-package org.opensearch.indexmanagement
+package com.colasoft.opensearch.indexmanagement
 
 import org.junit.After
 import org.junit.Before
-import org.opensearch.client.RestClient
-import org.opensearch.commons.rest.SecureRestClientBuilder
-import org.opensearch.indexmanagement.common.model.dimension.DateHistogram
-import org.opensearch.indexmanagement.common.model.dimension.Terms
-import org.opensearch.indexmanagement.indexstatemanagement.action.RollupAction
-import org.opensearch.indexmanagement.indexstatemanagement.model.ISMTemplate
-import org.opensearch.indexmanagement.indexstatemanagement.model.Policy
-import org.opensearch.indexmanagement.indexstatemanagement.model.State
-import org.opensearch.indexmanagement.indexstatemanagement.randomErrorNotification
-import org.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
-import org.opensearch.indexmanagement.indexstatemanagement.step.rollup.AttemptCreateRollupJobStep
-import org.opensearch.indexmanagement.indexstatemanagement.step.rollup.WaitForRollupCompletionStep
-import org.opensearch.indexmanagement.rollup.model.ISMRollup
-import org.opensearch.indexmanagement.rollup.model.RollupMetadata
-import org.opensearch.indexmanagement.rollup.model.RollupMetrics
-import org.opensearch.indexmanagement.rollup.model.metric.Average
-import org.opensearch.indexmanagement.rollup.model.metric.Max
-import org.opensearch.indexmanagement.rollup.model.metric.Min
-import org.opensearch.indexmanagement.rollup.model.metric.Sum
-import org.opensearch.indexmanagement.rollup.model.metric.ValueCount
-import org.opensearch.rest.RestStatus
-import org.opensearch.test.junit.annotations.TestLogging
+import com.colasoft.opensearch.client.RestClient
+import com.colasoft.opensearch.commons.rest.SecureRestClientBuilder
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.DateHistogram
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.Terms
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.RollupAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.ISMTemplate
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.Policy
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.State
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomErrorNotification
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.rollup.AttemptCreateRollupJobStep
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.rollup.WaitForRollupCompletionStep
+import com.colasoft.opensearch.indexmanagement.rollup.model.ISMRollup
+import com.colasoft.opensearch.indexmanagement.rollup.model.RollupMetadata
+import com.colasoft.opensearch.indexmanagement.rollup.model.RollupMetrics
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.Average
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.Max
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.Min
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.Sum
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.ValueCount
+import com.colasoft.opensearch.rest.RestStatus
+import com.colasoft.opensearch.test.junit.annotations.TestLogging
 import java.time.Instant
 import java.time.temporal.ChronoUnit
 import java.util.Locale

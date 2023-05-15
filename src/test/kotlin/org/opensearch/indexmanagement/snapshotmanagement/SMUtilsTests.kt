@@ -3,12 +3,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.snapshotmanagement
+package com.colasoft.opensearch.indexmanagement.snapshotmanagement
 
-import org.opensearch.indexmanagement.opensearchapi.parseWithType
-import org.opensearch.indexmanagement.randomCronSchedule
-import org.opensearch.indexmanagement.snapshotmanagement.model.SMPolicy
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.indexmanagement.opensearchapi.parseWithType
+import com.colasoft.opensearch.indexmanagement.randomCronSchedule
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.model.SMPolicy
+import com.colasoft.opensearch.test.OpenSearchTestCase
 import java.time.Instant.now
 import kotlin.test.assertFailsWith
 

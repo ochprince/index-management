@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.util
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.util
 
 /**
  * Temporary import from alerting, this will be removed once we pull notifications out of

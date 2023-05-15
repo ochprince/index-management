@@ -3,20 +3,20 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.transform.model
+package com.colasoft.opensearch.indexmanagement.transform.model
 
-import org.opensearch.common.settings.Settings
-import org.opensearch.common.xcontent.LoggingDeprecationHandler
-import org.opensearch.core.xcontent.NamedXContentRegistry
-import org.opensearch.core.xcontent.XContentParser
-import org.opensearch.common.xcontent.XContentType
-import org.opensearch.indexmanagement.indexstatemanagement.util.XCONTENT_WITHOUT_TYPE
-import org.opensearch.indexmanagement.opensearchapi.parseWithType
-import org.opensearch.indexmanagement.transform.randomTransform
-import org.opensearch.indexmanagement.transform.randomTransformMetadata
-import org.opensearch.indexmanagement.transform.toJsonString
-import org.opensearch.search.SearchModule
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.common.xcontent.LoggingDeprecationHandler
+import com.colasoft.opensearch.core.xcontent.NamedXContentRegistry
+import com.colasoft.opensearch.core.xcontent.XContentParser
+import com.colasoft.opensearch.common.xcontent.XContentType
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.XCONTENT_WITHOUT_TYPE
+import com.colasoft.opensearch.indexmanagement.opensearchapi.parseWithType
+import com.colasoft.opensearch.indexmanagement.transform.randomTransform
+import com.colasoft.opensearch.indexmanagement.transform.randomTransformMetadata
+import com.colasoft.opensearch.indexmanagement.transform.toJsonString
+import com.colasoft.opensearch.search.SearchModule
+import com.colasoft.opensearch.test.OpenSearchTestCase
 
 class XContentTests : OpenSearchTestCase() {
 

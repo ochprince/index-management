@@ -3,40 +3,40 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement
 
 import org.apache.logging.log4j.LogManager
-import org.opensearch.action.ActionListener
-import org.opensearch.action.DocWriteRequest
-import org.opensearch.action.admin.cluster.state.ClusterStateRequest
-import org.opensearch.action.admin.cluster.state.ClusterStateResponse
-import org.opensearch.action.admin.indices.delete.DeleteIndexRequest
-import org.opensearch.action.admin.indices.rollover.RolloverRequest
-import org.opensearch.action.admin.indices.rollover.RolloverResponse
-import org.opensearch.action.bulk.BulkRequest
-import org.opensearch.action.bulk.BulkResponse
-import org.opensearch.action.index.IndexRequest
-import org.opensearch.action.support.IndicesOptions
-import org.opensearch.action.support.master.AcknowledgedResponse
-import org.opensearch.client.Client
-import org.opensearch.cluster.LocalNodeClusterManagerListener
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.settings.Settings
-import org.opensearch.core.xcontent.ToXContent
-import org.opensearch.common.xcontent.XContentFactory
-import org.opensearch.indexmanagement.IndexManagementIndices
-import org.opensearch.indexmanagement.IndexManagementPlugin
-import org.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
-import org.opensearch.indexmanagement.indexstatemanagement.util.INDEX_HIDDEN
-import org.opensearch.indexmanagement.indexstatemanagement.util.INDEX_NUMBER_OF_REPLICAS
-import org.opensearch.indexmanagement.indexstatemanagement.util.INDEX_NUMBER_OF_SHARDS
-import org.opensearch.indexmanagement.opensearchapi.OPENDISTRO_SECURITY_PROTECTED_INDICES_CONF_REQUEST
-import org.opensearch.indexmanagement.opensearchapi.suspendUntil
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Step
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
-import org.opensearch.indexmanagement.util.OpenForTesting
-import org.opensearch.threadpool.Scheduler
-import org.opensearch.threadpool.ThreadPool
+import com.colasoft.opensearch.action.ActionListener
+import com.colasoft.opensearch.action.DocWriteRequest
+import com.colasoft.opensearch.action.admin.cluster.state.ClusterStateRequest
+import com.colasoft.opensearch.action.admin.cluster.state.ClusterStateResponse
+import com.colasoft.opensearch.action.admin.indices.delete.DeleteIndexRequest
+import com.colasoft.opensearch.action.admin.indices.rollover.RolloverRequest
+import com.colasoft.opensearch.action.admin.indices.rollover.RolloverResponse
+import com.colasoft.opensearch.action.bulk.BulkRequest
+import com.colasoft.opensearch.action.bulk.BulkResponse
+import com.colasoft.opensearch.action.index.IndexRequest
+import com.colasoft.opensearch.action.support.IndicesOptions
+import com.colasoft.opensearch.action.support.master.AcknowledgedResponse
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.cluster.LocalNodeClusterManagerListener
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.core.xcontent.ToXContent
+import com.colasoft.opensearch.common.xcontent.XContentFactory
+import com.colasoft.opensearch.indexmanagement.IndexManagementIndices
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.INDEX_HIDDEN
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.INDEX_NUMBER_OF_REPLICAS
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.INDEX_NUMBER_OF_SHARDS
+import com.colasoft.opensearch.indexmanagement.opensearchapi.OPENDISTRO_SECURITY_PROTECTED_INDICES_CONF_REQUEST
+import com.colasoft.opensearch.indexmanagement.opensearchapi.suspendUntil
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Step
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.indexmanagement.util.OpenForTesting
+import com.colasoft.opensearch.threadpool.Scheduler
+import com.colasoft.opensearch.threadpool.ThreadPool
 import java.time.Instant
 
 @OpenForTesting

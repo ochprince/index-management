@@ -3,11 +3,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.actionfilter
+package com.colasoft.opensearch.indexmanagement.rollup.actionfilter
 
-import org.opensearch.action.fieldcaps.FieldCapabilitiesResponse
-import org.opensearch.indexmanagement.rollup.randomISMFieldCaps
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.action.fieldcaps.FieldCapabilitiesResponse
+import com.colasoft.opensearch.indexmanagement.rollup.randomISMFieldCaps
+import com.colasoft.opensearch.test.OpenSearchTestCase
 
 class SerDeTests : OpenSearchTestCase() {
 

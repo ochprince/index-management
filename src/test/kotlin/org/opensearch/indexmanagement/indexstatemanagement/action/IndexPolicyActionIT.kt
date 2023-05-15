@@ -3,21 +3,21 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.action
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.action
 
 import org.apache.http.entity.ContentType
 import org.apache.http.entity.StringEntity
 import org.junit.Assert
-import org.opensearch.client.ResponseException
-import org.opensearch.cluster.routing.allocation.AwarenessReplicaBalance
-import org.opensearch.cluster.routing.allocation.decider.AwarenessAllocationDecider
-import org.opensearch.indexmanagement.IndexManagementPlugin
-import org.opensearch.indexmanagement.indexstatemanagement.IndexStateManagementRestTestCase
-import org.opensearch.indexmanagement.indexstatemanagement.model.Policy
-import org.opensearch.indexmanagement.indexstatemanagement.model.State
-import org.opensearch.indexmanagement.indexstatemanagement.randomErrorNotification
-import org.opensearch.indexmanagement.indexstatemanagement.toJsonString
-import org.opensearch.indexmanagement.makeRequest
+import com.colasoft.opensearch.client.ResponseException
+import com.colasoft.opensearch.cluster.routing.allocation.AwarenessReplicaBalance
+import com.colasoft.opensearch.cluster.routing.allocation.decider.AwarenessAllocationDecider
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.IndexStateManagementRestTestCase
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.Policy
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.State
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomErrorNotification
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.toJsonString
+import com.colasoft.opensearch.indexmanagement.makeRequest
 import java.time.Instant
 import java.time.temporal.ChronoUnit
 import java.util.Locale

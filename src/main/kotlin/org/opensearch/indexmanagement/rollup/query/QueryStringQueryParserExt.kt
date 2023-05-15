@@ -3,12 +3,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.query
+package com.colasoft.opensearch.indexmanagement.rollup.query
 
 import org.apache.lucene.search.Query
-import org.opensearch.common.regex.Regex
-import org.opensearch.index.query.QueryShardContext
-import org.opensearch.index.search.QueryStringQueryParser
+import com.colasoft.opensearch.common.regex.Regex
+import com.colasoft.opensearch.index.query.QueryShardContext
+import com.colasoft.opensearch.index.search.QueryStringQueryParser
 
 const val EXISTS = "_exists_"
 

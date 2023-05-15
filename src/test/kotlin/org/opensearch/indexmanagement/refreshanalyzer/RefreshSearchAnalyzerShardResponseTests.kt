@@ -3,13 +3,13 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.refreshanalyzer
+package com.colasoft.opensearch.indexmanagement.refreshanalyzer
 
 import org.junit.Assert
-import org.opensearch.common.io.stream.BytesStreamOutput
-import org.opensearch.index.Index
-import org.opensearch.index.shard.ShardId
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.common.io.stream.BytesStreamOutput
+import com.colasoft.opensearch.index.Index
+import com.colasoft.opensearch.index.shard.ShardId
+import com.colasoft.opensearch.test.OpenSearchTestCase
 
 class RefreshSearchAnalyzerShardResponseTests : OpenSearchTestCase() {
 

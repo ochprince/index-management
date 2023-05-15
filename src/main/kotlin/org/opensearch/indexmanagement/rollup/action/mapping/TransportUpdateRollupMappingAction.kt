@@ -3,33 +3,33 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.action.mapping
+package com.colasoft.opensearch.indexmanagement.rollup.action.mapping
 
 import org.apache.logging.log4j.LogManager
-import org.opensearch.action.ActionListener
-import org.opensearch.action.admin.indices.mapping.put.PutMappingRequest
-import org.opensearch.action.support.ActionFilters
-import org.opensearch.action.support.clustermanager.TransportClusterManagerNodeAction
-import org.opensearch.action.support.master.AcknowledgedResponse
-import org.opensearch.client.Client
-import org.opensearch.cluster.ClusterState
-import org.opensearch.cluster.block.ClusterBlockException
-import org.opensearch.cluster.block.ClusterBlockLevel
-import org.opensearch.cluster.metadata.IndexNameExpressionResolver
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.bytes.BytesReference
-import org.opensearch.common.inject.Inject
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.common.io.stream.Writeable
-import org.opensearch.core.xcontent.MediaType
-import org.opensearch.common.xcontent.XContentFactory
-import org.opensearch.common.xcontent.XContentHelper
-import org.opensearch.common.xcontent.XContentType
-import org.opensearch.indexmanagement.indexstatemanagement.util.XCONTENT_WITHOUT_TYPE
-import org.opensearch.indexmanagement.rollup.util.RollupFieldValueExpressionResolver
-import org.opensearch.indexmanagement.util.IndexUtils.Companion._META
-import org.opensearch.threadpool.ThreadPool
-import org.opensearch.transport.TransportService
+import com.colasoft.opensearch.action.ActionListener
+import com.colasoft.opensearch.action.admin.indices.mapping.put.PutMappingRequest
+import com.colasoft.opensearch.action.support.ActionFilters
+import com.colasoft.opensearch.action.support.clustermanager.TransportClusterManagerNodeAction
+import com.colasoft.opensearch.action.support.master.AcknowledgedResponse
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.cluster.ClusterState
+import com.colasoft.opensearch.cluster.block.ClusterBlockException
+import com.colasoft.opensearch.cluster.block.ClusterBlockLevel
+import com.colasoft.opensearch.cluster.metadata.IndexNameExpressionResolver
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.bytes.BytesReference
+import com.colasoft.opensearch.common.inject.Inject
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.common.io.stream.Writeable
+import com.colasoft.opensearch.core.xcontent.MediaType
+import com.colasoft.opensearch.common.xcontent.XContentFactory
+import com.colasoft.opensearch.common.xcontent.XContentHelper
+import com.colasoft.opensearch.common.xcontent.XContentType
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.XCONTENT_WITHOUT_TYPE
+import com.colasoft.opensearch.indexmanagement.rollup.util.RollupFieldValueExpressionResolver
+import com.colasoft.opensearch.indexmanagement.util.IndexUtils.Companion._META
+import com.colasoft.opensearch.threadpool.ThreadPool
+import com.colasoft.opensearch.transport.TransportService
 import java.lang.Exception
 
 class TransportUpdateRollupMappingAction @Inject constructor(

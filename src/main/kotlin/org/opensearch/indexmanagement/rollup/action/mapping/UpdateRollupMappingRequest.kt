@@ -3,13 +3,13 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.action.mapping
+package com.colasoft.opensearch.indexmanagement.rollup.action.mapping
 
-import org.opensearch.action.ActionRequestValidationException
-import org.opensearch.action.support.master.AcknowledgedRequest
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.common.io.stream.StreamOutput
-import org.opensearch.indexmanagement.rollup.model.Rollup
+import com.colasoft.opensearch.action.ActionRequestValidationException
+import com.colasoft.opensearch.action.support.master.AcknowledgedRequest
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.common.io.stream.StreamOutput
+import com.colasoft.opensearch.indexmanagement.rollup.model.Rollup
 
 class UpdateRollupMappingRequest : AcknowledgedRequest<UpdateRollupMappingRequest> {
     val rollup: Rollup

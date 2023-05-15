@@ -3,6 +3,6 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.util
+package com.colasoft.opensearch.indexmanagement.util
 
 annotation class OpenForTesting

@@ -3,28 +3,28 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.snapshotmanagement.api.resthandler
+package com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.resthandler
 
-import org.opensearch.action.support.WriteRequest
-import org.opensearch.client.node.NodeClient
-import org.opensearch.core.xcontent.ToXContent
-import org.opensearch.index.seqno.SequenceNumbers
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.SM_POLICIES_URI
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.index.IndexSMPolicyRequest
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.index.IndexSMPolicyResponse
-import org.opensearch.indexmanagement.snapshotmanagement.model.SMPolicy
-import org.opensearch.indexmanagement.snapshotmanagement.smPolicyNameToDocId
-import org.opensearch.indexmanagement.snapshotmanagement.util.getValidSMPolicyName
-import org.opensearch.indexmanagement.util.IF_PRIMARY_TERM
-import org.opensearch.indexmanagement.util.IF_SEQ_NO
-import org.opensearch.indexmanagement.util.REFRESH
-import org.opensearch.rest.BaseRestHandler
-import org.opensearch.rest.BytesRestResponse
-import org.opensearch.rest.RestRequest
-import org.opensearch.rest.RestResponse
-import org.opensearch.rest.RestStatus
-import org.opensearch.rest.action.RestResponseListener
+import com.colasoft.opensearch.action.support.WriteRequest
+import com.colasoft.opensearch.client.node.NodeClient
+import com.colasoft.opensearch.core.xcontent.ToXContent
+import com.colasoft.opensearch.index.seqno.SequenceNumbers
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.SM_POLICIES_URI
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.index.IndexSMPolicyRequest
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.index.IndexSMPolicyResponse
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.model.SMPolicy
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.smPolicyNameToDocId
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.util.getValidSMPolicyName
+import com.colasoft.opensearch.indexmanagement.util.IF_PRIMARY_TERM
+import com.colasoft.opensearch.indexmanagement.util.IF_SEQ_NO
+import com.colasoft.opensearch.indexmanagement.util.REFRESH
+import com.colasoft.opensearch.rest.BaseRestHandler
+import com.colasoft.opensearch.rest.BytesRestResponse
+import com.colasoft.opensearch.rest.RestRequest
+import com.colasoft.opensearch.rest.RestResponse
+import com.colasoft.opensearch.rest.RestStatus
+import com.colasoft.opensearch.rest.action.RestResponseListener
 import java.time.Instant
 
 abstract class RestBaseIndexSMPolicyHandler : BaseRestHandler() {

@@ -3,28 +3,28 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.step.snapshot
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.snapshot
 
 import org.apache.logging.log4j.LogManager
-import org.opensearch.ExceptionsHelper
-import org.opensearch.action.admin.cluster.snapshots.create.CreateSnapshotRequest
-import org.opensearch.action.admin.cluster.snapshots.create.CreateSnapshotResponse
-import org.opensearch.common.regex.Regex
-import org.opensearch.indexmanagement.indexstatemanagement.action.SnapshotAction
-import org.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings.Companion.SNAPSHOT_DENY_LIST
-import org.opensearch.indexmanagement.opensearchapi.convertToMap
-import org.opensearch.indexmanagement.opensearchapi.suspendUntil
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Step
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionProperties
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StepMetaData
-import org.opensearch.rest.RestStatus
-import org.opensearch.script.Script
-import org.opensearch.script.ScriptService
-import org.opensearch.script.ScriptType
-import org.opensearch.script.TemplateScript
-import org.opensearch.snapshots.ConcurrentSnapshotExecutionException
-import org.opensearch.transport.RemoteTransportException
+import com.colasoft.opensearch.ExceptionsHelper
+import com.colasoft.opensearch.action.admin.cluster.snapshots.create.CreateSnapshotRequest
+import com.colasoft.opensearch.action.admin.cluster.snapshots.create.CreateSnapshotResponse
+import com.colasoft.opensearch.common.regex.Regex
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.SnapshotAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings.Companion.SNAPSHOT_DENY_LIST
+import com.colasoft.opensearch.indexmanagement.opensearchapi.convertToMap
+import com.colasoft.opensearch.indexmanagement.opensearchapi.suspendUntil
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Step
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionProperties
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StepMetaData
+import com.colasoft.opensearch.rest.RestStatus
+import com.colasoft.opensearch.script.Script
+import com.colasoft.opensearch.script.ScriptService
+import com.colasoft.opensearch.script.ScriptType
+import com.colasoft.opensearch.script.TemplateScript
+import com.colasoft.opensearch.snapshots.ConcurrentSnapshotExecutionException
+import com.colasoft.opensearch.transport.RemoteTransportException
 import java.time.LocalDateTime
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter

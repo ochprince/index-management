@@ -3,18 +3,18 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.refreshanalyzer
+package com.colasoft.opensearch.indexmanagement.refreshanalyzer
 
-import org.opensearch.client.node.NodeClient
-import org.opensearch.common.Strings
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.OPEN_DISTRO_BASE_URI
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.PLUGINS_BASE_URI
-import org.opensearch.rest.BaseRestHandler
-import org.opensearch.rest.RestHandler.ReplacedRoute
-import org.opensearch.rest.RestHandler.Route
-import org.opensearch.rest.RestRequest
-import org.opensearch.rest.RestRequest.Method.POST
-import org.opensearch.rest.action.RestToXContentListener
+import com.colasoft.opensearch.client.node.NodeClient
+import com.colasoft.opensearch.common.Strings
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.OPEN_DISTRO_BASE_URI
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.PLUGINS_BASE_URI
+import com.colasoft.opensearch.rest.BaseRestHandler
+import com.colasoft.opensearch.rest.RestHandler.ReplacedRoute
+import com.colasoft.opensearch.rest.RestHandler.Route
+import com.colasoft.opensearch.rest.RestRequest
+import com.colasoft.opensearch.rest.RestRequest.Method.POST
+import com.colasoft.opensearch.rest.action.RestToXContentListener
 import java.io.IOException
 
 class RestRefreshSearchAnalyzerAction : BaseRestHandler() {

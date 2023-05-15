@@ -3,21 +3,21 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.model.coordinator
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.coordinator
 
-import org.opensearch.core.xcontent.XContentParser
-import org.opensearch.core.xcontent.XContentParser.Token
-import org.opensearch.common.xcontent.XContentParserUtils.ensureExpectedToken
-import org.opensearch.indexmanagement.indexstatemanagement.model.ChangePolicy
-import org.opensearch.indexmanagement.indexstatemanagement.model.ManagedIndexConfig
-import org.opensearch.indexmanagement.indexstatemanagement.model.Policy
-import org.opensearch.indexmanagement.util.NO_ID
+import com.colasoft.opensearch.core.xcontent.XContentParser
+import com.colasoft.opensearch.core.xcontent.XContentParser.Token
+import com.colasoft.opensearch.common.xcontent.XContentParserUtils.ensureExpectedToken
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.ChangePolicy
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.ManagedIndexConfig
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.Policy
+import com.colasoft.opensearch.indexmanagement.util.NO_ID
 import java.io.IOException
 
 /**
  * Data class to hold partial [ManagedIndexConfig] data.
  *
- * This data class is used in the [org.opensearch.indexmanagement.indexstatemanagement.ManagedIndexCoordinator]
+ * This data class is used in the [com.colasoft.opensearch.indexmanagement.indexstatemanagement.ManagedIndexCoordinator]
  * to hold partial data when reading in the [ManagedIndexConfig] document from the index.
  */
 data class SweptManagedIndexConfig(

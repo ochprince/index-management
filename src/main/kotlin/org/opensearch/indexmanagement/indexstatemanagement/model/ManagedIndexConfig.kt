@@ -3,21 +3,21 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.model
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.model
 
-import org.opensearch.core.xcontent.ToXContent
-import org.opensearch.core.xcontent.XContentBuilder
-import org.opensearch.core.xcontent.XContentParser
-import org.opensearch.core.xcontent.XContentParser.Token
-import org.opensearch.common.xcontent.XContentParserUtils.ensureExpectedToken
-import org.opensearch.index.seqno.SequenceNumbers
-import org.opensearch.indexmanagement.indexstatemanagement.util.XCONTENT_WITHOUT_TYPE
-import org.opensearch.indexmanagement.opensearchapi.instant
-import org.opensearch.indexmanagement.opensearchapi.optionalTimeField
-import org.opensearch.indexmanagement.util.NO_ID
-import org.opensearch.jobscheduler.spi.ScheduledJobParameter
-import org.opensearch.jobscheduler.spi.schedule.Schedule
-import org.opensearch.jobscheduler.spi.schedule.ScheduleParser
+import com.colasoft.opensearch.core.xcontent.ToXContent
+import com.colasoft.opensearch.core.xcontent.XContentBuilder
+import com.colasoft.opensearch.core.xcontent.XContentParser
+import com.colasoft.opensearch.core.xcontent.XContentParser.Token
+import com.colasoft.opensearch.common.xcontent.XContentParserUtils.ensureExpectedToken
+import com.colasoft.opensearch.index.seqno.SequenceNumbers
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.XCONTENT_WITHOUT_TYPE
+import com.colasoft.opensearch.indexmanagement.opensearchapi.instant
+import com.colasoft.opensearch.indexmanagement.opensearchapi.optionalTimeField
+import com.colasoft.opensearch.indexmanagement.util.NO_ID
+import com.colasoft.opensearch.jobscheduler.spi.ScheduledJobParameter
+import com.colasoft.opensearch.jobscheduler.spi.schedule.Schedule
+import com.colasoft.opensearch.jobscheduler.spi.schedule.ScheduleParser
 import java.io.IOException
 import java.time.Instant
 

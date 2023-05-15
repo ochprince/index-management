@@ -3,23 +3,23 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.coordinator
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.coordinator
 
-import org.opensearch.indexmanagement.indexstatemanagement.IndexStateManagementRestTestCase
-import org.opensearch.indexmanagement.indexstatemanagement.action.DeleteAction
-import org.opensearch.indexmanagement.indexstatemanagement.action.ForceMergeAction
-import org.opensearch.indexmanagement.indexstatemanagement.action.RolloverAction
-import org.opensearch.indexmanagement.indexstatemanagement.model.ManagedIndexConfig
-import org.opensearch.indexmanagement.indexstatemanagement.model.Policy
-import org.opensearch.indexmanagement.indexstatemanagement.model.State
-import org.opensearch.indexmanagement.indexstatemanagement.model.Transition
-import org.opensearch.indexmanagement.indexstatemanagement.randomErrorNotification
-import org.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
-import org.opensearch.indexmanagement.indexstatemanagement.step.forcemerge.WaitForForceMergeStep
-import org.opensearch.indexmanagement.indexstatemanagement.step.rollover.AttemptRolloverStep
-import org.opensearch.indexmanagement.indexstatemanagement.util.TOTAL_MANAGED_INDICES
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
-import org.opensearch.indexmanagement.waitFor
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.IndexStateManagementRestTestCase
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.DeleteAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.ForceMergeAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.RolloverAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.ManagedIndexConfig
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.Policy
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.State
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.Transition
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomErrorNotification
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.forcemerge.WaitForForceMergeStep
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.rollover.AttemptRolloverStep
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.TOTAL_MANAGED_INDICES
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.indexmanagement.waitFor
 import java.time.Instant
 import java.time.temporal.ChronoUnit
 import kotlin.test.assertFailsWith

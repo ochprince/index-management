@@ -3,18 +3,18 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.model
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.model
 
-import org.opensearch.common.io.stream.InputStreamStreamInput
-import org.opensearch.common.io.stream.OutputStreamStreamOutput
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Step
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionProperties
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.PolicyRetryInfoMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StateMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StepMetaData
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.common.io.stream.InputStreamStreamInput
+import com.colasoft.opensearch.common.io.stream.OutputStreamStreamOutput
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Step
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionProperties
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.PolicyRetryInfoMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StateMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StepMetaData
+import com.colasoft.opensearch.test.OpenSearchTestCase
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 import java.time.Instant

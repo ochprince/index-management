@@ -3,12 +3,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.model
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.model
 
-import org.opensearch.indexmanagement.indexstatemanagement.model.destination.Chime
-import org.opensearch.indexmanagement.indexstatemanagement.model.destination.CustomWebhook
-import org.opensearch.indexmanagement.indexstatemanagement.model.destination.Slack
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.destination.Chime
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.destination.CustomWebhook
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.destination.Slack
+import com.colasoft.opensearch.test.OpenSearchTestCase
 
 /**
  * Temporary import from alerting, this will be removed once we pull notifications out of

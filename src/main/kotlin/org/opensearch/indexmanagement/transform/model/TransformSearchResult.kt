@@ -3,10 +3,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.transform.model
+package com.colasoft.opensearch.indexmanagement.transform.model
 
-import org.opensearch.action.index.IndexRequest
-import org.opensearch.index.shard.ShardId
+import com.colasoft.opensearch.action.index.IndexRequest
+import com.colasoft.opensearch.index.shard.ShardId
 
 data class TransformSearchResult(val stats: TransformStats, val docsToIndex: List<IndexRequest>, val afterKey: Map<String, Any>? = null)
 

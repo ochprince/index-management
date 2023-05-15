@@ -3,29 +3,29 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.validation
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.validation
 
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.whenever
 import kotlinx.coroutines.runBlocking
-import org.opensearch.client.Client
-import org.opensearch.cluster.ClusterState
-import org.opensearch.cluster.metadata.IndexAbstraction
-import org.opensearch.cluster.metadata.IndexMetadata
-import org.opensearch.cluster.metadata.Metadata
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.settings.Settings
-import org.opensearch.common.unit.TimeValue
-import org.opensearch.indexmanagement.indexstatemanagement.action.RolloverAction
-import org.opensearch.indexmanagement.indexstatemanagement.validation.ValidateRollover.Companion.getFailedNoValidAliasMessage
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Validate
-import org.opensearch.jobscheduler.spi.utils.LockService
-import org.opensearch.monitor.jvm.JvmService
-import org.opensearch.script.ScriptService
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.cluster.ClusterState
+import com.colasoft.opensearch.cluster.metadata.IndexAbstraction
+import com.colasoft.opensearch.cluster.metadata.IndexMetadata
+import com.colasoft.opensearch.cluster.metadata.Metadata
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.common.unit.TimeValue
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.RolloverAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.validation.ValidateRollover.Companion.getFailedNoValidAliasMessage
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Validate
+import com.colasoft.opensearch.jobscheduler.spi.utils.LockService
+import com.colasoft.opensearch.monitor.jvm.JvmService
+import com.colasoft.opensearch.script.ScriptService
+import com.colasoft.opensearch.test.OpenSearchTestCase
 import java.util.*
 
 class ValidateRolloverTests : OpenSearchTestCase() {

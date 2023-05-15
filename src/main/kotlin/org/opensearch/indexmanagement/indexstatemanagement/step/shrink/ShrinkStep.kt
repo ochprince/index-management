@@ -3,24 +3,24 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.step.shrink
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.shrink
 
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
-import org.opensearch.ExceptionsHelper
-import org.opensearch.OpenSearchSecurityException
-import org.opensearch.action.admin.indices.delete.DeleteIndexRequest
-import org.opensearch.action.support.master.AcknowledgedResponse
-import org.opensearch.indexmanagement.indexstatemanagement.action.ShrinkAction.Companion.getSecurityFailureMessage
-import org.opensearch.indexmanagement.indexstatemanagement.util.getUpdatedShrinkActionProperties
-import org.opensearch.indexmanagement.indexstatemanagement.util.releaseShrinkLock
-import org.opensearch.indexmanagement.indexstatemanagement.util.renewShrinkLock
-import org.opensearch.indexmanagement.indexstatemanagement.util.resetReadOnlyAndRouting
-import org.opensearch.indexmanagement.opensearchapi.suspendUntil
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Step
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ShrinkActionProperties
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
-import org.opensearch.transport.RemoteTransportException
+import com.colasoft.opensearch.ExceptionsHelper
+import com.colasoft.opensearch.OpenSearchSecurityException
+import com.colasoft.opensearch.action.admin.indices.delete.DeleteIndexRequest
+import com.colasoft.opensearch.action.support.master.AcknowledgedResponse
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.ShrinkAction.Companion.getSecurityFailureMessage
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.getUpdatedShrinkActionProperties
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.releaseShrinkLock
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.renewShrinkLock
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.resetReadOnlyAndRouting
+import com.colasoft.opensearch.indexmanagement.opensearchapi.suspendUntil
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Step
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ShrinkActionProperties
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
+import com.colasoft.opensearch.transport.RemoteTransportException
 
 abstract class ShrinkStep(
     name: String,

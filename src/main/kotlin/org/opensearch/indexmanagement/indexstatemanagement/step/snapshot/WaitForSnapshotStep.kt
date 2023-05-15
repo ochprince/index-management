@@ -3,21 +3,21 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.step.snapshot
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.snapshot
 
 import org.apache.logging.log4j.LogManager
-import org.opensearch.ExceptionsHelper
-import org.opensearch.action.admin.cluster.snapshots.status.SnapshotStatus
-import org.opensearch.action.admin.cluster.snapshots.status.SnapshotsStatusRequest
-import org.opensearch.action.admin.cluster.snapshots.status.SnapshotsStatusResponse
-import org.opensearch.cluster.SnapshotsInProgress.State
-import org.opensearch.indexmanagement.indexstatemanagement.action.SnapshotAction
-import org.opensearch.indexmanagement.opensearchapi.suspendUntil
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Step
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionProperties
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StepMetaData
-import org.opensearch.transport.RemoteTransportException
+import com.colasoft.opensearch.ExceptionsHelper
+import com.colasoft.opensearch.action.admin.cluster.snapshots.status.SnapshotStatus
+import com.colasoft.opensearch.action.admin.cluster.snapshots.status.SnapshotsStatusRequest
+import com.colasoft.opensearch.action.admin.cluster.snapshots.status.SnapshotsStatusResponse
+import com.colasoft.opensearch.cluster.SnapshotsInProgress.State
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.SnapshotAction
+import com.colasoft.opensearch.indexmanagement.opensearchapi.suspendUntil
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Step
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionProperties
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StepMetaData
+import com.colasoft.opensearch.transport.RemoteTransportException
 
 class WaitForSnapshotStep(private val action: SnapshotAction) : Step(name) {
 

@@ -3,28 +3,28 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.step.shrink
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.shrink
 
-import org.opensearch.action.admin.cluster.node.stats.NodesStatsRequest
-import org.opensearch.action.admin.cluster.node.stats.NodesStatsResponse
-import org.opensearch.action.admin.indices.shrink.ResizeRequest
-import org.opensearch.action.admin.indices.shrink.ResizeResponse
-import org.opensearch.action.admin.indices.stats.IndicesStatsRequest
-import org.opensearch.action.admin.indices.stats.IndicesStatsResponse
-import org.opensearch.action.support.master.AcknowledgedResponse
-import org.opensearch.cluster.metadata.IndexMetadata
-import org.opensearch.common.settings.Settings
-import org.opensearch.indexmanagement.indexstatemanagement.action.ShrinkAction
-import org.opensearch.indexmanagement.indexstatemanagement.util.INDEX_NUMBER_OF_SHARDS
-import org.opensearch.indexmanagement.indexstatemanagement.util.getNodeFreeDiskSpaceAfterShrink
-import org.opensearch.indexmanagement.indexstatemanagement.util.isIndexGreen
-import org.opensearch.indexmanagement.indexstatemanagement.util.issueUpdateSettingsRequest
-import org.opensearch.indexmanagement.opensearchapi.suspendUntil
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionProperties
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ShrinkActionProperties
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StepMetaData
+import com.colasoft.opensearch.action.admin.cluster.node.stats.NodesStatsRequest
+import com.colasoft.opensearch.action.admin.cluster.node.stats.NodesStatsResponse
+import com.colasoft.opensearch.action.admin.indices.shrink.ResizeRequest
+import com.colasoft.opensearch.action.admin.indices.shrink.ResizeResponse
+import com.colasoft.opensearch.action.admin.indices.stats.IndicesStatsRequest
+import com.colasoft.opensearch.action.admin.indices.stats.IndicesStatsResponse
+import com.colasoft.opensearch.action.support.master.AcknowledgedResponse
+import com.colasoft.opensearch.cluster.metadata.IndexMetadata
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.ShrinkAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.INDEX_NUMBER_OF_SHARDS
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.getNodeFreeDiskSpaceAfterShrink
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.isIndexGreen
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.issueUpdateSettingsRequest
+import com.colasoft.opensearch.indexmanagement.opensearchapi.suspendUntil
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionProperties
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ShrinkActionProperties
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StepMetaData
 
 class AttemptShrinkStep(private val action: ShrinkAction) : ShrinkStep(name, true, true, false) {
 

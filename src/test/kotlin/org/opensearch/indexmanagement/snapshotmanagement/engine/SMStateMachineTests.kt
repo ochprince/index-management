@@ -3,25 +3,25 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.snapshotmanagement.engine
+package com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine
 
 import com.nhaarman.mockitokotlin2.argumentCaptor
 import com.nhaarman.mockitokotlin2.spy
 import com.nhaarman.mockitokotlin2.times
 import com.nhaarman.mockitokotlin2.verify
 import kotlinx.coroutines.runBlocking
-import org.opensearch.common.unit.TimeValue
-import org.opensearch.indexmanagement.MocksTestCase
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.SMState
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.creationTransitions
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.deletionTransitions
-import org.opensearch.indexmanagement.snapshotmanagement.mockCreateSnapshotResponse
-import org.opensearch.indexmanagement.snapshotmanagement.mockGetSnapshotResponse
-import org.opensearch.indexmanagement.snapshotmanagement.mockSnapshotInfo
-import org.opensearch.indexmanagement.snapshotmanagement.model.SMMetadata
-import org.opensearch.indexmanagement.snapshotmanagement.randomLatestExecution
-import org.opensearch.indexmanagement.snapshotmanagement.randomSMMetadata
-import org.opensearch.indexmanagement.snapshotmanagement.randomSMPolicy
+import com.colasoft.opensearch.common.unit.TimeValue
+import com.colasoft.opensearch.indexmanagement.MocksTestCase
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.SMState
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.creationTransitions
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.deletionTransitions
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.mockCreateSnapshotResponse
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.mockGetSnapshotResponse
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.mockSnapshotInfo
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.model.SMMetadata
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.randomLatestExecution
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.randomSMMetadata
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.randomSMPolicy
 import java.time.Instant.now
 
 open class SMStateMachineTests : MocksTestCase() {

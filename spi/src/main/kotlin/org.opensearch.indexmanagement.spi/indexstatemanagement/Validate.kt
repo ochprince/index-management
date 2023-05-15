@@ -3,14 +3,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.spi.indexstatemanagement
+package com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement
 
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.common.io.stream.StreamOutput
-import org.opensearch.common.io.stream.Writeable
-import org.opensearch.common.settings.Settings
-import org.opensearch.monitor.jvm.JvmService
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.common.io.stream.StreamOutput
+import com.colasoft.opensearch.common.io.stream.Writeable
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.monitor.jvm.JvmService
 import java.util.Locale
 
 abstract class Validate(

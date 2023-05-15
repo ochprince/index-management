@@ -3,14 +3,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.transform.opensearchapi
+package com.colasoft.opensearch.indexmanagement.transform.opensearchapi
 
 import org.junit.Assert
-import org.opensearch.OpenSearchException
-import org.opensearch.indexmanagement.util.IndexManagementException
-import org.opensearch.rest.RestStatus
-import org.opensearch.tasks.TaskCancelledException
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.OpenSearchException
+import com.colasoft.opensearch.indexmanagement.util.IndexManagementException
+import com.colasoft.opensearch.rest.RestStatus
+import com.colasoft.opensearch.tasks.TaskCancelledException
+import com.colasoft.opensearch.test.OpenSearchTestCase
 
 class ExtensionsTests : OpenSearchTestCase() {
 

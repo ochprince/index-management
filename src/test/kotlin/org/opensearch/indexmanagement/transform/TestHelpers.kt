@@ -3,34 +3,34 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.transform
+package com.colasoft.opensearch.indexmanagement.transform
 
-import org.opensearch.cluster.metadata.IndexMetadata
-import org.opensearch.common.io.stream.BytesStreamOutput
-import org.opensearch.common.io.stream.NamedWriteableAwareStreamInput
-import org.opensearch.common.io.stream.NamedWriteableRegistry
-import org.opensearch.common.settings.Settings
-import org.opensearch.core.xcontent.ToXContent
-import org.opensearch.common.xcontent.XContentFactory
-import org.opensearch.index.Index
-import org.opensearch.index.shard.ShardId
-import org.opensearch.indexmanagement.common.model.dimension.Dimension
-import org.opensearch.indexmanagement.opensearchapi.string
-import org.opensearch.indexmanagement.randomInstant
-import org.opensearch.indexmanagement.randomSchedule
-import org.opensearch.indexmanagement.randomUser
-import org.opensearch.indexmanagement.rollup.randomAfterKey
-import org.opensearch.indexmanagement.rollup.randomDimension
-import org.opensearch.indexmanagement.transform.model.ContinuousTransformStats
-import org.opensearch.indexmanagement.transform.model.ExplainTransform
-import org.opensearch.indexmanagement.transform.model.Transform
-import org.opensearch.indexmanagement.transform.model.TransformMetadata
-import org.opensearch.indexmanagement.transform.model.TransformStats
-import org.opensearch.search.SearchModule
-import org.opensearch.search.aggregations.AggregationBuilder
-import org.opensearch.search.aggregations.AggregationBuilders
-import org.opensearch.search.aggregations.AggregatorFactories
-import org.opensearch.test.rest.OpenSearchRestTestCase
+import com.colasoft.opensearch.cluster.metadata.IndexMetadata
+import com.colasoft.opensearch.common.io.stream.BytesStreamOutput
+import com.colasoft.opensearch.common.io.stream.NamedWriteableAwareStreamInput
+import com.colasoft.opensearch.common.io.stream.NamedWriteableRegistry
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.core.xcontent.ToXContent
+import com.colasoft.opensearch.common.xcontent.XContentFactory
+import com.colasoft.opensearch.index.Index
+import com.colasoft.opensearch.index.shard.ShardId
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.Dimension
+import com.colasoft.opensearch.indexmanagement.opensearchapi.string
+import com.colasoft.opensearch.indexmanagement.randomInstant
+import com.colasoft.opensearch.indexmanagement.randomSchedule
+import com.colasoft.opensearch.indexmanagement.randomUser
+import com.colasoft.opensearch.indexmanagement.rollup.randomAfterKey
+import com.colasoft.opensearch.indexmanagement.rollup.randomDimension
+import com.colasoft.opensearch.indexmanagement.transform.model.ContinuousTransformStats
+import com.colasoft.opensearch.indexmanagement.transform.model.ExplainTransform
+import com.colasoft.opensearch.indexmanagement.transform.model.Transform
+import com.colasoft.opensearch.indexmanagement.transform.model.TransformMetadata
+import com.colasoft.opensearch.indexmanagement.transform.model.TransformStats
+import com.colasoft.opensearch.search.SearchModule
+import com.colasoft.opensearch.search.aggregations.AggregationBuilder
+import com.colasoft.opensearch.search.aggregations.AggregationBuilders
+import com.colasoft.opensearch.search.aggregations.AggregatorFactories
+import com.colasoft.opensearch.test.rest.OpenSearchRestTestCase
 import java.util.Locale
 
 fun randomGroups(): List<Dimension> {

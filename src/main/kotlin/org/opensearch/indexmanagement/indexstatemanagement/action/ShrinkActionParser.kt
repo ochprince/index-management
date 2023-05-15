@@ -3,22 +3,22 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.action
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.action
 
-import org.opensearch.action.admin.indices.alias.Alias
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.common.unit.ByteSizeValue
-import org.opensearch.core.xcontent.XContentParser
-import org.opensearch.common.xcontent.XContentParserUtils.ensureExpectedToken
-import org.opensearch.indexmanagement.indexstatemanagement.action.ShrinkAction.Companion.ALIASES_FIELD
-import org.opensearch.indexmanagement.indexstatemanagement.action.ShrinkAction.Companion.FORCE_UNSAFE_FIELD
-import org.opensearch.indexmanagement.indexstatemanagement.action.ShrinkAction.Companion.MAX_SHARD_SIZE_FIELD
-import org.opensearch.indexmanagement.indexstatemanagement.action.ShrinkAction.Companion.NUM_NEW_SHARDS_FIELD
-import org.opensearch.indexmanagement.indexstatemanagement.action.ShrinkAction.Companion.PERCENTAGE_OF_SOURCE_SHARDS_FIELD
-import org.opensearch.indexmanagement.indexstatemanagement.action.ShrinkAction.Companion.TARGET_INDEX_TEMPLATE_FIELD
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Action
-import org.opensearch.indexmanagement.spi.indexstatemanagement.ActionParser
-import org.opensearch.script.Script
+import com.colasoft.opensearch.action.admin.indices.alias.Alias
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.common.unit.ByteSizeValue
+import com.colasoft.opensearch.core.xcontent.XContentParser
+import com.colasoft.opensearch.common.xcontent.XContentParserUtils.ensureExpectedToken
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.ShrinkAction.Companion.ALIASES_FIELD
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.ShrinkAction.Companion.FORCE_UNSAFE_FIELD
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.ShrinkAction.Companion.MAX_SHARD_SIZE_FIELD
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.ShrinkAction.Companion.NUM_NEW_SHARDS_FIELD
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.ShrinkAction.Companion.PERCENTAGE_OF_SOURCE_SHARDS_FIELD
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.ShrinkAction.Companion.TARGET_INDEX_TEMPLATE_FIELD
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Action
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.ActionParser
+import com.colasoft.opensearch.script.Script
 
 class ShrinkActionParser : ActionParser() {
     override fun fromStreamInput(sin: StreamInput): Action {

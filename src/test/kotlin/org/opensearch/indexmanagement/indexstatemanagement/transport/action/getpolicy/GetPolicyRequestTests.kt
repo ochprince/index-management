@@ -3,12 +3,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.transport.action.getpolicy
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.getpolicy
 
-import org.opensearch.common.io.stream.BytesStreamOutput
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.search.fetch.subphase.FetchSourceContext
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.common.io.stream.BytesStreamOutput
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.search.fetch.subphase.FetchSourceContext
+import com.colasoft.opensearch.test.OpenSearchTestCase
 
 class GetPolicyRequestTests : OpenSearchTestCase() {
 

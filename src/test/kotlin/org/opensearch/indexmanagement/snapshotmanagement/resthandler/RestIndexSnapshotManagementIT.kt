@@ -3,24 +3,24 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.snapshotmanagement.resthandler
+package com.colasoft.opensearch.indexmanagement.snapshotmanagement.resthandler
 
-import org.opensearch.client.ResponseException
-import org.opensearch.common.xcontent.XContentType
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.SM_POLICIES_URI
-import org.opensearch.indexmanagement.indexstatemanagement.util.XCONTENT_WITHOUT_TYPE_AND_USER
-import org.opensearch.indexmanagement.makeRequest
-import org.opensearch.indexmanagement.snapshotmanagement.SnapshotManagementRestTestCase
-import org.opensearch.indexmanagement.snapshotmanagement.model.SMPolicy
-import org.opensearch.indexmanagement.snapshotmanagement.model.SMPolicy.Companion.SM_TYPE
-import org.opensearch.indexmanagement.snapshotmanagement.randomSMPolicy
-import org.opensearch.indexmanagement.snapshotmanagement.toMap
-import org.opensearch.indexmanagement.util.IndexUtils
-import org.opensearch.indexmanagement.util.NO_ID
-import org.opensearch.indexmanagement.util._ID
-import org.opensearch.indexmanagement.util._SEQ_NO
-import org.opensearch.rest.RestStatus
+import com.colasoft.opensearch.client.ResponseException
+import com.colasoft.opensearch.common.xcontent.XContentType
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.SM_POLICIES_URI
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.XCONTENT_WITHOUT_TYPE_AND_USER
+import com.colasoft.opensearch.indexmanagement.makeRequest
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.SnapshotManagementRestTestCase
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.model.SMPolicy
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.model.SMPolicy.Companion.SM_TYPE
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.randomSMPolicy
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.toMap
+import com.colasoft.opensearch.indexmanagement.util.IndexUtils
+import com.colasoft.opensearch.indexmanagement.util.NO_ID
+import com.colasoft.opensearch.indexmanagement.util._ID
+import com.colasoft.opensearch.indexmanagement.util._SEQ_NO
+import com.colasoft.opensearch.rest.RestStatus
 import java.time.Instant
 
 class RestIndexSnapshotManagementIT : SnapshotManagementRestTestCase() {

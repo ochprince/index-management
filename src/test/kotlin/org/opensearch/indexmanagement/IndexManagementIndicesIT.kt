@@ -3,37 +3,37 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement
+package com.colasoft.opensearch.indexmanagement
 
 import org.apache.http.entity.ContentType
 import org.apache.http.entity.StringEntity
-import org.opensearch.common.settings.Settings
-import org.opensearch.core.xcontent.ToXContent
-import org.opensearch.common.xcontent.XContentFactory
-import org.opensearch.indexmanagement.IndexManagementIndices.Companion.HISTORY_INDEX_BASE
-import org.opensearch.indexmanagement.IndexManagementIndices.Companion.HISTORY_WRITE_INDEX_ALIAS
-import org.opensearch.indexmanagement.IndexManagementIndices.Companion.indexManagementMappings
-import org.opensearch.indexmanagement.IndexManagementIndices.Companion.indexStateManagementHistoryMappings
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.POLICY_BASE_URI
-import org.opensearch.indexmanagement.indexstatemanagement.IndexStateManagementRestTestCase
-import org.opensearch.indexmanagement.indexstatemanagement.model.ChangePolicy
-import org.opensearch.indexmanagement.indexstatemanagement.randomPolicy
-import org.opensearch.indexmanagement.indexstatemanagement.resthandler.RestAddPolicyAction
-import org.opensearch.indexmanagement.indexstatemanagement.resthandler.RestChangePolicyAction
-import org.opensearch.indexmanagement.indexstatemanagement.resthandler.RestExplainAction
-import org.opensearch.indexmanagement.indexstatemanagement.resthandler.RestRemovePolicyAction
-import org.opensearch.indexmanagement.indexstatemanagement.resthandler.RestRetryFailedManagedIndexAction
-import org.opensearch.indexmanagement.indexstatemanagement.util.FAILED_INDICES
-import org.opensearch.indexmanagement.indexstatemanagement.util.FAILURES
-import org.opensearch.indexmanagement.indexstatemanagement.util.INDEX_HIDDEN
-import org.opensearch.indexmanagement.indexstatemanagement.util.UPDATED_INDICES
-import org.opensearch.indexmanagement.opensearchapi.string
-import org.opensearch.indexmanagement.refreshanalyzer.RestRefreshSearchAnalyzerAction
-import org.opensearch.indexmanagement.rollup.randomRollup
-import org.opensearch.rest.RestRequest
-import org.opensearch.rest.RestStatus
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.core.xcontent.ToXContent
+import com.colasoft.opensearch.common.xcontent.XContentFactory
+import com.colasoft.opensearch.indexmanagement.IndexManagementIndices.Companion.HISTORY_INDEX_BASE
+import com.colasoft.opensearch.indexmanagement.IndexManagementIndices.Companion.HISTORY_WRITE_INDEX_ALIAS
+import com.colasoft.opensearch.indexmanagement.IndexManagementIndices.Companion.indexManagementMappings
+import com.colasoft.opensearch.indexmanagement.IndexManagementIndices.Companion.indexStateManagementHistoryMappings
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.POLICY_BASE_URI
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.IndexStateManagementRestTestCase
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.ChangePolicy
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomPolicy
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.resthandler.RestAddPolicyAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.resthandler.RestChangePolicyAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.resthandler.RestExplainAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.resthandler.RestRemovePolicyAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.resthandler.RestRetryFailedManagedIndexAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.FAILED_INDICES
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.FAILURES
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.INDEX_HIDDEN
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.UPDATED_INDICES
+import com.colasoft.opensearch.indexmanagement.opensearchapi.string
+import com.colasoft.opensearch.indexmanagement.refreshanalyzer.RestRefreshSearchAnalyzerAction
+import com.colasoft.opensearch.indexmanagement.rollup.randomRollup
+import com.colasoft.opensearch.rest.RestRequest
+import com.colasoft.opensearch.rest.RestStatus
+import com.colasoft.opensearch.test.OpenSearchTestCase
 import java.util.Locale
 
 class IndexManagementIndicesIT : IndexStateManagementRestTestCase() {

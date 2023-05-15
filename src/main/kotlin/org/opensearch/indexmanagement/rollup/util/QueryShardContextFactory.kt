@@ -3,30 +3,30 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.util
+package com.colasoft.opensearch.indexmanagement.rollup.util
 
-import org.opensearch.Version
-import org.opensearch.client.Client
-import org.opensearch.cluster.metadata.IndexMetadata
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.io.stream.NamedWriteableRegistry
-import org.opensearch.common.regex.Regex
-import org.opensearch.common.settings.IndexScopedSettings
-import org.opensearch.common.settings.Settings
-import org.opensearch.common.settings.SettingsModule
-import org.opensearch.common.util.BigArrays
-import org.opensearch.core.xcontent.NamedXContentRegistry
-import org.opensearch.env.Environment
-import org.opensearch.index.Index
-import org.opensearch.index.IndexSettings
-import org.opensearch.index.mapper.MapperService
-import org.opensearch.index.query.QueryShardContext
-import org.opensearch.index.similarity.SimilarityService
-import org.opensearch.indices.IndicesModule
-import org.opensearch.indices.analysis.AnalysisModule
-import org.opensearch.plugins.MapperPlugin
-import org.opensearch.plugins.PluginsService
-import org.opensearch.script.ScriptService
+import com.colasoft.opensearch.Version
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.cluster.metadata.IndexMetadata
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.io.stream.NamedWriteableRegistry
+import com.colasoft.opensearch.common.regex.Regex
+import com.colasoft.opensearch.common.settings.IndexScopedSettings
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.common.settings.SettingsModule
+import com.colasoft.opensearch.common.util.BigArrays
+import com.colasoft.opensearch.core.xcontent.NamedXContentRegistry
+import com.colasoft.opensearch.env.Environment
+import com.colasoft.opensearch.index.Index
+import com.colasoft.opensearch.index.IndexSettings
+import com.colasoft.opensearch.index.mapper.MapperService
+import com.colasoft.opensearch.index.query.QueryShardContext
+import com.colasoft.opensearch.index.similarity.SimilarityService
+import com.colasoft.opensearch.indices.IndicesModule
+import com.colasoft.opensearch.indices.analysis.AnalysisModule
+import com.colasoft.opensearch.plugins.MapperPlugin
+import com.colasoft.opensearch.plugins.PluginsService
+import com.colasoft.opensearch.script.ScriptService
 import java.time.Instant
 
 /**

@@ -3,12 +3,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.refreshanalyzer
+package com.colasoft.opensearch.indexmanagement.refreshanalyzer
 
-import org.opensearch.action.support.broadcast.BroadcastShardResponse
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.common.io.stream.StreamOutput
-import org.opensearch.index.shard.ShardId
+import com.colasoft.opensearch.action.support.broadcast.BroadcastShardResponse
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.common.io.stream.StreamOutput
+import com.colasoft.opensearch.index.shard.ShardId
 import java.io.IOException
 
 class RefreshSearchAnalyzerShardResponse : BroadcastShardResponse {

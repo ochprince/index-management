@@ -3,10 +3,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.transport.action.managedIndex
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.managedIndex
 
-import org.opensearch.action.support.broadcast.BroadcastRequest
-import org.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.action.support.broadcast.BroadcastRequest
+import com.colasoft.opensearch.common.io.stream.StreamInput
 import java.io.IOException
 
 @Suppress("SpreadOperator")

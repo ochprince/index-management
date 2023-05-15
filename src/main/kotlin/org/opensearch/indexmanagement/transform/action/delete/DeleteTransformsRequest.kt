@@ -3,13 +3,13 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.transform.action.delete
+package com.colasoft.opensearch.indexmanagement.transform.action.delete
 
-import org.opensearch.action.ActionRequest
-import org.opensearch.action.ActionRequestValidationException
-import org.opensearch.action.ValidateActions.addValidationError
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.common.io.stream.StreamOutput
+import com.colasoft.opensearch.action.ActionRequest
+import com.colasoft.opensearch.action.ActionRequestValidationException
+import com.colasoft.opensearch.action.ValidateActions.addValidationError
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.common.io.stream.StreamOutput
 import java.io.IOException
 
 class DeleteTransformsRequest(

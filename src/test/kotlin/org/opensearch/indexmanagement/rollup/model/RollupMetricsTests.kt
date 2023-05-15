@@ -3,12 +3,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.model
+package com.colasoft.opensearch.indexmanagement.rollup.model
 
-import org.opensearch.indexmanagement.rollup.randomAverage
-import org.opensearch.indexmanagement.rollup.randomRollupMetrics
-import org.opensearch.test.OpenSearchTestCase
-import org.opensearch.test.rest.OpenSearchRestTestCase
+import com.colasoft.opensearch.indexmanagement.rollup.randomAverage
+import com.colasoft.opensearch.indexmanagement.rollup.randomRollupMetrics
+import com.colasoft.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.test.rest.OpenSearchRestTestCase
 import kotlin.test.assertFailsWith
 
 class RollupMetricsTests : OpenSearchTestCase() {

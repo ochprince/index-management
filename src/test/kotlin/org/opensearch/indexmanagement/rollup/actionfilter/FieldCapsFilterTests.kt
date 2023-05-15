@@ -3,26 +3,26 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.actionfilter
+package com.colasoft.opensearch.indexmanagement.rollup.actionfilter
 
 import com.nhaarman.mockitokotlin2.doReturn
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.whenever
 import org.junit.Before
-import org.opensearch.action.fieldcaps.FieldCapabilitiesResponse
-import org.opensearch.cluster.ClusterState
-import org.opensearch.cluster.metadata.IndexMetadata
-import org.opensearch.cluster.metadata.IndexNameExpressionResolver
-import org.opensearch.cluster.metadata.Metadata
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.settings.ClusterSettings
-import org.opensearch.common.settings.Settings
-import org.opensearch.indexmanagement.rollup.model.Rollup
-import org.opensearch.indexmanagement.rollup.randomISMFieldCapabilitiesIndexResponse
-import org.opensearch.indexmanagement.rollup.randomISMFieldCaps
-import org.opensearch.indexmanagement.rollup.randomRollup
-import org.opensearch.indexmanagement.rollup.settings.RollupSettings
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.action.fieldcaps.FieldCapabilitiesResponse
+import com.colasoft.opensearch.cluster.ClusterState
+import com.colasoft.opensearch.cluster.metadata.IndexMetadata
+import com.colasoft.opensearch.cluster.metadata.IndexNameExpressionResolver
+import com.colasoft.opensearch.cluster.metadata.Metadata
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.settings.ClusterSettings
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.indexmanagement.rollup.model.Rollup
+import com.colasoft.opensearch.indexmanagement.rollup.randomISMFieldCapabilitiesIndexResponse
+import com.colasoft.opensearch.indexmanagement.rollup.randomISMFieldCaps
+import com.colasoft.opensearch.indexmanagement.rollup.randomRollup
+import com.colasoft.opensearch.indexmanagement.rollup.settings.RollupSettings
+import com.colasoft.opensearch.test.OpenSearchTestCase
 
 class FieldCapsFilterTests : OpenSearchTestCase() {
     private val indexNameExpressionResolver: IndexNameExpressionResolver = mock()

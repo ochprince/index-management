@@ -3,12 +3,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.opensearchapi
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.opensearchapi
 
-import org.opensearch.Version
-import org.opensearch.action.admin.indices.rollover.RolloverInfo
-import org.opensearch.cluster.metadata.IndexMetadata
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.Version
+import com.colasoft.opensearch.action.admin.indices.rollover.RolloverInfo
+import com.colasoft.opensearch.cluster.metadata.IndexMetadata
+import com.colasoft.opensearch.test.OpenSearchTestCase
 
 class ExtensionsTests : OpenSearchTestCase() {
 

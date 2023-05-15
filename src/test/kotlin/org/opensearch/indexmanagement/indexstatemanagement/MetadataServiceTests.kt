@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement
 
 import com.nhaarman.mockitokotlin2.any
 import com.nhaarman.mockitokotlin2.doAnswer
@@ -14,17 +14,17 @@ import com.nhaarman.mockitokotlin2.verify
 import com.nhaarman.mockitokotlin2.whenever
 import kotlinx.coroutines.runBlocking
 import org.junit.Before
-import org.opensearch.action.ActionListener
-import org.opensearch.action.admin.cluster.settings.ClusterUpdateSettingsResponse
-import org.opensearch.client.AdminClient
-import org.opensearch.client.Client
-import org.opensearch.client.ClusterAdminClient
-import org.opensearch.cluster.ClusterState
-import org.opensearch.cluster.metadata.Metadata
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.collect.ImmutableOpenMap
-import org.opensearch.indexmanagement.IndexManagementIndices
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.action.ActionListener
+import com.colasoft.opensearch.action.admin.cluster.settings.ClusterUpdateSettingsResponse
+import com.colasoft.opensearch.client.AdminClient
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.client.ClusterAdminClient
+import com.colasoft.opensearch.cluster.ClusterState
+import com.colasoft.opensearch.cluster.metadata.Metadata
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.collect.ImmutableOpenMap
+import com.colasoft.opensearch.indexmanagement.IndexManagementIndices
+import com.colasoft.opensearch.test.OpenSearchTestCase
 import kotlin.test.assertFailsWith
 
 class MetadataServiceTests : OpenSearchTestCase() {

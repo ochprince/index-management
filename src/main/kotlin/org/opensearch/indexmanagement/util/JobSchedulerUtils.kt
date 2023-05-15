@@ -3,15 +3,15 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.util
+package com.colasoft.opensearch.indexmanagement.util
 
 import org.apache.logging.log4j.LogManager
-import org.opensearch.action.bulk.BackoffPolicy
-import org.opensearch.indexmanagement.opensearchapi.retry
-import org.opensearch.indexmanagement.opensearchapi.suspendUntil
-import org.opensearch.jobscheduler.spi.JobExecutionContext
-import org.opensearch.jobscheduler.spi.LockModel
-import org.opensearch.jobscheduler.spi.ScheduledJobParameter
+import com.colasoft.opensearch.action.bulk.BackoffPolicy
+import com.colasoft.opensearch.indexmanagement.opensearchapi.retry
+import com.colasoft.opensearch.indexmanagement.opensearchapi.suspendUntil
+import com.colasoft.opensearch.jobscheduler.spi.JobExecutionContext
+import com.colasoft.opensearch.jobscheduler.spi.LockModel
+import com.colasoft.opensearch.jobscheduler.spi.ScheduledJobParameter
 
 private val logger = LogManager.getLogger("o.o.i.u.JobSchedulerUtils")
 

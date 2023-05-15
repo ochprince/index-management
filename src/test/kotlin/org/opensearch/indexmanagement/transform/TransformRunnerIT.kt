@@ -3,29 +3,29 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.transform
+package com.colasoft.opensearch.indexmanagement.transform
 
 import org.apache.http.entity.ContentType
 import org.apache.http.entity.StringEntity
-import org.opensearch.client.Request
-import org.opensearch.client.RequestOptions
-import org.opensearch.common.settings.Settings
-import org.opensearch.index.query.TermQueryBuilder
-import org.opensearch.indexmanagement.common.model.dimension.DateHistogram
-import org.opensearch.indexmanagement.common.model.dimension.Histogram
-import org.opensearch.indexmanagement.common.model.dimension.Terms
-import org.opensearch.indexmanagement.makeRequest
-import org.opensearch.indexmanagement.transform.model.Transform
-import org.opensearch.indexmanagement.transform.model.TransformMetadata
-import org.opensearch.indexmanagement.waitFor
-import org.opensearch.jobscheduler.spi.schedule.IntervalSchedule
-import org.opensearch.rest.RestRequest
-import org.opensearch.rest.RestStatus
-import org.opensearch.script.Script
-import org.opensearch.script.ScriptType
-import org.opensearch.search.aggregations.AggregationBuilders
-import org.opensearch.search.aggregations.AggregatorFactories
-import org.opensearch.search.aggregations.metrics.ScriptedMetricAggregationBuilder
+import com.colasoft.opensearch.client.Request
+import com.colasoft.opensearch.client.RequestOptions
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.index.query.TermQueryBuilder
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.DateHistogram
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.Histogram
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.Terms
+import com.colasoft.opensearch.indexmanagement.makeRequest
+import com.colasoft.opensearch.indexmanagement.transform.model.Transform
+import com.colasoft.opensearch.indexmanagement.transform.model.TransformMetadata
+import com.colasoft.opensearch.indexmanagement.waitFor
+import com.colasoft.opensearch.jobscheduler.spi.schedule.IntervalSchedule
+import com.colasoft.opensearch.rest.RestRequest
+import com.colasoft.opensearch.rest.RestStatus
+import com.colasoft.opensearch.script.Script
+import com.colasoft.opensearch.script.ScriptType
+import com.colasoft.opensearch.search.aggregations.AggregationBuilders
+import com.colasoft.opensearch.search.aggregations.AggregatorFactories
+import com.colasoft.opensearch.search.aggregations.metrics.ScriptedMetricAggregationBuilder
 import java.lang.Integer.min
 import java.time.Instant
 import java.time.temporal.ChronoUnit

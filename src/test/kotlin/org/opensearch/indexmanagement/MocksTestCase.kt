@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement
+package com.colasoft.opensearch.indexmanagement
 
 import com.nhaarman.mockitokotlin2.any
 import com.nhaarman.mockitokotlin2.doAnswer
@@ -11,17 +11,17 @@ import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.whenever
 import org.junit.Before
 import org.mockito.Mockito
-import org.opensearch.action.ActionListener
-import org.opensearch.action.ActionResponse
-import org.opensearch.action.index.IndexResponse
-import org.opensearch.client.AdminClient
-import org.opensearch.client.Client
-import org.opensearch.client.ClusterAdminClient
-import org.opensearch.common.settings.Settings
-import org.opensearch.common.util.concurrent.ThreadContext
-import org.opensearch.indexmanagement.snapshotmanagement.mockIndexResponse
-import org.opensearch.test.OpenSearchTestCase
-import org.opensearch.threadpool.ThreadPool
+import com.colasoft.opensearch.action.ActionListener
+import com.colasoft.opensearch.action.ActionResponse
+import com.colasoft.opensearch.action.index.IndexResponse
+import com.colasoft.opensearch.client.AdminClient
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.client.ClusterAdminClient
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.common.util.concurrent.ThreadContext
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.mockIndexResponse
+import com.colasoft.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.threadpool.ThreadPool
 
 abstract class MocksTestCase : OpenSearchTestCase() {
 

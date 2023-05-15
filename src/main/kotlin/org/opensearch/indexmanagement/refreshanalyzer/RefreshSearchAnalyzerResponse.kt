@@ -3,16 +3,16 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.refreshanalyzer
+package com.colasoft.opensearch.indexmanagement.refreshanalyzer
 
-import org.opensearch.action.support.DefaultShardOperationFailedException
-import org.opensearch.action.support.broadcast.BroadcastResponse
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.common.io.stream.StreamOutput
-import org.opensearch.core.xcontent.ConstructingObjectParser
-import org.opensearch.core.xcontent.ToXContent.Params
-import org.opensearch.core.xcontent.XContentBuilder
-import org.opensearch.rest.action.RestActions
+import com.colasoft.opensearch.action.support.DefaultShardOperationFailedException
+import com.colasoft.opensearch.action.support.broadcast.BroadcastResponse
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.common.io.stream.StreamOutput
+import com.colasoft.opensearch.core.xcontent.ConstructingObjectParser
+import com.colasoft.opensearch.core.xcontent.ToXContent.Params
+import com.colasoft.opensearch.core.xcontent.XContentBuilder
+import com.colasoft.opensearch.rest.action.RestActions
 import java.io.IOException
 import java.util.function.Function
 

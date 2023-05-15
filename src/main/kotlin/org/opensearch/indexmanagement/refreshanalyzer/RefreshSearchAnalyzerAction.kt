@@ -3,10 +3,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.refreshanalyzer
+package com.colasoft.opensearch.indexmanagement.refreshanalyzer
 
-import org.opensearch.action.ActionType
-import org.opensearch.common.io.stream.Writeable
+import com.colasoft.opensearch.action.ActionType
+import com.colasoft.opensearch.common.io.stream.Writeable
 
 class RefreshSearchAnalyzerAction : ActionType<RefreshSearchAnalyzerResponse>(NAME, reader) {
     companion object {

@@ -3,16 +3,16 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement
 
 import org.apache.logging.log4j.LogManager
-import org.opensearch.action.ActionListener
-import org.opensearch.action.admin.cluster.node.info.NodesInfoAction
-import org.opensearch.action.admin.cluster.node.info.NodesInfoRequest
-import org.opensearch.action.admin.cluster.node.info.NodesInfoResponse
-import org.opensearch.action.admin.cluster.node.info.PluginsAndModules
-import org.opensearch.client.Client
-import org.opensearch.indexmanagement.util.OpenForTesting
+import com.colasoft.opensearch.action.ActionListener
+import com.colasoft.opensearch.action.admin.cluster.node.info.NodesInfoAction
+import com.colasoft.opensearch.action.admin.cluster.node.info.NodesInfoRequest
+import com.colasoft.opensearch.action.admin.cluster.node.info.NodesInfoResponse
+import com.colasoft.opensearch.action.admin.cluster.node.info.PluginsAndModules
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.indexmanagement.util.OpenForTesting
 
 // TODO this can be moved to job scheduler, so that all extended plugin
 //  can avoid running jobs in an upgrading cluster

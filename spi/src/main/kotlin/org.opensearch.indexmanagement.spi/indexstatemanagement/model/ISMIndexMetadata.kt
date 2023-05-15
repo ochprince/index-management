@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.spi.indexstatemanagement.model
+package com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model
 
 data class ISMIndexMetadata(
     val indexUuid: String,

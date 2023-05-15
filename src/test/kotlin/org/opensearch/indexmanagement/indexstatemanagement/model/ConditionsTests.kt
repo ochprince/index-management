@@ -3,12 +3,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.model
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.model
 
-import org.opensearch.common.unit.ByteSizeValue
-import org.opensearch.indexmanagement.indexstatemanagement.randomByteSizeValue
-import org.opensearch.indexmanagement.indexstatemanagement.randomTimeValueObject
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.common.unit.ByteSizeValue
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomByteSizeValue
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomTimeValueObject
+import com.colasoft.opensearch.test.OpenSearchTestCase
 import kotlin.test.assertFailsWith
 
 class ConditionsTests : OpenSearchTestCase() {

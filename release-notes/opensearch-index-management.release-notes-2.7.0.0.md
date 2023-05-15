@@ -14,7 +14,7 @@ Compatible with OpenSearch 2.7.0
 * Error Prevention: Add snapshot action. ([#745](https://github.com/opensearch-project/index-management/pull/745))
 
 ### Refactoring
-* Replace Set in org.opensearch.common.collect with java.util references. ([#717](https://github.com/opensearch-project/index-management/pull/717))
+* Replace Set in com.colasoft.opensearch.common.collect with java.util references. ([#717](https://github.com/opensearch-project/index-management/pull/717))
 * Fixed xContent dependencies due to OSCore changes. ([#721](https://github.com/opensearch-project/index-management/pull/721))
 
 ### Bug fixes

@@ -3,22 +3,22 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.snapshotmanagement.api.resthandler
+package com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.resthandler
 
-import org.opensearch.client.node.NodeClient
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.SM_POLICIES_URI
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.GET_SM_POLICY_ACTION_TYPE
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.GET_SM_POLICIES_ACTION_TYPE
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.get.GetSMPoliciesRequest
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.get.GetSMPolicyRequest
-import org.opensearch.indexmanagement.snapshotmanagement.smPolicyNameToDocId
-import org.opensearch.indexmanagement.snapshotmanagement.util.DEFAULT_SM_POLICY_SORT_FIELD
-import org.opensearch.indexmanagement.util.getSearchParams
-import org.opensearch.rest.BaseRestHandler
-import org.opensearch.rest.RestHandler.Route
-import org.opensearch.rest.RestRequest
-import org.opensearch.rest.RestRequest.Method.GET
-import org.opensearch.rest.action.RestToXContentListener
+import com.colasoft.opensearch.client.node.NodeClient
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.SM_POLICIES_URI
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.GET_SM_POLICY_ACTION_TYPE
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.GET_SM_POLICIES_ACTION_TYPE
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.get.GetSMPoliciesRequest
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.get.GetSMPolicyRequest
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.smPolicyNameToDocId
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.util.DEFAULT_SM_POLICY_SORT_FIELD
+import com.colasoft.opensearch.indexmanagement.util.getSearchParams
+import com.colasoft.opensearch.rest.BaseRestHandler
+import com.colasoft.opensearch.rest.RestHandler.Route
+import com.colasoft.opensearch.rest.RestRequest
+import com.colasoft.opensearch.rest.RestRequest.Method.GET
+import com.colasoft.opensearch.rest.action.RestToXContentListener
 
 class RestGetSMPolicyHandler : BaseRestHandler() {
 

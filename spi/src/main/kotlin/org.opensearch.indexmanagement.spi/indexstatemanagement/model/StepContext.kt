@@ -3,15 +3,15 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.spi.indexstatemanagement.model
+package com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model
 
-import org.opensearch.client.Client
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.settings.Settings
-import org.opensearch.common.util.concurrent.ThreadContext
-import org.opensearch.commons.authuser.User
-import org.opensearch.jobscheduler.spi.utils.LockService
-import org.opensearch.script.ScriptService
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.common.util.concurrent.ThreadContext
+import com.colasoft.opensearch.commons.authuser.User
+import com.colasoft.opensearch.jobscheduler.spi.utils.LockService
+import com.colasoft.opensearch.script.ScriptService
 
 class StepContext(
     val metadata: ManagedIndexMetaData,

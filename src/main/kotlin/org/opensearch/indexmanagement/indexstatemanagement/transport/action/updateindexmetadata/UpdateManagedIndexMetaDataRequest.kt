@@ -3,15 +3,15 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.transport.action.updateindexmetadata
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.updateindexmetadata
 
-import org.opensearch.action.ActionRequestValidationException
-import org.opensearch.action.ValidateActions.addValidationError
-import org.opensearch.action.support.master.AcknowledgedRequest
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.common.io.stream.StreamOutput
-import org.opensearch.index.Index
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.action.ActionRequestValidationException
+import com.colasoft.opensearch.action.ValidateActions.addValidationError
+import com.colasoft.opensearch.action.support.master.AcknowledgedRequest
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.common.io.stream.StreamOutput
+import com.colasoft.opensearch.index.Index
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
 
 class UpdateManagedIndexMetaDataRequest : AcknowledgedRequest<UpdateManagedIndexMetaDataRequest> {
 

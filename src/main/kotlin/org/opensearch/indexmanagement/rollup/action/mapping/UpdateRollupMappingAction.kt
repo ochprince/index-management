@@ -3,11 +3,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.action.mapping
+package com.colasoft.opensearch.indexmanagement.rollup.action.mapping
 
-import org.opensearch.action.ActionType
-import org.opensearch.action.support.master.AcknowledgedResponse
-import org.opensearch.common.io.stream.Writeable
+import com.colasoft.opensearch.action.ActionType
+import com.colasoft.opensearch.action.support.master.AcknowledgedResponse
+import com.colasoft.opensearch.common.io.stream.Writeable
 
 class UpdateRollupMappingAction : ActionType<AcknowledgedResponse>(NAME, reader) {
 

@@ -3,20 +3,20 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.step.forcemerge
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.forcemerge
 
 import org.apache.logging.log4j.LogManager
-import org.opensearch.action.admin.indices.stats.IndicesStatsRequest
-import org.opensearch.action.admin.indices.stats.IndicesStatsResponse
-import org.opensearch.indexmanagement.indexstatemanagement.action.ForceMergeAction
-import org.opensearch.indexmanagement.opensearchapi.getUsefulCauseString
-import org.opensearch.indexmanagement.opensearchapi.suspendUntil
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Step
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionProperties
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StepMetaData
-import org.opensearch.rest.RestStatus
+import com.colasoft.opensearch.action.admin.indices.stats.IndicesStatsRequest
+import com.colasoft.opensearch.action.admin.indices.stats.IndicesStatsResponse
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.ForceMergeAction
+import com.colasoft.opensearch.indexmanagement.opensearchapi.getUsefulCauseString
+import com.colasoft.opensearch.indexmanagement.opensearchapi.suspendUntil
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Step
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionProperties
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StepMetaData
+import com.colasoft.opensearch.rest.RestStatus
 import java.time.Duration
 import java.time.Instant
 

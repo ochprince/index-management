@@ -4,8 +4,8 @@
  */
 
 
-import org.opensearch.gradle.testclusters.OpenSearchCluster
-import org.opensearch.gradle.testclusters.StandaloneRestIntegTestTask
+import com.colasoft.opensearch.gradle.testclusters.OpenSearchCluster
+import com.colasoft.opensearch.gradle.testclusters.StandaloneRestIntegTestTask
 
 import javax.net.ssl.HostnameVerifier
 import javax.net.ssl.HttpsURLConnection
@@ -25,8 +25,8 @@ import java.util.concurrent.TimeUnit
 
 buildscript {
     ext {
-        isSnapshot = "true" == System.getProperty("build.snapshot", "true")
-        opensearch_version = System.getProperty("opensearch.version", "2.7.0-SNAPSHOT")
+        isSnapshot = "true" == System.getProperty("build.snapshot", "false")
+        opensearch_version = System.getProperty("opensearch.version", "2.7.0")
         buildVersionQualifier = System.getProperty("build.version_qualifier", "")
         // 2.2.0-SNAPSHOT -> 2.2.0.0-SNAPSHOT
         version_tokens = opensearch_version.tokenize('-')
@@ -69,14 +69,19 @@ buildscript {
     }
 
     repositories {
+        maven {
+            allowInsecureProtocol(true)
+            url 'http://192.168.0.9:8081/nexus/content/groups/public'
+        }
+        maven {
+            url 'https://maven.aliyun.com/nexus/content/groups/public/'
+        }
         mavenLocal()
-        mavenCentral()
         maven { url "https://plugins.gradle.org/m2/" }
-        maven { url "https://aws.oss.sonatype.org/content/repositories/snapshots" }
     }
 
     dependencies {
-        classpath "org.opensearch.gradle:build-tools:${opensearch_version}"
+        classpath "com.colasoft.opensearch.gradle:build-tools:${opensearch_version}"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlin_version}"
         classpath "org.jetbrains.kotlin:kotlin-allopen:${kotlin_version}"
         classpath "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.21.0"
@@ -135,7 +140,7 @@ check.dependsOn jacocoTestReport
 opensearchplugin {
     name 'opensearch-index-management'
     description 'OpenSearch Index Management Plugin'
-    classname 'org.opensearch.indexmanagement.IndexManagementPlugin'
+    classname 'com.colasoft.opensearch.indexmanagement.IndexManagementPlugin'
     extendedPlugins = ['opensearch-job-scheduler']
 }
 
@@ -144,7 +149,7 @@ tasks.named("integTest").configure {
 }
 
 allOpen {
-    annotation("org.opensearch.indexmanagement.util.OpenForTesting")
+    annotation("com.colasoft.opensearch.indexmanagement.util.OpenForTesting")
 }
 
 configurations {
@@ -187,7 +192,7 @@ ext {
 }
 
 allprojects {
-    group = "org.opensearch"
+    group = "com.colasoft.opensearch"
     version = "${opensearch_build}"
 }
 
@@ -195,21 +200,21 @@ configurations {
     opensearchPlugin
 }
 dependencies {
-    compileOnly "org.opensearch:opensearch:${opensearch_version}"
-    compileOnly "org.opensearch:opensearch-job-scheduler-spi:${job_scheduler_version}"
+    compileOnly "com.colasoft.opensearch:opensearch:${opensearch_version}"
+    compileOnly "com.colasoft.opensearch:opensearch-job-scheduler-spi:${job_scheduler_version}"
     implementation "org.jetbrains.kotlin:kotlin-stdlib:${kotlin_version}"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-common:${kotlin_version}"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}"
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.9'
     implementation "org.jetbrains:annotations:13.0"
     implementation project(path: ":${rootProject.name}-spi", configuration: 'shadow')
-    implementation "org.opensearch:common-utils:${common_utils_version}"
+    implementation "com.colasoft.opensearch:common-utils:${common_utils_version}"
     implementation "com.github.seancfoley:ipaddress:5.3.3"
     implementation "commons-codec:commons-codec:${versions.commonscodec}"
     implementation "org.apache.httpcomponents:httpclient:4.5.13"
     implementation "org.apache.httpcomponents:httpcore:4.4.15"
 
-    testImplementation "org.opensearch.test:framework:${opensearch_version}"
+    testImplementation "com.colasoft.opensearch.test:framework:${opensearch_version}"
     testImplementation "org.jetbrains.kotlin:kotlin-test:${kotlin_version}"
     testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0"
     testImplementation "org.mockito:mockito-core:${versions.mockito}"
@@ -221,15 +226,21 @@ dependencies {
     }
 
     // https://aws.oss.sonatype.org/content/repositories/snapshots/org/opensearch/plugin/
-    opensearchPlugin "org.opensearch.plugin:opensearch-job-scheduler:${job_scheduler_version}@zip"
-    opensearchPlugin "org.opensearch.plugin:opensearch-notifications-core:${notifications_version}@zip"
-    opensearchPlugin "org.opensearch.plugin:notifications:${notifications_version}@zip"
-    opensearchPlugin "org.opensearch.plugin:opensearch-security:${security_plugin_version}@zip"
+    opensearchPlugin "com.colasoft.opensearch.plugin:opensearch-job-scheduler:${job_scheduler_version}@zip"
+    opensearchPlugin "com.colasoft.opensearch.plugin:opensearch-notifications-core:${notifications_version}@zip"
+    opensearchPlugin "com.colasoft.opensearch.plugin:notifications:${notifications_version}@zip"
+    opensearchPlugin "com.colasoft.opensearch.plugin:opensearch-security:${security_plugin_version}@zip"
 }
 
 repositories {
+    maven {
+        allowInsecureProtocol(true)
+        url 'http://192.168.0.9:8081/nexus/content/groups/public'
+    }
+    maven {
+        url 'https://maven.aliyun.com/nexus/content/groups/public/'
+    }
     mavenLocal()
-    maven { url "https://aws.oss.sonatype.org/content/repositories/snapshots" }
 }
 
 publishing {
@@ -238,7 +249,7 @@ publishing {
             pom {
                 name = opensearchplugin.name
                 description = opensearchplugin.description
-                groupId = "org.opensearch.plugin"
+                groupId = "com.colasoft.opensearch.plugin"
                 licenses {
                     license {
                         name = "The Apache License, Version 2.0"
@@ -256,11 +267,12 @@ publishing {
     }
     repositories {
         maven {
-            name = "Snapshots"
-            url = "https://aws.oss.sonatype.org/content/repositories/snapshots"
+            setAllowInsecureProtocol(true)
+            name = 'release'
+            url = 'http://192.168.0.9:8081/nexus/content/repositories/sm_release_repositories'
             credentials {
-                username "$System.env.SONATYPE_USERNAME"
-                password "$System.env.SONATYPE_PASSWORD"
+                username 'sm_admin'
+                password 'p[-sdko12}(9K'
             }
         }
     }
@@ -545,20 +557,20 @@ integTest {
 
     if (System.getProperty("tests.rest.bwcsuite") == null) {
         filter {
-            excludeTestsMatching "org.opensearch.indexmanagement.bwc.*IT"
+            excludeTestsMatching "com.colasoft.opensearch.indexmanagement.bwc.*IT"
         }
     }
     // Exclude security test
     if (System.getProperty("https") == null || System.getProperty("https") == "false") {
         filter {
-            excludeTestsMatching "org.opensearch.*Security*IT"
+            excludeTestsMatching "com.colasoft.opensearch.*Security*IT"
         }
     }
 
     // TODO: Fix running notification test against remote cluster with security plugin installed
     if (System.getProperty("https") != null) {
         filter {
-            excludeTestsMatching "org.opensearch.indexmanagement.indexstatemanagement.action.NotificationActionIT"
+            excludeTestsMatching "com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.NotificationActionIT"
         }
         exclude 'org/opensearch/indexmanagement/indexstatemanagement/MetadataRegressionIT.class'
     }
@@ -581,7 +593,7 @@ task integTestRemote(type: RestIntegTestTask) {
 
     if (System.getProperty("tests.rest.bwcsuite") == null) {
         filter {
-            excludeTestsMatching "org.opensearch.indexmanagement.bwc.*IT"
+            excludeTestsMatching "com.colasoft.opensearch.indexmanagement.bwc.*IT"
         }
     }
 
@@ -592,7 +604,7 @@ task integTestRemote(type: RestIntegTestTask) {
     // TODO: Fix running notification test against remote cluster with security plugin installed
     if (System.getProperty("https") != null) {
         filter {
-            excludeTestsMatching "org.opensearch.indexmanagement.indexstatemanagement.action.NotificationActionIT"
+            excludeTestsMatching "com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.NotificationActionIT"
         }
     }
 
@@ -733,7 +745,7 @@ task prepareBwcTests {
         dependsOn 'prepareBwcTests'
         useCluster testClusters."${baseName}$i"
         filter {
-            includeTestsMatching "org.opensearch.indexmanagement.bwc.*IT"
+            includeTestsMatching "com.colasoft.opensearch.indexmanagement.bwc.*IT"
         }
         systemProperty 'tests.rest.bwcsuite', 'old_cluster'
         systemProperty 'tests.rest.bwcsuite_round', 'old'
@@ -757,7 +769,7 @@ task "${baseName}#oneThirdsUpgradeCluster"(type: StandaloneRestIntegTestTask) {
         }
     }
     filter {
-        includeTestsMatching "org.opensearch.indexmanagement.bwc.*IT"
+        includeTestsMatching "com.colasoft.opensearch.indexmanagement.bwc.*IT"
     }
     systemProperty 'tests.rest.bwcsuite', 'mixed_cluster'
     systemProperty 'tests.rest.bwcsuite_round', 'first'
@@ -777,7 +789,7 @@ task "${baseName}#twoThirdsUpgradedClusterTask"(type: StandaloneRestIntegTestTas
         testClusters."${baseName}0".upgradeNodeAndPluginToNextVersion(plugins)
     }
     filter {
-        includeTestsMatching "org.opensearch.indexmanagement.bwc.*IT"
+        includeTestsMatching "com.colasoft.opensearch.indexmanagement.bwc.*IT"
     }
     systemProperty 'tests.rest.bwcsuite', 'mixed_cluster'
     systemProperty 'tests.rest.bwcsuite_round', 'second'
@@ -797,7 +809,7 @@ task "${baseName}#rollingUpgradeClusterTask"(type: StandaloneRestIntegTestTask) 
         testClusters."${baseName}0".upgradeNodeAndPluginToNextVersion(plugins)
     }
     filter {
-        includeTestsMatching "org.opensearch.indexmanagement.bwc.*IT"
+        includeTestsMatching "com.colasoft.opensearch.indexmanagement.bwc.*IT"
     }
     systemProperty 'tests.rest.bwcsuite', 'upgraded_cluster'
     systemProperty 'tests.rest.bwcsuite_round', 'third'
@@ -816,7 +828,7 @@ task "${baseName}#fullRestartClusterTask"(type: StandaloneRestIntegTestTask) {
         testClusters."${baseName}1".upgradeAllNodesAndPluginsToNextVersion(plugins)
     }
     filter {
-        includeTestsMatching "org.opensearch.indexmanagement.bwc.*IT"
+        includeTestsMatching "com.colasoft.opensearch.indexmanagement.bwc.*IT"
     }
     systemProperty 'tests.rest.bwcsuite', 'upgraded_cluster'
     systemProperty 'tests.plugin_bwc_version', bwcVersion
@@ -861,7 +873,7 @@ apply from: 'build-tools/pkgbuild.gradle'
 // This IT is to simulate the situation
 // when there are old version (without metadata change)
 // and new version mixed in one cluster
-import org.opensearch.gradle.test.RestIntegTestTask
+import com.colasoft.opensearch.gradle.test.RestIntegTestTask
 
 def mixedClusterTest = project.tasks.create('mixedCluster', RestIntegTestTask.class)
 def mixedClusterFlag = findProperty('mixed') as Boolean ?: false

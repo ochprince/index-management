@@ -3,17 +3,17 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.transform.opensearchapi
+package com.colasoft.opensearch.indexmanagement.transform.opensearchapi
 
 import kotlinx.coroutines.delay
 import org.apache.logging.log4j.Logger
-import org.opensearch.OpenSearchException
-import org.opensearch.action.bulk.BackoffPolicy
-import org.opensearch.common.unit.TimeValue
-import org.opensearch.indexmanagement.opensearchapi.isRetryable
-import org.opensearch.indexmanagement.transform.util.TransformLockManager
-import org.opensearch.rest.RestStatus
-import org.opensearch.tasks.TaskCancelledException
+import com.colasoft.opensearch.OpenSearchException
+import com.colasoft.opensearch.action.bulk.BackoffPolicy
+import com.colasoft.opensearch.common.unit.TimeValue
+import com.colasoft.opensearch.indexmanagement.opensearchapi.isRetryable
+import com.colasoft.opensearch.indexmanagement.transform.util.TransformLockManager
+import com.colasoft.opensearch.rest.RestStatus
+import com.colasoft.opensearch.tasks.TaskCancelledException
 import java.util.regex.Pattern
 
 /**
@@ -27,7 +27,7 @@ private val timeoutMessagePattern = Pattern.compile("cancelled task with reason:
  * if [block] throws an [OpenSearchException] that is retriable (502, 503, 504 or 500 with message Time exceeded).
  *
  * If all retries fail the final exception will be rethrown. Exceptions caught during intermediate retries are
- * logged as warnings to [logger]. Similar to [org.opensearch.action.bulk.Retry], except these retries on
+ * logged as warnings to [logger]. Similar to [com.colasoft.opensearch.action.bulk.Retry], except these retries on
  * 502, 503, 504 error codes as well as when TaskCancelledException is being raised as cause. If the request is timeout, lock will be renewed
  *
  * @param logger - logger used to log intermediate failures

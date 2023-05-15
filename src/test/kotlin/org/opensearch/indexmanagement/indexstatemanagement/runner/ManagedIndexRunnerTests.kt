@@ -3,28 +3,28 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.runner
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.runner
 
 import com.carrotsearch.randomizedtesting.annotations.ThreadLeakScope
 import org.junit.Before
 import org.mockito.Mockito
-import org.opensearch.Version
-import org.opensearch.client.Client
-import org.opensearch.cluster.node.DiscoveryNode
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.settings.ClusterSettings
-import org.opensearch.common.settings.Setting
-import org.opensearch.common.settings.Settings
-import org.opensearch.core.xcontent.NamedXContentRegistry
-import org.opensearch.env.Environment
-import org.opensearch.indexmanagement.indexstatemanagement.IndexStateManagementHistory
-import org.opensearch.indexmanagement.indexstatemanagement.ManagedIndexRunner
-import org.opensearch.indexmanagement.indexstatemanagement.SkipExecution
-import org.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
-import org.opensearch.script.ScriptService
-import org.opensearch.test.ClusterServiceUtils
-import org.opensearch.test.OpenSearchTestCase
-import org.opensearch.threadpool.ThreadPool
+import com.colasoft.opensearch.Version
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.cluster.node.DiscoveryNode
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.settings.ClusterSettings
+import com.colasoft.opensearch.common.settings.Setting
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.core.xcontent.NamedXContentRegistry
+import com.colasoft.opensearch.env.Environment
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.IndexStateManagementHistory
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.ManagedIndexRunner
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.SkipExecution
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
+import com.colasoft.opensearch.script.ScriptService
+import com.colasoft.opensearch.test.ClusterServiceUtils
+import com.colasoft.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.threadpool.ThreadPool
 
 @ThreadLeakScope(ThreadLeakScope.Scope.NONE)
 class ManagedIndexRunnerTests : OpenSearchTestCase() {

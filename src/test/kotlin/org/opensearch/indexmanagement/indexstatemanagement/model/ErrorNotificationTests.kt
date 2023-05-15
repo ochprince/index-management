@@ -3,12 +3,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.model
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.model
 
-import org.opensearch.indexmanagement.indexstatemanagement.randomChannel
-import org.opensearch.indexmanagement.indexstatemanagement.randomDestination
-import org.opensearch.indexmanagement.indexstatemanagement.randomTemplateScript
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomChannel
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomDestination
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomTemplateScript
+import com.colasoft.opensearch.test.OpenSearchTestCase
 import kotlin.test.assertFailsWith
 
 class ErrorNotificationTests : OpenSearchTestCase() {

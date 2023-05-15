@@ -3,21 +3,21 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.transform.action
+package com.colasoft.opensearch.indexmanagement.transform.action
 
-import org.opensearch.common.io.stream.BytesStreamOutput
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.indexmanagement.transform.action.explain.ExplainTransformResponse
-import org.opensearch.indexmanagement.transform.action.get.GetTransformResponse
-import org.opensearch.indexmanagement.transform.action.get.GetTransformsResponse
-import org.opensearch.indexmanagement.transform.action.index.IndexTransformResponse
-import org.opensearch.indexmanagement.transform.action.preview.PreviewTransformResponse
-import org.opensearch.indexmanagement.transform.buildStreamInputForTransforms
-import org.opensearch.indexmanagement.transform.randomExplainTransform
-import org.opensearch.indexmanagement.transform.randomTransform
-import org.opensearch.rest.RestStatus
-import org.opensearch.test.OpenSearchTestCase
-import org.opensearch.test.OpenSearchTestCase.randomList
+import com.colasoft.opensearch.common.io.stream.BytesStreamOutput
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.indexmanagement.transform.action.explain.ExplainTransformResponse
+import com.colasoft.opensearch.indexmanagement.transform.action.get.GetTransformResponse
+import com.colasoft.opensearch.indexmanagement.transform.action.get.GetTransformsResponse
+import com.colasoft.opensearch.indexmanagement.transform.action.index.IndexTransformResponse
+import com.colasoft.opensearch.indexmanagement.transform.action.preview.PreviewTransformResponse
+import com.colasoft.opensearch.indexmanagement.transform.buildStreamInputForTransforms
+import com.colasoft.opensearch.indexmanagement.transform.randomExplainTransform
+import com.colasoft.opensearch.indexmanagement.transform.randomTransform
+import com.colasoft.opensearch.rest.RestStatus
+import com.colasoft.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.test.OpenSearchTestCase.randomList
 
 class ResponseTests : OpenSearchTestCase() {
 

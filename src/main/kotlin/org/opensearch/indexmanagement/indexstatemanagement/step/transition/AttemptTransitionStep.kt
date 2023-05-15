@@ -3,27 +3,27 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.step.transition
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.transition
 
 import org.apache.logging.log4j.LogManager
-import org.opensearch.ExceptionsHelper
-import org.opensearch.action.admin.indices.stats.IndicesStatsRequest
-import org.opensearch.action.admin.indices.stats.IndicesStatsResponse
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.unit.ByteSizeValue
-import org.opensearch.indexmanagement.indexstatemanagement.IndexMetadataProvider
-import org.opensearch.indexmanagement.indexstatemanagement.action.TransitionsAction
-import org.opensearch.indexmanagement.indexstatemanagement.opensearchapi.getOldestRolloverTime
-import org.opensearch.indexmanagement.indexstatemanagement.util.DEFAULT_INDEX_TYPE
-import org.opensearch.indexmanagement.indexstatemanagement.util.evaluateConditions
-import org.opensearch.indexmanagement.indexstatemanagement.util.hasStatsConditions
-import org.opensearch.indexmanagement.opensearchapi.getUsefulCauseString
-import org.opensearch.indexmanagement.opensearchapi.suspendUntil
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Step
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StepMetaData
-import org.opensearch.rest.RestStatus
-import org.opensearch.transport.RemoteTransportException
+import com.colasoft.opensearch.ExceptionsHelper
+import com.colasoft.opensearch.action.admin.indices.stats.IndicesStatsRequest
+import com.colasoft.opensearch.action.admin.indices.stats.IndicesStatsResponse
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.unit.ByteSizeValue
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.IndexMetadataProvider
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.TransitionsAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.opensearchapi.getOldestRolloverTime
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.DEFAULT_INDEX_TYPE
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.evaluateConditions
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.hasStatsConditions
+import com.colasoft.opensearch.indexmanagement.opensearchapi.getUsefulCauseString
+import com.colasoft.opensearch.indexmanagement.opensearchapi.suspendUntil
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Step
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StepMetaData
+import com.colasoft.opensearch.rest.RestStatus
+import com.colasoft.opensearch.transport.RemoteTransportException
 import java.time.Instant
 
 class AttemptTransitionStep(private val action: TransitionsAction) : Step(name) {

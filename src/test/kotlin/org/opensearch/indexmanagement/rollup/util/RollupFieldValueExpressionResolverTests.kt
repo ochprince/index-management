@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.util
+package com.colasoft.opensearch.indexmanagement.rollup.util
 
 import com.nhaarman.mockitokotlin2.any
 import com.nhaarman.mockitokotlin2.eq
@@ -12,12 +12,12 @@ import com.nhaarman.mockitokotlin2.whenever
 import com.nhaarman.mockitokotlin2.doReturn
 import org.junit.Before
 import org.mockito.ArgumentMatchers.anyString
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.indexmanagement.rollup.randomRollup
-import org.opensearch.ingest.TestTemplateService
-import org.opensearch.script.ScriptService
-import org.opensearch.script.TemplateScript
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.indexmanagement.rollup.randomRollup
+import com.colasoft.opensearch.ingest.TestTemplateService
+import com.colasoft.opensearch.script.ScriptService
+import com.colasoft.opensearch.script.TemplateScript
+import com.colasoft.opensearch.test.OpenSearchTestCase
 
 class RollupFieldValueExpressionResolverTests : OpenSearchTestCase() {
 

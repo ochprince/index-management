@@ -3,22 +3,22 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.common.model.dimension
+package com.colasoft.opensearch.indexmanagement.common.model.dimension
 
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.common.io.stream.StreamOutput
-import org.opensearch.core.xcontent.ToXContent
-import org.opensearch.core.xcontent.XContentBuilder
-import org.opensearch.core.xcontent.XContentParser
-import org.opensearch.core.xcontent.XContentParser.Token
-import org.opensearch.common.xcontent.XContentParserUtils.ensureExpectedToken
-import org.opensearch.index.query.AbstractQueryBuilder
-import org.opensearch.index.query.TermsQueryBuilder
-import org.opensearch.indexmanagement.util.IndexUtils.Companion.getFieldFromMappings
-import org.opensearch.search.aggregations.AggregatorFactories
-import org.opensearch.search.aggregations.bucket.composite.CompositeValuesSourceBuilder
-import org.opensearch.search.aggregations.bucket.composite.TermsValuesSourceBuilder
-import org.opensearch.search.aggregations.bucket.terms.TermsAggregationBuilder
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.common.io.stream.StreamOutput
+import com.colasoft.opensearch.core.xcontent.ToXContent
+import com.colasoft.opensearch.core.xcontent.XContentBuilder
+import com.colasoft.opensearch.core.xcontent.XContentParser
+import com.colasoft.opensearch.core.xcontent.XContentParser.Token
+import com.colasoft.opensearch.common.xcontent.XContentParserUtils.ensureExpectedToken
+import com.colasoft.opensearch.index.query.AbstractQueryBuilder
+import com.colasoft.opensearch.index.query.TermsQueryBuilder
+import com.colasoft.opensearch.indexmanagement.util.IndexUtils.Companion.getFieldFromMappings
+import com.colasoft.opensearch.search.aggregations.AggregatorFactories
+import com.colasoft.opensearch.search.aggregations.bucket.composite.CompositeValuesSourceBuilder
+import com.colasoft.opensearch.search.aggregations.bucket.composite.TermsValuesSourceBuilder
+import com.colasoft.opensearch.search.aggregations.bucket.terms.TermsAggregationBuilder
 import java.io.IOException
 
 data class Terms(

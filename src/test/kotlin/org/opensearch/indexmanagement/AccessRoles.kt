@@ -3,27 +3,27 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement
+package com.colasoft.opensearch.indexmanagement
 
-import org.opensearch.indexmanagement.indexstatemanagement.transport.action.addpolicy.AddPolicyAction
-import org.opensearch.indexmanagement.indexstatemanagement.transport.action.deletepolicy.DeletePolicyAction
-import org.opensearch.indexmanagement.indexstatemanagement.transport.action.explain.ExplainAction
-import org.opensearch.indexmanagement.indexstatemanagement.transport.action.getpolicy.GetPoliciesAction
-import org.opensearch.indexmanagement.indexstatemanagement.transport.action.getpolicy.GetPolicyAction
-import org.opensearch.indexmanagement.indexstatemanagement.transport.action.indexpolicy.IndexPolicyAction
-import org.opensearch.indexmanagement.indexstatemanagement.transport.action.managedIndex.ManagedIndexAction
-import org.opensearch.indexmanagement.rollup.action.delete.DeleteRollupAction
-import org.opensearch.indexmanagement.rollup.action.explain.ExplainRollupAction
-import org.opensearch.indexmanagement.rollup.action.get.GetRollupAction
-import org.opensearch.indexmanagement.rollup.action.index.IndexRollupAction
-import org.opensearch.indexmanagement.rollup.action.mapping.UpdateRollupMappingAction
-import org.opensearch.indexmanagement.transform.action.delete.DeleteTransformsAction
-import org.opensearch.indexmanagement.transform.action.explain.ExplainTransformAction
-import org.opensearch.indexmanagement.transform.action.get.GetTransformAction
-import org.opensearch.indexmanagement.transform.action.get.GetTransformsAction
-import org.opensearch.indexmanagement.transform.action.index.IndexTransformAction
-import org.opensearch.indexmanagement.transform.action.start.StartTransformAction
-import org.opensearch.indexmanagement.transform.action.stop.StopTransformAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.addpolicy.AddPolicyAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.deletepolicy.DeletePolicyAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.explain.ExplainAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.getpolicy.GetPoliciesAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.getpolicy.GetPolicyAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.indexpolicy.IndexPolicyAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.managedIndex.ManagedIndexAction
+import com.colasoft.opensearch.indexmanagement.rollup.action.delete.DeleteRollupAction
+import com.colasoft.opensearch.indexmanagement.rollup.action.explain.ExplainRollupAction
+import com.colasoft.opensearch.indexmanagement.rollup.action.get.GetRollupAction
+import com.colasoft.opensearch.indexmanagement.rollup.action.index.IndexRollupAction
+import com.colasoft.opensearch.indexmanagement.rollup.action.mapping.UpdateRollupMappingAction
+import com.colasoft.opensearch.indexmanagement.transform.action.delete.DeleteTransformsAction
+import com.colasoft.opensearch.indexmanagement.transform.action.explain.ExplainTransformAction
+import com.colasoft.opensearch.indexmanagement.transform.action.get.GetTransformAction
+import com.colasoft.opensearch.indexmanagement.transform.action.get.GetTransformsAction
+import com.colasoft.opensearch.indexmanagement.transform.action.index.IndexTransformAction
+import com.colasoft.opensearch.indexmanagement.transform.action.start.StartTransformAction
+import com.colasoft.opensearch.indexmanagement.transform.action.stop.StopTransformAction
 
 // ISM
 const val WRITE_POLICY = IndexPolicyAction.NAME

@@ -3,16 +3,16 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.snapshotmanagement.model
+package com.colasoft.opensearch.indexmanagement.snapshotmanagement.model
 
-import org.opensearch.indexmanagement.indexstatemanagement.util.XCONTENT_WITHOUT_TYPE
-import org.opensearch.indexmanagement.opensearchapi.parseWithType
-import org.opensearch.indexmanagement.snapshotmanagement.parser
-import org.opensearch.indexmanagement.snapshotmanagement.randomNotificationConfig
-import org.opensearch.indexmanagement.snapshotmanagement.randomSMMetadata
-import org.opensearch.indexmanagement.snapshotmanagement.randomSMPolicy
-import org.opensearch.indexmanagement.snapshotmanagement.toJsonString
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.XCONTENT_WITHOUT_TYPE
+import com.colasoft.opensearch.indexmanagement.opensearchapi.parseWithType
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.parser
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.randomNotificationConfig
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.randomSMMetadata
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.randomSMPolicy
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.toJsonString
+import com.colasoft.opensearch.test.OpenSearchTestCase
 
 class XContentTests : OpenSearchTestCase() {
 

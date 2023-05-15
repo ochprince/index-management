@@ -3,25 +3,25 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.resthandler
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.resthandler
 
-import org.opensearch.client.ResponseException
-import org.opensearch.indexmanagement.indexstatemanagement.IndexStateManagementRestTestCase
-import org.opensearch.indexmanagement.indexstatemanagement.action.AllocationAction
-import org.opensearch.indexmanagement.indexstatemanagement.randomForceMergeActionConfig
-import org.opensearch.indexmanagement.indexstatemanagement.randomPolicy
-import org.opensearch.indexmanagement.indexstatemanagement.randomState
-import org.opensearch.indexmanagement.indexstatemanagement.util.FAILED_INDICES
-import org.opensearch.indexmanagement.indexstatemanagement.util.FAILURES
-import org.opensearch.indexmanagement.indexstatemanagement.util.UPDATED_INDICES
-import org.opensearch.indexmanagement.makeRequest
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Step
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionRetry
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
-import org.opensearch.indexmanagement.waitFor
-import org.opensearch.rest.RestRequest
-import org.opensearch.rest.RestStatus
+import com.colasoft.opensearch.client.ResponseException
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.IndexStateManagementRestTestCase
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.AllocationAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomForceMergeActionConfig
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomPolicy
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomState
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.FAILED_INDICES
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.FAILURES
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.UPDATED_INDICES
+import com.colasoft.opensearch.indexmanagement.makeRequest
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Step
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ActionRetry
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.indexmanagement.waitFor
+import com.colasoft.opensearch.rest.RestRequest
+import com.colasoft.opensearch.rest.RestStatus
 import java.time.Instant
 import java.util.Locale
 

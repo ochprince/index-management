@@ -3,32 +3,32 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.resthandler
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.resthandler
 
 import org.apache.logging.log4j.LogManager
-import org.opensearch.client.node.NodeClient
-import org.opensearch.common.Strings
-import org.opensearch.common.logging.DeprecationLogger
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.ISM_BASE_URI
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.LEGACY_ISM_BASE_URI
-import org.opensearch.indexmanagement.indexstatemanagement.transport.action.explain.ExplainAction
-import org.opensearch.indexmanagement.indexstatemanagement.transport.action.explain.ExplainRequest
-import org.opensearch.indexmanagement.indexstatemanagement.util.DEFAULT_EXPLAIN_VALIDATE_ACTION
-import org.opensearch.indexmanagement.indexstatemanagement.util.DEFAULT_EXPLAIN_SHOW_POLICY
-import org.opensearch.indexmanagement.indexstatemanagement.util.SHOW_VALIDATE_ACTION
-import org.opensearch.indexmanagement.indexstatemanagement.util.DEFAULT_INDEX_TYPE
-import org.opensearch.indexmanagement.indexstatemanagement.util.DEFAULT_JOB_SORT_FIELD
-import org.opensearch.indexmanagement.indexstatemanagement.util.SHOW_POLICY_QUERY_PARAM
-import org.opensearch.indexmanagement.indexstatemanagement.util.TYPE_PARAM_KEY
-import org.opensearch.indexmanagement.indexstatemanagement.util.parseClusterManagerTimeout
-import org.opensearch.indexmanagement.util.getSearchParams
-import org.opensearch.rest.BaseRestHandler
-import org.opensearch.rest.BaseRestHandler.RestChannelConsumer
-import org.opensearch.rest.RestHandler.ReplacedRoute
-import org.opensearch.rest.RestHandler.Route
-import org.opensearch.rest.RestRequest
-import org.opensearch.rest.RestRequest.Method.GET
-import org.opensearch.rest.action.RestToXContentListener
+import com.colasoft.opensearch.client.node.NodeClient
+import com.colasoft.opensearch.common.Strings
+import com.colasoft.opensearch.common.logging.DeprecationLogger
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.ISM_BASE_URI
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.LEGACY_ISM_BASE_URI
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.explain.ExplainAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.explain.ExplainRequest
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.DEFAULT_EXPLAIN_VALIDATE_ACTION
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.DEFAULT_EXPLAIN_SHOW_POLICY
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.SHOW_VALIDATE_ACTION
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.DEFAULT_INDEX_TYPE
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.DEFAULT_JOB_SORT_FIELD
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.SHOW_POLICY_QUERY_PARAM
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.TYPE_PARAM_KEY
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.parseClusterManagerTimeout
+import com.colasoft.opensearch.indexmanagement.util.getSearchParams
+import com.colasoft.opensearch.rest.BaseRestHandler
+import com.colasoft.opensearch.rest.BaseRestHandler.RestChannelConsumer
+import com.colasoft.opensearch.rest.RestHandler.ReplacedRoute
+import com.colasoft.opensearch.rest.RestHandler.Route
+import com.colasoft.opensearch.rest.RestRequest
+import com.colasoft.opensearch.rest.RestRequest.Method.GET
+import com.colasoft.opensearch.rest.action.RestToXContentListener
 
 private val log = LogManager.getLogger(RestExplainAction::class.java)
 

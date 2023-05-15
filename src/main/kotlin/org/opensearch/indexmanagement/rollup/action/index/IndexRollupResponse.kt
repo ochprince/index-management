@@ -3,22 +3,22 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.action.index
+package com.colasoft.opensearch.indexmanagement.rollup.action.index
 
-import org.opensearch.action.ActionResponse
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.common.io.stream.StreamOutput
-import org.opensearch.core.xcontent.ToXContent
-import org.opensearch.core.xcontent.ToXContentObject
-import org.opensearch.core.xcontent.XContentBuilder
-import org.opensearch.indexmanagement.indexstatemanagement.util.XCONTENT_WITHOUT_TYPE_AND_USER
-import org.opensearch.indexmanagement.rollup.model.Rollup
-import org.opensearch.indexmanagement.rollup.model.Rollup.Companion.ROLLUP_TYPE
-import org.opensearch.indexmanagement.util._ID
-import org.opensearch.indexmanagement.util._PRIMARY_TERM
-import org.opensearch.indexmanagement.util._SEQ_NO
-import org.opensearch.indexmanagement.util._VERSION
-import org.opensearch.rest.RestStatus
+import com.colasoft.opensearch.action.ActionResponse
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.common.io.stream.StreamOutput
+import com.colasoft.opensearch.core.xcontent.ToXContent
+import com.colasoft.opensearch.core.xcontent.ToXContentObject
+import com.colasoft.opensearch.core.xcontent.XContentBuilder
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.XCONTENT_WITHOUT_TYPE_AND_USER
+import com.colasoft.opensearch.indexmanagement.rollup.model.Rollup
+import com.colasoft.opensearch.indexmanagement.rollup.model.Rollup.Companion.ROLLUP_TYPE
+import com.colasoft.opensearch.indexmanagement.util._ID
+import com.colasoft.opensearch.indexmanagement.util._PRIMARY_TERM
+import com.colasoft.opensearch.indexmanagement.util._SEQ_NO
+import com.colasoft.opensearch.indexmanagement.util._VERSION
+import com.colasoft.opensearch.rest.RestStatus
 import java.io.IOException
 
 class IndexRollupResponse : ActionResponse, ToXContentObject {

@@ -3,29 +3,29 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.transform
+package com.colasoft.opensearch.indexmanagement.transform
 
 import org.apache.logging.log4j.LogManager
-import org.opensearch.ExceptionsHelper
-import org.opensearch.OpenSearchSecurityException
-import org.opensearch.action.DocWriteRequest
-import org.opensearch.action.admin.indices.create.CreateIndexRequest
-import org.opensearch.action.admin.indices.create.CreateIndexResponse
-import org.opensearch.action.bulk.BackoffPolicy
-import org.opensearch.action.bulk.BulkItemResponse
-import org.opensearch.action.bulk.BulkRequest
-import org.opensearch.action.bulk.BulkResponse
-import org.opensearch.action.index.IndexRequest
-import org.opensearch.client.Client
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.settings.Settings
-import org.opensearch.indexmanagement.IndexManagementIndices
-import org.opensearch.indexmanagement.opensearchapi.retry
-import org.opensearch.indexmanagement.opensearchapi.suspendUntil
-import org.opensearch.indexmanagement.transform.exceptions.TransformIndexException
-import org.opensearch.indexmanagement.transform.settings.TransformSettings
-import org.opensearch.rest.RestStatus
-import org.opensearch.transport.RemoteTransportException
+import com.colasoft.opensearch.ExceptionsHelper
+import com.colasoft.opensearch.OpenSearchSecurityException
+import com.colasoft.opensearch.action.DocWriteRequest
+import com.colasoft.opensearch.action.admin.indices.create.CreateIndexRequest
+import com.colasoft.opensearch.action.admin.indices.create.CreateIndexResponse
+import com.colasoft.opensearch.action.bulk.BackoffPolicy
+import com.colasoft.opensearch.action.bulk.BulkItemResponse
+import com.colasoft.opensearch.action.bulk.BulkRequest
+import com.colasoft.opensearch.action.bulk.BulkResponse
+import com.colasoft.opensearch.action.index.IndexRequest
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.indexmanagement.IndexManagementIndices
+import com.colasoft.opensearch.indexmanagement.opensearchapi.retry
+import com.colasoft.opensearch.indexmanagement.opensearchapi.suspendUntil
+import com.colasoft.opensearch.indexmanagement.transform.exceptions.TransformIndexException
+import com.colasoft.opensearch.indexmanagement.transform.settings.TransformSettings
+import com.colasoft.opensearch.rest.RestStatus
+import com.colasoft.opensearch.transport.RemoteTransportException
 
 @Suppress("ComplexMethod")
 class TransformIndexer(

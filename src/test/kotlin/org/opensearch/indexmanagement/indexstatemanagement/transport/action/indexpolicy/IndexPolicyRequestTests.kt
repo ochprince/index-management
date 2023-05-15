@@ -3,21 +3,21 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.transport.action.indexpolicy
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.indexpolicy
 
-import org.opensearch.action.support.WriteRequest
-import org.opensearch.common.io.stream.BytesStreamOutput
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.indexmanagement.indexstatemanagement.ISMActionsParser
-import org.opensearch.indexmanagement.indexstatemanagement.action.AllocationAction
-import org.opensearch.indexmanagement.indexstatemanagement.action.DeleteAction
-import org.opensearch.indexmanagement.indexstatemanagement.action.IndexPriorityAction
-import org.opensearch.indexmanagement.indexstatemanagement.extension.SampleCustomActionParser
-import org.opensearch.indexmanagement.indexstatemanagement.model.Policy
-import org.opensearch.indexmanagement.indexstatemanagement.model.State
-import org.opensearch.indexmanagement.indexstatemanagement.randomErrorNotification
-import org.opensearch.indexmanagement.opensearchapi.convertToMap
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.action.support.WriteRequest
+import com.colasoft.opensearch.common.io.stream.BytesStreamOutput
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.ISMActionsParser
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.AllocationAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.DeleteAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.IndexPriorityAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.extension.SampleCustomActionParser
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.Policy
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.State
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomErrorNotification
+import com.colasoft.opensearch.indexmanagement.opensearchapi.convertToMap
+import com.colasoft.opensearch.test.OpenSearchTestCase
 import java.time.Instant
 import java.time.temporal.ChronoUnit
 

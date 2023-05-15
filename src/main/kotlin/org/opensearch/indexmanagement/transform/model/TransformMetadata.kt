@@ -3,21 +3,21 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.transform.model
+package com.colasoft.opensearch.indexmanagement.transform.model
 
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.common.io.stream.StreamOutput
-import org.opensearch.common.io.stream.Writeable
-import org.opensearch.core.xcontent.ToXContent
-import org.opensearch.core.xcontent.ToXContentObject
-import org.opensearch.core.xcontent.XContentBuilder
-import org.opensearch.core.xcontent.XContentParser
-import org.opensearch.common.xcontent.XContentParserUtils.ensureExpectedToken
-import org.opensearch.index.seqno.SequenceNumbers
-import org.opensearch.index.shard.ShardId
-import org.opensearch.indexmanagement.indexstatemanagement.util.WITH_TYPE
-import org.opensearch.indexmanagement.opensearchapi.instant
-import org.opensearch.indexmanagement.opensearchapi.optionalTimeField
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.common.io.stream.StreamOutput
+import com.colasoft.opensearch.common.io.stream.Writeable
+import com.colasoft.opensearch.core.xcontent.ToXContent
+import com.colasoft.opensearch.core.xcontent.ToXContentObject
+import com.colasoft.opensearch.core.xcontent.XContentBuilder
+import com.colasoft.opensearch.core.xcontent.XContentParser
+import com.colasoft.opensearch.common.xcontent.XContentParserUtils.ensureExpectedToken
+import com.colasoft.opensearch.index.seqno.SequenceNumbers
+import com.colasoft.opensearch.index.shard.ShardId
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.WITH_TYPE
+import com.colasoft.opensearch.indexmanagement.opensearchapi.instant
+import com.colasoft.opensearch.indexmanagement.opensearchapi.optionalTimeField
 import java.io.IOException
 import java.time.Instant
 import java.util.Locale

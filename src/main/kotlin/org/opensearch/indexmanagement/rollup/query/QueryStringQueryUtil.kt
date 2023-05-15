@@ -3,22 +3,22 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.query
+package com.colasoft.opensearch.indexmanagement.rollup.query
 
 import org.apache.lucene.queryparser.classic.ParseException
 import org.apache.lucene.queryparser.classic.QueryParser
-import org.opensearch.OpenSearchParseException
-import org.opensearch.common.regex.Regex
-import org.opensearch.common.xcontent.LoggingDeprecationHandler
-import org.opensearch.index.analysis.NamedAnalyzer
-import org.opensearch.index.query.QueryBuilder
-import org.opensearch.index.query.QueryShardContext
-import org.opensearch.index.query.QueryShardException
-import org.opensearch.index.query.QueryStringQueryBuilder
-import org.opensearch.index.query.support.QueryParsers
-import org.opensearch.index.search.QueryParserHelper
-import org.opensearch.indexmanagement.common.model.dimension.Dimension
-import org.opensearch.indexmanagement.rollup.util.QueryShardContextFactory
+import com.colasoft.opensearch.OpenSearchParseException
+import com.colasoft.opensearch.common.regex.Regex
+import com.colasoft.opensearch.common.xcontent.LoggingDeprecationHandler
+import com.colasoft.opensearch.index.analysis.NamedAnalyzer
+import com.colasoft.opensearch.index.query.QueryBuilder
+import com.colasoft.opensearch.index.query.QueryShardContext
+import com.colasoft.opensearch.index.query.QueryShardException
+import com.colasoft.opensearch.index.query.QueryStringQueryBuilder
+import com.colasoft.opensearch.index.query.support.QueryParsers
+import com.colasoft.opensearch.index.search.QueryParserHelper
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.Dimension
+import com.colasoft.opensearch.indexmanagement.rollup.util.QueryShardContextFactory
 
 object QueryStringQueryUtil {
 

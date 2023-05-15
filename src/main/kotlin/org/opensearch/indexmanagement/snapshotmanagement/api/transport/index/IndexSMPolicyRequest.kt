@@ -3,17 +3,17 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.snapshotmanagement.api.transport.index
+package com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.index
 
-import org.opensearch.action.ActionRequestValidationException
-import org.opensearch.action.DocWriteRequest
-import org.opensearch.action.ValidateActions
-import org.opensearch.action.index.IndexRequest
-import org.opensearch.action.support.WriteRequest
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.common.io.stream.StreamOutput
-import org.opensearch.index.seqno.SequenceNumbers
-import org.opensearch.indexmanagement.snapshotmanagement.model.SMPolicy
+import com.colasoft.opensearch.action.ActionRequestValidationException
+import com.colasoft.opensearch.action.DocWriteRequest
+import com.colasoft.opensearch.action.ValidateActions
+import com.colasoft.opensearch.action.index.IndexRequest
+import com.colasoft.opensearch.action.support.WriteRequest
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.common.io.stream.StreamOutput
+import com.colasoft.opensearch.index.seqno.SequenceNumbers
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.model.SMPolicy
 import java.time.Instant.now
 
 class IndexSMPolicyRequest : IndexRequest {

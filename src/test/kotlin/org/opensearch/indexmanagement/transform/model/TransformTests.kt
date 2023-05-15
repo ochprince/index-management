@@ -3,11 +3,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.transform.model
+package com.colasoft.opensearch.indexmanagement.transform.model
 
-import org.opensearch.indexmanagement.transform.randomTransform
-import org.opensearch.jobscheduler.spi.schedule.IntervalSchedule
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.indexmanagement.transform.randomTransform
+import com.colasoft.opensearch.jobscheduler.spi.schedule.IntervalSchedule
+import com.colasoft.opensearch.test.OpenSearchTestCase
 import java.time.Instant
 import java.time.temporal.ChronoUnit
 import kotlin.test.assertFailsWith

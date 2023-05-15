@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup
+package com.colasoft.opensearch.indexmanagement.rollup
 
 import com.nhaarman.mockitokotlin2.any
 import com.nhaarman.mockitokotlin2.doAnswer
@@ -12,25 +12,25 @@ import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.whenever
 import kotlinx.coroutines.runBlocking
 import org.junit.Before
-import org.opensearch.action.ActionListener
-import org.opensearch.action.DocWriteResponse
-import org.opensearch.action.get.GetResponse
-import org.opensearch.action.index.IndexResponse
-import org.opensearch.action.search.SearchResponse
-import org.opensearch.client.Client
-import org.opensearch.common.bytes.BytesArray
-import org.opensearch.common.bytes.BytesReference
-import org.opensearch.common.document.DocumentField
-import org.opensearch.core.xcontent.NamedXContentRegistry
-import org.opensearch.core.xcontent.ToXContent
-import org.opensearch.indexmanagement.common.model.dimension.DateHistogram
-import org.opensearch.indexmanagement.indexstatemanagement.util.WITH_TYPE
-import org.opensearch.indexmanagement.rollup.model.Rollup
-import org.opensearch.indexmanagement.rollup.model.RollupMetadata
-import org.opensearch.indexmanagement.rollup.model.RollupStats
-import org.opensearch.search.SearchHit
-import org.opensearch.search.SearchHits
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.action.ActionListener
+import com.colasoft.opensearch.action.DocWriteResponse
+import com.colasoft.opensearch.action.get.GetResponse
+import com.colasoft.opensearch.action.index.IndexResponse
+import com.colasoft.opensearch.action.search.SearchResponse
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.common.bytes.BytesArray
+import com.colasoft.opensearch.common.bytes.BytesReference
+import com.colasoft.opensearch.common.document.DocumentField
+import com.colasoft.opensearch.core.xcontent.NamedXContentRegistry
+import com.colasoft.opensearch.core.xcontent.ToXContent
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.DateHistogram
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.WITH_TYPE
+import com.colasoft.opensearch.indexmanagement.rollup.model.Rollup
+import com.colasoft.opensearch.indexmanagement.rollup.model.RollupMetadata
+import com.colasoft.opensearch.indexmanagement.rollup.model.RollupStats
+import com.colasoft.opensearch.search.SearchHit
+import com.colasoft.opensearch.search.SearchHits
+import com.colasoft.opensearch.test.OpenSearchTestCase
 import java.time.Instant
 import java.time.LocalDateTime
 import java.time.ZoneId

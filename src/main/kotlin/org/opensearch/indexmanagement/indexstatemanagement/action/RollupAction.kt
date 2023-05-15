@@ -3,17 +3,17 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.action
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.action
 
-import org.opensearch.common.io.stream.StreamOutput
-import org.opensearch.core.xcontent.ToXContent
-import org.opensearch.core.xcontent.XContentBuilder
-import org.opensearch.indexmanagement.indexstatemanagement.step.rollup.AttemptCreateRollupJobStep
-import org.opensearch.indexmanagement.indexstatemanagement.step.rollup.WaitForRollupCompletionStep
-import org.opensearch.indexmanagement.rollup.model.ISMRollup
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Action
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Step
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
+import com.colasoft.opensearch.common.io.stream.StreamOutput
+import com.colasoft.opensearch.core.xcontent.ToXContent
+import com.colasoft.opensearch.core.xcontent.XContentBuilder
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.rollup.AttemptCreateRollupJobStep
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.rollup.WaitForRollupCompletionStep
+import com.colasoft.opensearch.indexmanagement.rollup.model.ISMRollup
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Action
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Step
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
 
 class RollupAction(
     val ismRollup: ISMRollup,

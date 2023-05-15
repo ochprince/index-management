@@ -3,14 +3,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.action
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.action
 
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.core.xcontent.XContentParser
-import org.opensearch.common.xcontent.XContentParserUtils.ensureExpectedToken
-import org.opensearch.indexmanagement.indexstatemanagement.action.IndexPriorityAction.Companion.INDEX_PRIORITY_FIELD
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Action
-import org.opensearch.indexmanagement.spi.indexstatemanagement.ActionParser
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.core.xcontent.XContentParser
+import com.colasoft.opensearch.common.xcontent.XContentParserUtils.ensureExpectedToken
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.IndexPriorityAction.Companion.INDEX_PRIORITY_FIELD
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Action
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.ActionParser
 
 class IndexPriorityActionParser : ActionParser() {
     override fun fromStreamInput(sin: StreamInput): Action {

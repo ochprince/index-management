@@ -3,28 +3,28 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.resthandler
+package com.colasoft.opensearch.indexmanagement.rollup.resthandler
 
-import org.opensearch.client.node.NodeClient
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.LEGACY_ROLLUP_JOBS_BASE_URI
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.ROLLUP_JOBS_BASE_URI
-import org.opensearch.indexmanagement.rollup.action.get.GetRollupAction
-import org.opensearch.indexmanagement.rollup.action.get.GetRollupRequest
-import org.opensearch.indexmanagement.rollup.action.get.GetRollupsAction
-import org.opensearch.indexmanagement.rollup.action.get.GetRollupsRequest
-import org.opensearch.indexmanagement.rollup.action.get.GetRollupsRequest.Companion.DEFAULT_FROM
-import org.opensearch.indexmanagement.rollup.action.get.GetRollupsRequest.Companion.DEFAULT_SEARCH_STRING
-import org.opensearch.indexmanagement.rollup.action.get.GetRollupsRequest.Companion.DEFAULT_SIZE
-import org.opensearch.indexmanagement.rollup.action.get.GetRollupsRequest.Companion.DEFAULT_SORT_DIRECTION
-import org.opensearch.indexmanagement.rollup.action.get.GetRollupsRequest.Companion.DEFAULT_SORT_FIELD
-import org.opensearch.rest.BaseRestHandler
-import org.opensearch.rest.RestHandler.ReplacedRoute
-import org.opensearch.rest.RestHandler.Route
-import org.opensearch.rest.RestRequest
-import org.opensearch.rest.RestRequest.Method.GET
-import org.opensearch.rest.RestRequest.Method.HEAD
-import org.opensearch.rest.action.RestToXContentListener
-import org.opensearch.search.fetch.subphase.FetchSourceContext
+import com.colasoft.opensearch.client.node.NodeClient
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.LEGACY_ROLLUP_JOBS_BASE_URI
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.ROLLUP_JOBS_BASE_URI
+import com.colasoft.opensearch.indexmanagement.rollup.action.get.GetRollupAction
+import com.colasoft.opensearch.indexmanagement.rollup.action.get.GetRollupRequest
+import com.colasoft.opensearch.indexmanagement.rollup.action.get.GetRollupsAction
+import com.colasoft.opensearch.indexmanagement.rollup.action.get.GetRollupsRequest
+import com.colasoft.opensearch.indexmanagement.rollup.action.get.GetRollupsRequest.Companion.DEFAULT_FROM
+import com.colasoft.opensearch.indexmanagement.rollup.action.get.GetRollupsRequest.Companion.DEFAULT_SEARCH_STRING
+import com.colasoft.opensearch.indexmanagement.rollup.action.get.GetRollupsRequest.Companion.DEFAULT_SIZE
+import com.colasoft.opensearch.indexmanagement.rollup.action.get.GetRollupsRequest.Companion.DEFAULT_SORT_DIRECTION
+import com.colasoft.opensearch.indexmanagement.rollup.action.get.GetRollupsRequest.Companion.DEFAULT_SORT_FIELD
+import com.colasoft.opensearch.rest.BaseRestHandler
+import com.colasoft.opensearch.rest.RestHandler.ReplacedRoute
+import com.colasoft.opensearch.rest.RestHandler.Route
+import com.colasoft.opensearch.rest.RestRequest
+import com.colasoft.opensearch.rest.RestRequest.Method.GET
+import com.colasoft.opensearch.rest.RestRequest.Method.HEAD
+import com.colasoft.opensearch.rest.action.RestToXContentListener
+import com.colasoft.opensearch.search.fetch.subphase.FetchSourceContext
 
 class RestGetRollupAction : BaseRestHandler() {
 

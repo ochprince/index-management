@@ -5,33 +5,33 @@
 
 @file:Suppress("TooManyFunctions")
 
-package org.opensearch.indexmanagement.indexstatemanagement.util
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.util
 
 import org.apache.logging.log4j.Logger
-import org.opensearch.action.admin.cluster.health.ClusterHealthRequest
-import org.opensearch.action.admin.cluster.health.ClusterHealthResponse
-import org.opensearch.action.admin.cluster.node.stats.NodeStats
-import org.opensearch.action.admin.indices.settings.put.UpdateSettingsRequest
-import org.opensearch.action.admin.indices.stats.ShardStats
-import org.opensearch.action.support.master.AcknowledgedResponse
-import org.opensearch.client.Client
-import org.opensearch.cluster.metadata.IndexMetadata
-import org.opensearch.cluster.node.DiscoveryNodes
-import org.opensearch.cluster.routing.allocation.DiskThresholdSettings
-import org.opensearch.cluster.routing.allocation.DiskThresholdSettings.CLUSTER_ROUTING_ALLOCATION_DISK_FLOOD_STAGE_WATERMARK_SETTING
-import org.opensearch.cluster.routing.allocation.DiskThresholdSettings.CLUSTER_ROUTING_ALLOCATION_HIGH_DISK_WATERMARK_SETTING
-import org.opensearch.cluster.routing.allocation.DiskThresholdSettings.CLUSTER_ROUTING_ALLOCATION_LOW_DISK_WATERMARK_SETTING
-import org.opensearch.common.settings.ClusterSettings
-import org.opensearch.common.settings.Settings
-import org.opensearch.common.unit.TimeValue
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
-import org.opensearch.indexmanagement.indexstatemanagement.action.ShrinkAction.Companion.LOCK_SOURCE_JOB_ID
-import org.opensearch.indexmanagement.indexstatemanagement.step.shrink.AttemptMoveShardsStep
-import org.opensearch.indexmanagement.opensearchapi.suspendUntil
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ShrinkActionProperties
-import org.opensearch.jobscheduler.spi.LockModel
-import org.opensearch.jobscheduler.spi.utils.LockService
+import com.colasoft.opensearch.action.admin.cluster.health.ClusterHealthRequest
+import com.colasoft.opensearch.action.admin.cluster.health.ClusterHealthResponse
+import com.colasoft.opensearch.action.admin.cluster.node.stats.NodeStats
+import com.colasoft.opensearch.action.admin.indices.settings.put.UpdateSettingsRequest
+import com.colasoft.opensearch.action.admin.indices.stats.ShardStats
+import com.colasoft.opensearch.action.support.master.AcknowledgedResponse
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.cluster.metadata.IndexMetadata
+import com.colasoft.opensearch.cluster.node.DiscoveryNodes
+import com.colasoft.opensearch.cluster.routing.allocation.DiskThresholdSettings
+import com.colasoft.opensearch.cluster.routing.allocation.DiskThresholdSettings.CLUSTER_ROUTING_ALLOCATION_DISK_FLOOD_STAGE_WATERMARK_SETTING
+import com.colasoft.opensearch.cluster.routing.allocation.DiskThresholdSettings.CLUSTER_ROUTING_ALLOCATION_HIGH_DISK_WATERMARK_SETTING
+import com.colasoft.opensearch.cluster.routing.allocation.DiskThresholdSettings.CLUSTER_ROUTING_ALLOCATION_LOW_DISK_WATERMARK_SETTING
+import com.colasoft.opensearch.common.settings.ClusterSettings
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.common.unit.TimeValue
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.ShrinkAction.Companion.LOCK_SOURCE_JOB_ID
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.shrink.AttemptMoveShardsStep
+import com.colasoft.opensearch.indexmanagement.opensearchapi.suspendUntil
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ShrinkActionProperties
+import com.colasoft.opensearch.jobscheduler.spi.LockModel
+import com.colasoft.opensearch.jobscheduler.spi.utils.LockService
 import java.lang.Exception
 import java.time.Instant
 

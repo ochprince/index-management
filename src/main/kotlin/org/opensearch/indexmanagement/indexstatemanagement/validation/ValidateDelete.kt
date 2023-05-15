@@ -3,17 +3,17 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.validation
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.validation
 
 import org.apache.logging.log4j.LogManager
-import org.opensearch.cluster.metadata.MetadataCreateIndexService.validateIndexOrAliasName
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.settings.Settings
-import org.opensearch.indexmanagement.indexstatemanagement.opensearchapi.getRolloverAlias
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Validate
-import org.opensearch.indexmanagement.util.OpenForTesting
-import org.opensearch.indices.InvalidIndexNameException
-import org.opensearch.monitor.jvm.JvmService
+import com.colasoft.opensearch.cluster.metadata.MetadataCreateIndexService.validateIndexOrAliasName
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.opensearchapi.getRolloverAlias
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Validate
+import com.colasoft.opensearch.indexmanagement.util.OpenForTesting
+import com.colasoft.opensearch.indices.InvalidIndexNameException
+import com.colasoft.opensearch.monitor.jvm.JvmService
 
 @OpenForTesting
 class ValidateDelete(

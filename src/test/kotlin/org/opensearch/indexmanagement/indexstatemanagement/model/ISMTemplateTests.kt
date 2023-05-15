@@ -3,12 +3,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.model
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.model
 
-import org.opensearch.common.io.stream.InputStreamStreamInput
-import org.opensearch.common.io.stream.OutputStreamStreamOutput
-import org.opensearch.indexmanagement.indexstatemanagement.randomISMTemplate
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.common.io.stream.InputStreamStreamInput
+import com.colasoft.opensearch.common.io.stream.OutputStreamStreamOutput
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomISMTemplate
+import com.colasoft.opensearch.test.OpenSearchTestCase
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 

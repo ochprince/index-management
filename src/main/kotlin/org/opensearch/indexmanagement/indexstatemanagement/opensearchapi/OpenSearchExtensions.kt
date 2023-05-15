@@ -5,36 +5,36 @@
 
 @file:Suppress("TooManyFunctions")
 
-package org.opensearch.indexmanagement.indexstatemanagement.opensearchapi
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.opensearchapi
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.apache.logging.log4j.LogManager
-import org.opensearch.action.ActionRequestValidationException
-import org.opensearch.action.NoShardAvailableActionException
-import org.opensearch.action.get.GetRequest
-import org.opensearch.action.get.GetResponse
-import org.opensearch.action.get.MultiGetRequest
-import org.opensearch.action.get.MultiGetResponse
-import org.opensearch.client.Client
-import org.opensearch.cluster.ClusterState
-import org.opensearch.cluster.metadata.IndexMetadata
-import org.opensearch.common.xcontent.LoggingDeprecationHandler
-import org.opensearch.core.xcontent.NamedXContentRegistry
-import org.opensearch.core.xcontent.ToXContent
-import org.opensearch.core.xcontent.ToXContentFragment
-import org.opensearch.core.xcontent.XContentBuilder
-import org.opensearch.common.xcontent.XContentHelper
-import org.opensearch.common.xcontent.XContentType
-import org.opensearch.index.IndexNotFoundException
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
-import org.opensearch.indexmanagement.indexstatemanagement.DefaultIndexMetadataService
-import org.opensearch.indexmanagement.indexstatemanagement.settings.LegacyOpenDistroManagedIndexSettings
-import org.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
-import org.opensearch.indexmanagement.indexstatemanagement.util.managedIndexMetadataID
-import org.opensearch.indexmanagement.opensearchapi.contentParser
-import org.opensearch.indexmanagement.opensearchapi.suspendUntil
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.action.ActionRequestValidationException
+import com.colasoft.opensearch.action.NoShardAvailableActionException
+import com.colasoft.opensearch.action.get.GetRequest
+import com.colasoft.opensearch.action.get.GetResponse
+import com.colasoft.opensearch.action.get.MultiGetRequest
+import com.colasoft.opensearch.action.get.MultiGetResponse
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.cluster.ClusterState
+import com.colasoft.opensearch.cluster.metadata.IndexMetadata
+import com.colasoft.opensearch.common.xcontent.LoggingDeprecationHandler
+import com.colasoft.opensearch.core.xcontent.NamedXContentRegistry
+import com.colasoft.opensearch.core.xcontent.ToXContent
+import com.colasoft.opensearch.core.xcontent.ToXContentFragment
+import com.colasoft.opensearch.core.xcontent.XContentBuilder
+import com.colasoft.opensearch.common.xcontent.XContentHelper
+import com.colasoft.opensearch.common.xcontent.XContentType
+import com.colasoft.opensearch.index.IndexNotFoundException
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.DefaultIndexMetadataService
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.settings.LegacyOpenDistroManagedIndexSettings
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.managedIndexMetadataID
+import com.colasoft.opensearch.indexmanagement.opensearchapi.contentParser
+import com.colasoft.opensearch.indexmanagement.opensearchapi.suspendUntil
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
 import java.time.Instant
 
 private val log = LogManager.getLogger("Index Management Helper")

@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.step
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.step
 
 import com.nhaarman.mockitokotlin2.any
 import com.nhaarman.mockitokotlin2.doAnswer
@@ -12,36 +12,36 @@ import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.whenever
 import kotlinx.coroutines.runBlocking
 import org.junit.Before
-import org.opensearch.action.ActionListener
-import org.opensearch.action.admin.indices.rollover.RolloverInfo
-import org.opensearch.action.admin.indices.stats.CommonStats
-import org.opensearch.action.admin.indices.stats.IndicesStatsResponse
-import org.opensearch.client.AdminClient
-import org.opensearch.client.Client
-import org.opensearch.client.IndicesAdminClient
-import org.opensearch.cluster.ClusterState
-import org.opensearch.cluster.metadata.IndexMetadata
-import org.opensearch.cluster.metadata.Metadata
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.collect.ImmutableOpenMap
-import org.opensearch.common.settings.ClusterSettings
-import org.opensearch.common.settings.Settings
-import org.opensearch.index.shard.DocsStats
-import org.opensearch.indexmanagement.indexstatemanagement.IndexMetadataProvider
-import org.opensearch.indexmanagement.indexstatemanagement.action.TransitionsAction
-import org.opensearch.indexmanagement.indexstatemanagement.model.Conditions
-import org.opensearch.indexmanagement.indexstatemanagement.model.Transition
-import org.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
-import org.opensearch.indexmanagement.indexstatemanagement.step.transition.AttemptTransitionStep
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Step
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.StepMetaData
-import org.opensearch.jobscheduler.spi.utils.LockService
-import org.opensearch.rest.RestStatus
-import org.opensearch.script.ScriptService
-import org.opensearch.test.OpenSearchTestCase
-import org.opensearch.transport.RemoteTransportException
+import com.colasoft.opensearch.action.ActionListener
+import com.colasoft.opensearch.action.admin.indices.rollover.RolloverInfo
+import com.colasoft.opensearch.action.admin.indices.stats.CommonStats
+import com.colasoft.opensearch.action.admin.indices.stats.IndicesStatsResponse
+import com.colasoft.opensearch.client.AdminClient
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.client.IndicesAdminClient
+import com.colasoft.opensearch.cluster.ClusterState
+import com.colasoft.opensearch.cluster.metadata.IndexMetadata
+import com.colasoft.opensearch.cluster.metadata.Metadata
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.collect.ImmutableOpenMap
+import com.colasoft.opensearch.common.settings.ClusterSettings
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.index.shard.DocsStats
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.IndexMetadataProvider
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.TransitionsAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.Conditions
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.Transition
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.transition.AttemptTransitionStep
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Step
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StepContext
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.StepMetaData
+import com.colasoft.opensearch.jobscheduler.spi.utils.LockService
+import com.colasoft.opensearch.rest.RestStatus
+import com.colasoft.opensearch.script.ScriptService
+import com.colasoft.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.transport.RemoteTransportException
 import java.time.Instant
 
 class AttemptTransitionStepTests : OpenSearchTestCase() {

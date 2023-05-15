@@ -3,28 +3,28 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement
+package com.colasoft.opensearch.indexmanagement
 
 import org.apache.http.entity.ContentType
 import org.apache.http.entity.StringEntity
 import org.junit.AfterClass
 import org.junit.Before
 import org.junit.rules.DisableOnDebug
-import org.opensearch.action.admin.cluster.node.tasks.list.ListTasksAction
-import org.opensearch.client.Request
-import org.opensearch.client.Response
-import org.opensearch.client.RestClient
-import org.opensearch.client.RequestOptions
-import org.opensearch.client.WarningsHandler
-import org.opensearch.client.ResponseException
-import org.opensearch.common.Strings
-import org.opensearch.common.io.PathUtils
-import org.opensearch.common.settings.Settings
-import org.opensearch.core.xcontent.DeprecationHandler
-import org.opensearch.core.xcontent.NamedXContentRegistry
-import org.opensearch.common.xcontent.XContentType
-import org.opensearch.indexmanagement.indexstatemanagement.util.INDEX_HIDDEN
-import org.opensearch.rest.RestStatus
+import com.colasoft.opensearch.action.admin.cluster.node.tasks.list.ListTasksAction
+import com.colasoft.opensearch.client.Request
+import com.colasoft.opensearch.client.Response
+import com.colasoft.opensearch.client.RestClient
+import com.colasoft.opensearch.client.RequestOptions
+import com.colasoft.opensearch.client.WarningsHandler
+import com.colasoft.opensearch.client.ResponseException
+import com.colasoft.opensearch.common.Strings
+import com.colasoft.opensearch.common.io.PathUtils
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.core.xcontent.DeprecationHandler
+import com.colasoft.opensearch.core.xcontent.NamedXContentRegistry
+import com.colasoft.opensearch.common.xcontent.XContentType
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.INDEX_HIDDEN
+import com.colasoft.opensearch.rest.RestStatus
 import java.io.IOException
 import java.nio.file.Files
 import java.util.*

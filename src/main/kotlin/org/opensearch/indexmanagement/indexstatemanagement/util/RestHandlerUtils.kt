@@ -4,30 +4,30 @@
  */
 
 @file:Suppress("TopLevelPropertyNaming", "MatchingDeclarationName")
-package org.opensearch.indexmanagement.indexstatemanagement.util
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.util
 
 import org.apache.logging.log4j.Logger
-import org.opensearch.OpenSearchParseException
-import org.opensearch.action.support.clustermanager.ClusterManagerNodeRequest
-import org.opensearch.action.support.master.AcknowledgedResponse
-import org.opensearch.client.Client
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.common.io.stream.StreamOutput
-import org.opensearch.common.io.stream.Writeable
-import org.opensearch.common.logging.DeprecationLogger
-import org.opensearch.common.unit.TimeValue
-import org.opensearch.core.xcontent.ToXContent
-import org.opensearch.core.xcontent.ToXContentFragment
-import org.opensearch.core.xcontent.XContentBuilder
-import org.opensearch.common.xcontent.XContentFactory
-import org.opensearch.index.Index
-import org.opensearch.indexmanagement.indexstatemanagement.model.ChangePolicy
-import org.opensearch.indexmanagement.indexstatemanagement.model.ManagedIndexConfig
-import org.opensearch.indexmanagement.indexstatemanagement.transport.action.updateindexmetadata.UpdateManagedIndexMetaDataAction
-import org.opensearch.indexmanagement.indexstatemanagement.transport.action.updateindexmetadata.UpdateManagedIndexMetaDataRequest
-import org.opensearch.indexmanagement.opensearchapi.optionalTimeField
-import org.opensearch.indexmanagement.opensearchapi.suspendUntil
-import org.opensearch.rest.RestRequest
+import com.colasoft.opensearch.OpenSearchParseException
+import com.colasoft.opensearch.action.support.clustermanager.ClusterManagerNodeRequest
+import com.colasoft.opensearch.action.support.master.AcknowledgedResponse
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.common.io.stream.StreamOutput
+import com.colasoft.opensearch.common.io.stream.Writeable
+import com.colasoft.opensearch.common.logging.DeprecationLogger
+import com.colasoft.opensearch.common.unit.TimeValue
+import com.colasoft.opensearch.core.xcontent.ToXContent
+import com.colasoft.opensearch.core.xcontent.ToXContentFragment
+import com.colasoft.opensearch.core.xcontent.XContentBuilder
+import com.colasoft.opensearch.common.xcontent.XContentFactory
+import com.colasoft.opensearch.index.Index
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.ChangePolicy
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.ManagedIndexConfig
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.updateindexmetadata.UpdateManagedIndexMetaDataAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.updateindexmetadata.UpdateManagedIndexMetaDataRequest
+import com.colasoft.opensearch.indexmanagement.opensearchapi.optionalTimeField
+import com.colasoft.opensearch.indexmanagement.opensearchapi.suspendUntil
+import com.colasoft.opensearch.rest.RestRequest
 import java.lang.Exception
 import java.time.Instant
 

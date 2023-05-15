@@ -3,17 +3,17 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.snapshotmanagement.engine.states.deletion
+package com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.deletion
 
-import org.opensearch.indexmanagement.snapshotmanagement.engine.SMStateMachine
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.SMResult
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.State
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.WorkflowType
-import org.opensearch.indexmanagement.snapshotmanagement.getSnapshots
-import org.opensearch.indexmanagement.snapshotmanagement.isExceed
-import org.opensearch.indexmanagement.snapshotmanagement.model.SMMetadata
-import org.opensearch.indexmanagement.snapshotmanagement.timeLimitExceeded
-import org.opensearch.indexmanagement.snapshotmanagement.tryUpdatingNextExecutionTime
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.SMStateMachine
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.SMResult
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.State
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.WorkflowType
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.getSnapshots
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.isExceed
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.model.SMMetadata
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.timeLimitExceeded
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.tryUpdatingNextExecutionTime
 import java.time.Instant.now
 
 object DeletionFinishedState : State {

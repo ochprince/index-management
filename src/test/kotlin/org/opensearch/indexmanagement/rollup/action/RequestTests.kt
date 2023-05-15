@@ -3,25 +3,25 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.action
+package com.colasoft.opensearch.indexmanagement.rollup.action
 
-import org.opensearch.action.DocWriteRequest
-import org.opensearch.action.support.WriteRequest
-import org.opensearch.common.io.stream.BytesStreamOutput
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.index.seqno.SequenceNumbers
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
-import org.opensearch.indexmanagement.rollup.action.delete.DeleteRollupRequest
-import org.opensearch.indexmanagement.rollup.action.explain.ExplainRollupRequest
-import org.opensearch.indexmanagement.rollup.action.get.GetRollupRequest
-import org.opensearch.indexmanagement.rollup.action.get.GetRollupsRequest
-import org.opensearch.indexmanagement.rollup.action.index.IndexRollupRequest
-import org.opensearch.indexmanagement.rollup.action.start.StartRollupRequest
-import org.opensearch.indexmanagement.rollup.action.stop.StopRollupRequest
-import org.opensearch.indexmanagement.rollup.model.Rollup
-import org.opensearch.indexmanagement.rollup.randomRollup
-import org.opensearch.search.fetch.subphase.FetchSourceContext
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.action.DocWriteRequest
+import com.colasoft.opensearch.action.support.WriteRequest
+import com.colasoft.opensearch.common.io.stream.BytesStreamOutput
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.index.seqno.SequenceNumbers
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
+import com.colasoft.opensearch.indexmanagement.rollup.action.delete.DeleteRollupRequest
+import com.colasoft.opensearch.indexmanagement.rollup.action.explain.ExplainRollupRequest
+import com.colasoft.opensearch.indexmanagement.rollup.action.get.GetRollupRequest
+import com.colasoft.opensearch.indexmanagement.rollup.action.get.GetRollupsRequest
+import com.colasoft.opensearch.indexmanagement.rollup.action.index.IndexRollupRequest
+import com.colasoft.opensearch.indexmanagement.rollup.action.start.StartRollupRequest
+import com.colasoft.opensearch.indexmanagement.rollup.action.stop.StopRollupRequest
+import com.colasoft.opensearch.indexmanagement.rollup.model.Rollup
+import com.colasoft.opensearch.indexmanagement.rollup.randomRollup
+import com.colasoft.opensearch.search.fetch.subphase.FetchSourceContext
+import com.colasoft.opensearch.test.OpenSearchTestCase
 
 class RequestTests : OpenSearchTestCase() {
 

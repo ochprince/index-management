@@ -3,29 +3,29 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.coordinator
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.coordinator
 
 import org.junit.Before
 import org.mockito.Mockito
-import org.opensearch.Version
-import org.opensearch.client.Client
-import org.opensearch.cluster.OpenSearchAllocationTestCase
-import org.opensearch.cluster.node.DiscoveryNode
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.settings.ClusterSettings
-import org.opensearch.common.settings.Setting
-import org.opensearch.common.settings.Settings
-import org.opensearch.core.xcontent.NamedXContentRegistry
-import org.opensearch.indexmanagement.IndexManagementIndices
-import org.opensearch.indexmanagement.indexstatemanagement.IndexMetadataProvider
-import org.opensearch.indexmanagement.indexstatemanagement.ManagedIndexCoordinator
-import org.opensearch.indexmanagement.indexstatemanagement.MetadataService
-import org.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
-import org.opensearch.indexmanagement.indexstatemanagement.migration.ISMTemplateService
-import org.opensearch.test.ClusterServiceUtils
-import org.opensearch.test.OpenSearchTestCase
-import org.opensearch.threadpool.Scheduler
-import org.opensearch.threadpool.ThreadPool
+import com.colasoft.opensearch.Version
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.cluster.OpenSearchAllocationTestCase
+import com.colasoft.opensearch.cluster.node.DiscoveryNode
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.settings.ClusterSettings
+import com.colasoft.opensearch.common.settings.Setting
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.core.xcontent.NamedXContentRegistry
+import com.colasoft.opensearch.indexmanagement.IndexManagementIndices
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.IndexMetadataProvider
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.ManagedIndexCoordinator
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.MetadataService
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.migration.ISMTemplateService
+import com.colasoft.opensearch.test.ClusterServiceUtils
+import com.colasoft.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.threadpool.Scheduler
+import com.colasoft.opensearch.threadpool.ThreadPool
 
 class ManagedIndexCoordinatorTests : OpenSearchAllocationTestCase() {
 

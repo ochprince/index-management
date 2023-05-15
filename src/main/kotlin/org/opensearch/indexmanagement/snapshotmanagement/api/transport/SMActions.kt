@@ -3,22 +3,22 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.snapshotmanagement.api.transport
+package com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport
 
-import org.opensearch.action.ActionType
-import org.opensearch.action.delete.DeleteResponse
-import org.opensearch.action.support.master.AcknowledgedResponse
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.delete.TransportDeleteSMPolicyAction
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.explain.ExplainSMPolicyResponse
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.get.GetSMPoliciesResponse
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.get.GetSMPolicyResponse
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.get.TransportGetSMPolicyAction
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.index.IndexSMPolicyResponse
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.index.TransportIndexSMPolicyAction
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.get.TransportGetSMPoliciesAction
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.explain.TransportExplainSMAction
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.start.TransportStartSMAction
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.stop.TransportStopSMAction
+import com.colasoft.opensearch.action.ActionType
+import com.colasoft.opensearch.action.delete.DeleteResponse
+import com.colasoft.opensearch.action.support.master.AcknowledgedResponse
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.delete.TransportDeleteSMPolicyAction
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.explain.ExplainSMPolicyResponse
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.get.GetSMPoliciesResponse
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.get.GetSMPolicyResponse
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.get.TransportGetSMPolicyAction
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.index.IndexSMPolicyResponse
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.index.TransportIndexSMPolicyAction
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.get.TransportGetSMPoliciesAction
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.explain.TransportExplainSMAction
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.start.TransportStartSMAction
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.stop.TransportStopSMAction
 
 object SMActions {
     /**

@@ -3,9 +3,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.spi.indexstatemanagement
+package com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement
 
-import org.opensearch.cluster.ClusterState
+import com.colasoft.opensearch.cluster.ClusterState
 
 interface StatusChecker {
 

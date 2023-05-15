@@ -3,20 +3,20 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement
+package com.colasoft.opensearch.indexmanagement
 
 import org.apache.http.Header
 import org.apache.http.HttpEntity
-import org.opensearch.client.Request
-import org.opensearch.client.RequestOptions
-import org.opensearch.client.Response
-import org.opensearch.client.RestClient
-import org.opensearch.client.WarningsHandler
-import org.opensearch.commons.authuser.User
-import org.opensearch.jobscheduler.spi.schedule.CronSchedule
-import org.opensearch.jobscheduler.spi.schedule.IntervalSchedule
-import org.opensearch.jobscheduler.spi.schedule.Schedule
-import org.opensearch.test.rest.OpenSearchRestTestCase
+import com.colasoft.opensearch.client.Request
+import com.colasoft.opensearch.client.RequestOptions
+import com.colasoft.opensearch.client.Response
+import com.colasoft.opensearch.client.RestClient
+import com.colasoft.opensearch.client.WarningsHandler
+import com.colasoft.opensearch.commons.authuser.User
+import com.colasoft.opensearch.jobscheduler.spi.schedule.CronSchedule
+import com.colasoft.opensearch.jobscheduler.spi.schedule.IntervalSchedule
+import com.colasoft.opensearch.jobscheduler.spi.schedule.Schedule
+import com.colasoft.opensearch.test.rest.OpenSearchRestTestCase
 import java.time.Instant
 import java.time.temporal.ChronoUnit
 

@@ -3,14 +3,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.model
+package com.colasoft.opensearch.indexmanagement.rollup.model
 
-import org.opensearch.indexmanagement.randomInstant
-import org.opensearch.indexmanagement.randomSchedule
-import org.opensearch.indexmanagement.rollup.randomDateHistogram
-import org.opensearch.indexmanagement.rollup.randomRollup
-import org.opensearch.indexmanagement.rollup.randomTerms
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.indexmanagement.randomInstant
+import com.colasoft.opensearch.indexmanagement.randomSchedule
+import com.colasoft.opensearch.indexmanagement.rollup.randomDateHistogram
+import com.colasoft.opensearch.indexmanagement.rollup.randomRollup
+import com.colasoft.opensearch.indexmanagement.rollup.randomTerms
+import com.colasoft.opensearch.test.OpenSearchTestCase
 import kotlin.test.assertFailsWith
 
 class RollupTests : OpenSearchTestCase() {

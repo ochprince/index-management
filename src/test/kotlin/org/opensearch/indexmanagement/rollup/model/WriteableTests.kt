@@ -3,34 +3,34 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.model
+package com.colasoft.opensearch.indexmanagement.rollup.model
 
-import org.opensearch.common.io.stream.BytesStreamOutput
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.indexmanagement.common.model.dimension.DateHistogram
-import org.opensearch.indexmanagement.common.model.dimension.Histogram
-import org.opensearch.indexmanagement.common.model.dimension.Terms
-import org.opensearch.indexmanagement.rollup.model.metric.Average
-import org.opensearch.indexmanagement.rollup.model.metric.Max
-import org.opensearch.indexmanagement.rollup.model.metric.Min
-import org.opensearch.indexmanagement.rollup.model.metric.Sum
-import org.opensearch.indexmanagement.rollup.model.metric.ValueCount
-import org.opensearch.indexmanagement.rollup.randomAverage
-import org.opensearch.indexmanagement.rollup.randomContinuousMetadata
-import org.opensearch.indexmanagement.rollup.randomDateHistogram
-import org.opensearch.indexmanagement.rollup.randomExplainRollup
-import org.opensearch.indexmanagement.rollup.randomHistogram
-import org.opensearch.indexmanagement.rollup.randomISMRollup
-import org.opensearch.indexmanagement.rollup.randomMax
-import org.opensearch.indexmanagement.rollup.randomMin
-import org.opensearch.indexmanagement.rollup.randomRollup
-import org.opensearch.indexmanagement.rollup.randomRollupMetadata
-import org.opensearch.indexmanagement.rollup.randomRollupMetrics
-import org.opensearch.indexmanagement.rollup.randomRollupStats
-import org.opensearch.indexmanagement.rollup.randomSum
-import org.opensearch.indexmanagement.rollup.randomTerms
-import org.opensearch.indexmanagement.rollup.randomValueCount
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.common.io.stream.BytesStreamOutput
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.DateHistogram
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.Histogram
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.Terms
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.Average
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.Max
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.Min
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.Sum
+import com.colasoft.opensearch.indexmanagement.rollup.model.metric.ValueCount
+import com.colasoft.opensearch.indexmanagement.rollup.randomAverage
+import com.colasoft.opensearch.indexmanagement.rollup.randomContinuousMetadata
+import com.colasoft.opensearch.indexmanagement.rollup.randomDateHistogram
+import com.colasoft.opensearch.indexmanagement.rollup.randomExplainRollup
+import com.colasoft.opensearch.indexmanagement.rollup.randomHistogram
+import com.colasoft.opensearch.indexmanagement.rollup.randomISMRollup
+import com.colasoft.opensearch.indexmanagement.rollup.randomMax
+import com.colasoft.opensearch.indexmanagement.rollup.randomMin
+import com.colasoft.opensearch.indexmanagement.rollup.randomRollup
+import com.colasoft.opensearch.indexmanagement.rollup.randomRollupMetadata
+import com.colasoft.opensearch.indexmanagement.rollup.randomRollupMetrics
+import com.colasoft.opensearch.indexmanagement.rollup.randomRollupStats
+import com.colasoft.opensearch.indexmanagement.rollup.randomSum
+import com.colasoft.opensearch.indexmanagement.rollup.randomTerms
+import com.colasoft.opensearch.indexmanagement.rollup.randomValueCount
+import com.colasoft.opensearch.test.OpenSearchTestCase
 
 class WriteableTests : OpenSearchTestCase() {
 

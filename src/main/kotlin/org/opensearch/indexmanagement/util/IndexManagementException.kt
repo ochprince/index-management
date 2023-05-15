@@ -3,14 +3,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.util
+package com.colasoft.opensearch.indexmanagement.util
 
-import org.opensearch.OpenSearchException
-import org.opensearch.OpenSearchStatusException
-import org.opensearch.common.Strings
-import org.opensearch.common.ValidationException
-import org.opensearch.index.IndexNotFoundException
-import org.opensearch.rest.RestStatus
+import com.colasoft.opensearch.OpenSearchException
+import com.colasoft.opensearch.OpenSearchStatusException
+import com.colasoft.opensearch.common.Strings
+import com.colasoft.opensearch.common.ValidationException
+import com.colasoft.opensearch.index.IndexNotFoundException
+import com.colasoft.opensearch.rest.RestStatus
 import java.lang.IllegalArgumentException
 
 class IndexManagementException(message: String, val status: RestStatus, ex: Exception) : OpenSearchException(message, ex) {

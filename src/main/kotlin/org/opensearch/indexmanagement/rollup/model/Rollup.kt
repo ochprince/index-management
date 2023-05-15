@@ -3,35 +3,35 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.model
+package com.colasoft.opensearch.indexmanagement.rollup.model
 
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.common.io.stream.StreamOutput
-import org.opensearch.common.io.stream.Writeable
-import org.opensearch.core.xcontent.ToXContent
-import org.opensearch.core.xcontent.XContentBuilder
-import org.opensearch.core.xcontent.XContentParser
-import org.opensearch.core.xcontent.XContentParser.Token
-import org.opensearch.common.xcontent.XContentParserUtils.ensureExpectedToken
-import org.opensearch.commons.authuser.User
-import org.opensearch.index.seqno.SequenceNumbers
-import org.opensearch.indexmanagement.common.model.dimension.DateHistogram
-import org.opensearch.indexmanagement.common.model.dimension.Dimension
-import org.opensearch.indexmanagement.common.model.dimension.Histogram
-import org.opensearch.indexmanagement.common.model.dimension.Terms
-import org.opensearch.indexmanagement.indexstatemanagement.util.WITH_TYPE
-import org.opensearch.indexmanagement.indexstatemanagement.util.WITH_USER
-import org.opensearch.indexmanagement.opensearchapi.instant
-import org.opensearch.indexmanagement.opensearchapi.optionalTimeField
-import org.opensearch.indexmanagement.opensearchapi.optionalUserField
-import org.opensearch.indexmanagement.util.IndexUtils
-import org.opensearch.indexmanagement.util.NO_ID
-import org.opensearch.indexmanagement.util._ID
-import org.opensearch.jobscheduler.spi.ScheduledJobParameter
-import org.opensearch.jobscheduler.spi.schedule.CronSchedule
-import org.opensearch.jobscheduler.spi.schedule.IntervalSchedule
-import org.opensearch.jobscheduler.spi.schedule.Schedule
-import org.opensearch.jobscheduler.spi.schedule.ScheduleParser
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.common.io.stream.StreamOutput
+import com.colasoft.opensearch.common.io.stream.Writeable
+import com.colasoft.opensearch.core.xcontent.ToXContent
+import com.colasoft.opensearch.core.xcontent.XContentBuilder
+import com.colasoft.opensearch.core.xcontent.XContentParser
+import com.colasoft.opensearch.core.xcontent.XContentParser.Token
+import com.colasoft.opensearch.common.xcontent.XContentParserUtils.ensureExpectedToken
+import com.colasoft.opensearch.commons.authuser.User
+import com.colasoft.opensearch.index.seqno.SequenceNumbers
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.DateHistogram
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.Dimension
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.Histogram
+import com.colasoft.opensearch.indexmanagement.common.model.dimension.Terms
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.WITH_TYPE
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.util.WITH_USER
+import com.colasoft.opensearch.indexmanagement.opensearchapi.instant
+import com.colasoft.opensearch.indexmanagement.opensearchapi.optionalTimeField
+import com.colasoft.opensearch.indexmanagement.opensearchapi.optionalUserField
+import com.colasoft.opensearch.indexmanagement.util.IndexUtils
+import com.colasoft.opensearch.indexmanagement.util.NO_ID
+import com.colasoft.opensearch.indexmanagement.util._ID
+import com.colasoft.opensearch.jobscheduler.spi.ScheduledJobParameter
+import com.colasoft.opensearch.jobscheduler.spi.schedule.CronSchedule
+import com.colasoft.opensearch.jobscheduler.spi.schedule.IntervalSchedule
+import com.colasoft.opensearch.jobscheduler.spi.schedule.Schedule
+import com.colasoft.opensearch.jobscheduler.spi.schedule.ScheduleParser
 import java.io.IOException
 import java.time.Instant
 

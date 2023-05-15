@@ -3,20 +3,20 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.transform.resthandler
+package com.colasoft.opensearch.indexmanagement.transform.resthandler
 
-import org.opensearch.client.node.NodeClient
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.TRANSFORM_BASE_URI
-import org.opensearch.indexmanagement.transform.action.delete.DeleteTransformsAction
-import org.opensearch.indexmanagement.transform.action.delete.DeleteTransformsRequest
-import org.opensearch.indexmanagement.transform.action.delete.DeleteTransformsRequest.Companion.DEFAULT_FORCE_DELETE
-import org.opensearch.rest.BaseRestHandler
-import org.opensearch.rest.BaseRestHandler.RestChannelConsumer
-import org.opensearch.rest.RestHandler
-import org.opensearch.rest.RestHandler.Route
-import org.opensearch.rest.RestRequest
-import org.opensearch.rest.RestRequest.Method.DELETE
-import org.opensearch.rest.action.RestToXContentListener
+import com.colasoft.opensearch.client.node.NodeClient
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.TRANSFORM_BASE_URI
+import com.colasoft.opensearch.indexmanagement.transform.action.delete.DeleteTransformsAction
+import com.colasoft.opensearch.indexmanagement.transform.action.delete.DeleteTransformsRequest
+import com.colasoft.opensearch.indexmanagement.transform.action.delete.DeleteTransformsRequest.Companion.DEFAULT_FORCE_DELETE
+import com.colasoft.opensearch.rest.BaseRestHandler
+import com.colasoft.opensearch.rest.BaseRestHandler.RestChannelConsumer
+import com.colasoft.opensearch.rest.RestHandler
+import com.colasoft.opensearch.rest.RestHandler.Route
+import com.colasoft.opensearch.rest.RestRequest
+import com.colasoft.opensearch.rest.RestRequest.Method.DELETE
+import com.colasoft.opensearch.rest.action.RestToXContentListener
 import java.io.IOException
 
 class RestDeleteTransformAction : BaseRestHandler() {

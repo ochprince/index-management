@@ -3,11 +3,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.settings
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.settings
 
-import org.opensearch.common.settings.Setting
-import org.opensearch.common.unit.TimeValue
-import org.opensearch.indexmanagement.indexstatemanagement.ISMActionsParser
+import com.colasoft.opensearch.common.settings.Setting
+import com.colasoft.opensearch.common.unit.TimeValue
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.ISMActionsParser
 import java.util.concurrent.TimeUnit
 import java.util.function.Function
 

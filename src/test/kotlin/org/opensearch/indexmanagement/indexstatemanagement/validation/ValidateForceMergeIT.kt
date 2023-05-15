@@ -3,14 +3,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.validation
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.validation
 
-import org.opensearch.indexmanagement.indexstatemanagement.IndexStateManagementRestTestCase
-import org.opensearch.indexmanagement.indexstatemanagement.model.Policy
-import org.opensearch.indexmanagement.indexstatemanagement.model.State
-import org.opensearch.indexmanagement.indexstatemanagement.randomErrorNotification
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Validate
-import org.opensearch.indexmanagement.waitFor
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.IndexStateManagementRestTestCase
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.Policy
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.State
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomErrorNotification
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Validate
+import com.colasoft.opensearch.indexmanagement.waitFor
 import java.time.Instant
 import java.time.temporal.ChronoUnit
 import java.util.Locale
@@ -25,7 +25,7 @@ class ValidateForceMergeIT : IndexStateManagementRestTestCase() {
         val policyID = "${testIndexName}_testPolicyName_1"
 
         // Create a Policy with one State that only preforms a force_merge Action
-        val forceMergeActionConfig = org.opensearch.indexmanagement.indexstatemanagement.action.ForceMergeAction(maxNumSegments = 1, index = 0)
+        val forceMergeActionConfig = com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.ForceMergeAction(maxNumSegments = 1, index = 0)
         val states = listOf(State("ForceMergeState", listOf(forceMergeActionConfig), listOf()))
 
         val policy = Policy(

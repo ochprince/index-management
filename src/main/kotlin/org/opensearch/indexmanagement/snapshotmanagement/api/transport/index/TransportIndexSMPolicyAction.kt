@@ -3,28 +3,28 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.snapshotmanagement.api.transport.index
+package com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.index
 
 import org.apache.logging.log4j.LogManager
-import org.opensearch.action.index.IndexResponse
-import org.opensearch.action.support.ActionFilters
-import org.opensearch.client.Client
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.inject.Inject
-import org.opensearch.common.settings.Settings
-import org.opensearch.common.util.concurrent.ThreadContext
-import org.opensearch.core.xcontent.ToXContent
-import org.opensearch.common.xcontent.XContentFactory
-import org.opensearch.commons.authuser.User
-import org.opensearch.indexmanagement.IndexManagementIndices
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
-import org.opensearch.indexmanagement.opensearchapi.suspendUntil
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.BaseTransportAction
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.INDEX_SM_POLICY_ACTION_NAME
-import org.opensearch.indexmanagement.snapshotmanagement.settings.SnapshotManagementSettings.Companion.FILTER_BY_BACKEND_ROLES
-import org.opensearch.indexmanagement.util.IndexUtils
-import org.opensearch.indexmanagement.util.SecurityUtils
-import org.opensearch.transport.TransportService
+import com.colasoft.opensearch.action.index.IndexResponse
+import com.colasoft.opensearch.action.support.ActionFilters
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.inject.Inject
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.common.util.concurrent.ThreadContext
+import com.colasoft.opensearch.core.xcontent.ToXContent
+import com.colasoft.opensearch.common.xcontent.XContentFactory
+import com.colasoft.opensearch.commons.authuser.User
+import com.colasoft.opensearch.indexmanagement.IndexManagementIndices
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.INDEX_MANAGEMENT_INDEX
+import com.colasoft.opensearch.indexmanagement.opensearchapi.suspendUntil
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.BaseTransportAction
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.INDEX_SM_POLICY_ACTION_NAME
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.settings.SnapshotManagementSettings.Companion.FILTER_BY_BACKEND_ROLES
+import com.colasoft.opensearch.indexmanagement.util.IndexUtils
+import com.colasoft.opensearch.indexmanagement.util.SecurityUtils
+import com.colasoft.opensearch.transport.TransportService
 
 class TransportIndexSMPolicyAction @Inject constructor(
     client: Client,

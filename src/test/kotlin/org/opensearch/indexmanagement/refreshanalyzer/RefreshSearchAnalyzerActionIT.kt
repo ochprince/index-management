@@ -3,17 +3,17 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.refreshanalyzer
+package com.colasoft.opensearch.indexmanagement.refreshanalyzer
 
 import org.junit.After
 import org.junit.Assume
 import org.junit.Before
-import org.opensearch.client.Request
-import org.opensearch.common.io.Streams
-import org.opensearch.common.settings.Settings
-import org.opensearch.common.xcontent.XContentType
-import org.opensearch.indexmanagement.IndexManagementRestTestCase
-import org.opensearch.indexmanagement.refreshanalyzer.RestRefreshSearchAnalyzerAction.Companion.REFRESH_SEARCH_ANALYZER_BASE_URI
+import com.colasoft.opensearch.client.Request
+import com.colasoft.opensearch.common.io.Streams
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.common.xcontent.XContentType
+import com.colasoft.opensearch.indexmanagement.IndexManagementRestTestCase
+import com.colasoft.opensearch.indexmanagement.refreshanalyzer.RestRefreshSearchAnalyzerAction.Companion.REFRESH_SEARCH_ANALYZER_BASE_URI
 import java.io.InputStreamReader
 import java.nio.charset.Charset
 import java.nio.charset.StandardCharsets
@@ -174,12 +174,12 @@ class RefreshSearchAnalyzerActionIT : IndexManagementRestTestCase() {
 
     companion object {
         fun writeToFile(filePath: String, contents: String) {
-            val path = org.opensearch.common.io.PathUtils.get(filePath)
+            val path = com.colasoft.opensearch.common.io.PathUtils.get(filePath)
             Files.newBufferedWriter(path, Charset.forName("UTF-8")).use { writer -> writer.write(contents) }
         }
 
         fun deleteFile(filePath: String) {
-            Files.deleteIfExists(org.opensearch.common.io.PathUtils.get(filePath))
+            Files.deleteIfExists(com.colasoft.opensearch.common.io.PathUtils.get(filePath))
         }
 
         fun ingestData(indexName: String) {

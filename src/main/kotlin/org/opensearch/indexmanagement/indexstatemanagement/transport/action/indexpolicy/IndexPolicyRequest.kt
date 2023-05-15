@@ -3,16 +3,16 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.transport.action.indexpolicy
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.transport.action.indexpolicy
 
-import org.opensearch.action.ActionRequest
-import org.opensearch.action.ActionRequestValidationException
-import org.opensearch.action.ValidateActions
-import org.opensearch.action.support.WriteRequest
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.common.io.stream.StreamOutput
-import org.opensearch.indexmanagement.indexstatemanagement.model.Policy
-import org.opensearch.indexmanagement.util.NO_ID
+import com.colasoft.opensearch.action.ActionRequest
+import com.colasoft.opensearch.action.ActionRequestValidationException
+import com.colasoft.opensearch.action.ValidateActions
+import com.colasoft.opensearch.action.support.WriteRequest
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.common.io.stream.StreamOutput
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.Policy
+import com.colasoft.opensearch.indexmanagement.util.NO_ID
 import java.io.IOException
 
 class IndexPolicyRequest : ActionRequest {

@@ -3,18 +3,18 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.action
+package com.colasoft.opensearch.indexmanagement.rollup.action
 
-import org.opensearch.common.io.stream.BytesStreamOutput
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.indexmanagement.rollup.action.explain.ExplainRollupResponse
-import org.opensearch.indexmanagement.rollup.action.get.GetRollupResponse
-import org.opensearch.indexmanagement.rollup.action.get.GetRollupsResponse
-import org.opensearch.indexmanagement.rollup.action.index.IndexRollupResponse
-import org.opensearch.indexmanagement.rollup.randomExplainRollup
-import org.opensearch.indexmanagement.rollup.randomRollup
-import org.opensearch.rest.RestStatus
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.common.io.stream.BytesStreamOutput
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.indexmanagement.rollup.action.explain.ExplainRollupResponse
+import com.colasoft.opensearch.indexmanagement.rollup.action.get.GetRollupResponse
+import com.colasoft.opensearch.indexmanagement.rollup.action.get.GetRollupsResponse
+import com.colasoft.opensearch.indexmanagement.rollup.action.index.IndexRollupResponse
+import com.colasoft.opensearch.indexmanagement.rollup.randomExplainRollup
+import com.colasoft.opensearch.indexmanagement.rollup.randomRollup
+import com.colasoft.opensearch.rest.RestStatus
+import com.colasoft.opensearch.test.OpenSearchTestCase
 
 class ResponseTests : OpenSearchTestCase() {
 

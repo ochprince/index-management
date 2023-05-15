@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.snapshotmanagement
+package com.colasoft.opensearch.indexmanagement.snapshotmanagement
 
 import kotlinx.coroutines.CoroutineName
 import kotlinx.coroutines.CoroutineScope
@@ -11,28 +11,28 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
 import org.apache.logging.log4j.LogManager
-import org.opensearch.action.bulk.BackoffPolicy
-import org.opensearch.client.Client
-import org.opensearch.common.unit.TimeValue
-import org.opensearch.indexmanagement.snapshotmanagement.engine.SMStateMachine
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.SMState
-import org.opensearch.indexmanagement.snapshotmanagement.model.SMPolicy
-import org.opensearch.indexmanagement.snapshotmanagement.model.SMMetadata
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.settings.Settings
-import org.opensearch.cluster.health.ClusterHealthStatus
-import org.opensearch.cluster.health.ClusterStateHealth
-import org.opensearch.index.seqno.SequenceNumbers
-import org.opensearch.indexmanagement.IndexManagementIndices
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.creationTransitions
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.deletionTransitions
-import org.opensearch.indexmanagement.util.acquireLockForScheduledJob
-import org.opensearch.indexmanagement.util.releaseLockForScheduledJob
-import org.opensearch.jobscheduler.spi.JobExecutionContext
-import org.opensearch.jobscheduler.spi.ScheduledJobParameter
-import org.opensearch.jobscheduler.spi.ScheduledJobRunner
-import org.opensearch.rest.RestStatus
-import org.opensearch.threadpool.ThreadPool
+import com.colasoft.opensearch.action.bulk.BackoffPolicy
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.common.unit.TimeValue
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.SMStateMachine
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.SMState
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.model.SMPolicy
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.model.SMMetadata
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.cluster.health.ClusterHealthStatus
+import com.colasoft.opensearch.cluster.health.ClusterStateHealth
+import com.colasoft.opensearch.index.seqno.SequenceNumbers
+import com.colasoft.opensearch.indexmanagement.IndexManagementIndices
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.creationTransitions
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.deletionTransitions
+import com.colasoft.opensearch.indexmanagement.util.acquireLockForScheduledJob
+import com.colasoft.opensearch.indexmanagement.util.releaseLockForScheduledJob
+import com.colasoft.opensearch.jobscheduler.spi.JobExecutionContext
+import com.colasoft.opensearch.jobscheduler.spi.ScheduledJobParameter
+import com.colasoft.opensearch.jobscheduler.spi.ScheduledJobRunner
+import com.colasoft.opensearch.rest.RestStatus
+import com.colasoft.opensearch.threadpool.ThreadPool
 import java.time.Instant.now
 
 object SMRunner :

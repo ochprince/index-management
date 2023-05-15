@@ -3,28 +3,28 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement.runner
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.runner
 
-import org.opensearch.indexmanagement.indexstatemanagement.ISMActionsParser
-import org.opensearch.indexmanagement.indexstatemanagement.IndexStateManagementRestTestCase
-import org.opensearch.indexmanagement.indexstatemanagement.action.OpenAction
-import org.opensearch.indexmanagement.indexstatemanagement.action.ReadOnlyAction
-import org.opensearch.indexmanagement.indexstatemanagement.model.Policy
-import org.opensearch.indexmanagement.indexstatemanagement.model.State
-import org.opensearch.indexmanagement.indexstatemanagement.randomErrorNotification
-import org.opensearch.indexmanagement.indexstatemanagement.randomPolicy
-import org.opensearch.indexmanagement.indexstatemanagement.randomReadOnlyActionConfig
-import org.opensearch.indexmanagement.indexstatemanagement.randomReadWriteActionConfig
-import org.opensearch.indexmanagement.indexstatemanagement.randomState
-import org.opensearch.indexmanagement.indexstatemanagement.randomTransition
-import org.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
-import org.opensearch.indexmanagement.indexstatemanagement.step.readonly.SetReadOnlyStep
-import org.opensearch.indexmanagement.indexstatemanagement.step.readwrite.SetReadWriteStep
-import org.opensearch.indexmanagement.indexstatemanagement.step.transition.AttemptTransitionStep
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.PolicyRetryInfoMetaData
-import org.opensearch.indexmanagement.waitFor
-import org.opensearch.jobscheduler.spi.schedule.IntervalSchedule
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.ISMActionsParser
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.IndexStateManagementRestTestCase
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.OpenAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.action.ReadOnlyAction
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.Policy
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.model.State
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomErrorNotification
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomPolicy
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomReadOnlyActionConfig
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomReadWriteActionConfig
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomState
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.randomTransition
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.readonly.SetReadOnlyStep
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.readwrite.SetReadWriteStep
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.step.transition.AttemptTransitionStep
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.PolicyRetryInfoMetaData
+import com.colasoft.opensearch.indexmanagement.waitFor
+import com.colasoft.opensearch.jobscheduler.spi.schedule.IntervalSchedule
 import java.time.Instant
 import java.time.temporal.ChronoUnit
 

@@ -3,17 +3,17 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.snapshotmanagement.engine.states
+package com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states
 
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.creation.CreationConditionMetState
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.creation.CreationFinishedState
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.creation.CreatingState
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.creation.CreationStartState
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.deletion.DeletionConditionMetState
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.deletion.DeletionFinishedState
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.deletion.DeletingState
-import org.opensearch.indexmanagement.snapshotmanagement.engine.states.deletion.DeletionStartState
-import org.opensearch.indexmanagement.snapshotmanagement.model.SMMetadata
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.creation.CreationConditionMetState
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.creation.CreationFinishedState
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.creation.CreatingState
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.creation.CreationStartState
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.deletion.DeletionConditionMetState
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.deletion.DeletionFinishedState
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.deletion.DeletingState
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.engine.states.deletion.DeletionStartState
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.model.SMMetadata
 
 enum class SMState(val instance: State) {
     CREATION_START(CreationStartState),

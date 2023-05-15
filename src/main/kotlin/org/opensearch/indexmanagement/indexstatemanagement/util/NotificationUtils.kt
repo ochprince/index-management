@@ -4,22 +4,22 @@
  */
 
 @file:JvmName("NotificationUtils")
-package org.opensearch.indexmanagement.indexstatemanagement.util
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement.util
 
-import org.opensearch.client.Client
-import org.opensearch.client.node.NodeClient
-import org.opensearch.commons.authuser.User
-import org.opensearch.commons.destination.message.LegacyBaseMessage
-import org.opensearch.commons.notifications.NotificationsPluginInterface
-import org.opensearch.commons.notifications.action.LegacyPublishNotificationRequest
-import org.opensearch.commons.notifications.action.LegacyPublishNotificationResponse
-import org.opensearch.commons.notifications.model.EventSource
-import org.opensearch.commons.notifications.model.SeverityType
-import org.opensearch.indexmanagement.common.model.notification.Channel
-import org.opensearch.indexmanagement.common.model.notification.validateResponseStatus
-import org.opensearch.indexmanagement.opensearchapi.suspendUntil
-import org.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
-import org.opensearch.rest.RestStatus
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.client.node.NodeClient
+import com.colasoft.opensearch.commons.authuser.User
+import com.colasoft.opensearch.commons.destination.message.LegacyBaseMessage
+import com.colasoft.opensearch.commons.notifications.NotificationsPluginInterface
+import com.colasoft.opensearch.commons.notifications.action.LegacyPublishNotificationRequest
+import com.colasoft.opensearch.commons.notifications.action.LegacyPublishNotificationResponse
+import com.colasoft.opensearch.commons.notifications.model.EventSource
+import com.colasoft.opensearch.commons.notifications.model.SeverityType
+import com.colasoft.opensearch.indexmanagement.common.model.notification.Channel
+import com.colasoft.opensearch.indexmanagement.common.model.notification.validateResponseStatus
+import com.colasoft.opensearch.indexmanagement.opensearchapi.suspendUntil
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.model.ManagedIndexMetaData
+import com.colasoft.opensearch.rest.RestStatus
 
 /**
  * Extension function for publishing a notification to a legacy destination.

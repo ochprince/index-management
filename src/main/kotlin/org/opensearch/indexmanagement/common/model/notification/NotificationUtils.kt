@@ -4,10 +4,10 @@
  */
 
 @file:JvmName("NotificationUtils")
-package org.opensearch.indexmanagement.common.model.notification
+package com.colasoft.opensearch.indexmanagement.common.model.notification
 
-import org.opensearch.OpenSearchStatusException
-import org.opensearch.rest.RestStatus
+import com.colasoft.opensearch.OpenSearchStatusException
+import com.colasoft.opensearch.rest.RestStatus
 
 /**
  * all valid response status

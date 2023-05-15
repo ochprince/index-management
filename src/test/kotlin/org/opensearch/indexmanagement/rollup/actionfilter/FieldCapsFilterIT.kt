@@ -3,14 +3,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.actionfilter
+package com.colasoft.opensearch.indexmanagement.rollup.actionfilter
 
-import org.opensearch.client.ResponseException
-import org.opensearch.common.settings.Settings
-import org.opensearch.indexmanagement.makeRequest
-import org.opensearch.indexmanagement.rollup.RollupRestTestCase
-import org.opensearch.indexmanagement.rollup.settings.RollupSettings
-import org.opensearch.rest.RestStatus
+import com.colasoft.opensearch.client.ResponseException
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.indexmanagement.makeRequest
+import com.colasoft.opensearch.indexmanagement.rollup.RollupRestTestCase
+import com.colasoft.opensearch.indexmanagement.rollup.settings.RollupSettings
+import com.colasoft.opensearch.rest.RestStatus
 
 // TODO: Add assertions on fields
 @Suppress("UNCHECKED_CAST")

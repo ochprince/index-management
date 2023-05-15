@@ -3,21 +3,21 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.resthandler
+package com.colasoft.opensearch.indexmanagement.rollup.resthandler
 
-import org.opensearch.action.support.WriteRequest.RefreshPolicy
-import org.opensearch.client.node.NodeClient
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.LEGACY_ROLLUP_JOBS_BASE_URI
-import org.opensearch.indexmanagement.IndexManagementPlugin.Companion.ROLLUP_JOBS_BASE_URI
-import org.opensearch.indexmanagement.rollup.action.delete.DeleteRollupAction
-import org.opensearch.indexmanagement.rollup.action.delete.DeleteRollupRequest
-import org.opensearch.indexmanagement.util.REFRESH
-import org.opensearch.rest.BaseRestHandler
-import org.opensearch.rest.RestHandler.ReplacedRoute
-import org.opensearch.rest.RestHandler.Route
-import org.opensearch.rest.RestRequest
-import org.opensearch.rest.RestRequest.Method.DELETE
-import org.opensearch.rest.action.RestToXContentListener
+import com.colasoft.opensearch.action.support.WriteRequest.RefreshPolicy
+import com.colasoft.opensearch.client.node.NodeClient
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.LEGACY_ROLLUP_JOBS_BASE_URI
+import com.colasoft.opensearch.indexmanagement.IndexManagementPlugin.Companion.ROLLUP_JOBS_BASE_URI
+import com.colasoft.opensearch.indexmanagement.rollup.action.delete.DeleteRollupAction
+import com.colasoft.opensearch.indexmanagement.rollup.action.delete.DeleteRollupRequest
+import com.colasoft.opensearch.indexmanagement.util.REFRESH
+import com.colasoft.opensearch.rest.BaseRestHandler
+import com.colasoft.opensearch.rest.RestHandler.ReplacedRoute
+import com.colasoft.opensearch.rest.RestHandler.Route
+import com.colasoft.opensearch.rest.RestRequest
+import com.colasoft.opensearch.rest.RestRequest.Method.DELETE
+import com.colasoft.opensearch.rest.action.RestToXContentListener
 import java.io.IOException
 
 class RestDeleteRollupAction : BaseRestHandler() {

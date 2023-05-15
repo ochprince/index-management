@@ -3,14 +3,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.common.model.rest
+package com.colasoft.opensearch.indexmanagement.common.model.rest
 
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.common.io.stream.StreamOutput
-import org.opensearch.common.io.stream.Writeable
-import org.opensearch.search.sort.FieldSortBuilder
-import org.opensearch.search.sort.SortBuilders
-import org.opensearch.search.sort.SortOrder
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.common.io.stream.StreamOutput
+import com.colasoft.opensearch.common.io.stream.Writeable
+import com.colasoft.opensearch.search.sort.FieldSortBuilder
+import com.colasoft.opensearch.search.sort.SortBuilders
+import com.colasoft.opensearch.search.sort.SortOrder
 import java.io.IOException
 
 const val DEFAULT_PAGINATION_SIZE = 20

@@ -16,3 +16,4 @@ src/test/resources/bwc/
 bin/
 spi/bin/
 src/test/resources/notifications*
+gradle/wrapper/gradle-7.4.2-bin.zip

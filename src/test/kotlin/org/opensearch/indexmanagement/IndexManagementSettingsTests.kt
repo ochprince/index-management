@@ -3,17 +3,17 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement
+package com.colasoft.opensearch.indexmanagement
 
 import org.junit.Before
-import org.opensearch.common.settings.Settings
-import org.opensearch.common.unit.TimeValue
-import org.opensearch.indexmanagement.indexstatemanagement.settings.LegacyOpenDistroManagedIndexSettings
-import org.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
-import org.opensearch.indexmanagement.rollup.settings.LegacyOpenDistroRollupSettings
-import org.opensearch.indexmanagement.rollup.settings.RollupSettings
-import org.opensearch.indexmanagement.snapshotmanagement.settings.SnapshotManagementSettings
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.common.settings.Settings
+import com.colasoft.opensearch.common.unit.TimeValue
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.settings.LegacyOpenDistroManagedIndexSettings
+import com.colasoft.opensearch.indexmanagement.indexstatemanagement.settings.ManagedIndexSettings
+import com.colasoft.opensearch.indexmanagement.rollup.settings.LegacyOpenDistroRollupSettings
+import com.colasoft.opensearch.indexmanagement.rollup.settings.RollupSettings
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.settings.SnapshotManagementSettings
+import com.colasoft.opensearch.test.OpenSearchTestCase
 
 class IndexManagementSettingsTests : OpenSearchTestCase() {
 

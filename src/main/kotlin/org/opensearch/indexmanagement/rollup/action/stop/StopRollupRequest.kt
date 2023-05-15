@@ -3,13 +3,13 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup.action.stop
+package com.colasoft.opensearch.indexmanagement.rollup.action.stop
 
-import org.opensearch.action.ActionRequestValidationException
-import org.opensearch.action.ValidateActions.addValidationError
-import org.opensearch.action.update.UpdateRequest
-import org.opensearch.common.io.stream.StreamInput
-import org.opensearch.common.io.stream.StreamOutput
+import com.colasoft.opensearch.action.ActionRequestValidationException
+import com.colasoft.opensearch.action.ValidateActions.addValidationError
+import com.colasoft.opensearch.action.update.UpdateRequest
+import com.colasoft.opensearch.common.io.stream.StreamInput
+import com.colasoft.opensearch.common.io.stream.StreamOutput
 import java.io.IOException
 
 class StopRollupRequest : UpdateRequest {

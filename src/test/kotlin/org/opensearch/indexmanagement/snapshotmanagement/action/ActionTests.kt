@@ -3,23 +3,23 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.snapshotmanagement.action
+package com.colasoft.opensearch.indexmanagement.snapshotmanagement.action
 
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.DELETE_SM_POLICY_ACTION_NAME
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.DELETE_SM_POLICY_ACTION_TYPE
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.EXPLAIN_SM_POLICY_ACTION_NAME
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.EXPLAIN_SM_POLICY_ACTION_TYPE
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.GET_SM_POLICY_ACTION_NAME
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.GET_SM_POLICY_ACTION_TYPE
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.GET_SM_POLICIES_ACTION_NAME
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.GET_SM_POLICIES_ACTION_TYPE
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.INDEX_SM_POLICY_ACTION_NAME
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.INDEX_SM_POLICY_ACTION_TYPE
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.START_SM_POLICY_ACTION_NAME
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.START_SM_POLICY_ACTION_TYPE
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.STOP_SM_POLICY_ACTION_NAME
-import org.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.STOP_SM_POLICY_ACTION_TYPE
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.DELETE_SM_POLICY_ACTION_NAME
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.DELETE_SM_POLICY_ACTION_TYPE
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.EXPLAIN_SM_POLICY_ACTION_NAME
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.EXPLAIN_SM_POLICY_ACTION_TYPE
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.GET_SM_POLICY_ACTION_NAME
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.GET_SM_POLICY_ACTION_TYPE
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.GET_SM_POLICIES_ACTION_NAME
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.GET_SM_POLICIES_ACTION_TYPE
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.INDEX_SM_POLICY_ACTION_NAME
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.INDEX_SM_POLICY_ACTION_TYPE
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.START_SM_POLICY_ACTION_NAME
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.START_SM_POLICY_ACTION_TYPE
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.STOP_SM_POLICY_ACTION_NAME
+import com.colasoft.opensearch.indexmanagement.snapshotmanagement.api.transport.SMActions.STOP_SM_POLICY_ACTION_TYPE
+import com.colasoft.opensearch.test.OpenSearchTestCase
 
 class ActionTests : OpenSearchTestCase() {
 

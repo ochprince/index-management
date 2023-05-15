@@ -3,11 +3,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.indexstatemanagement
+package com.colasoft.opensearch.indexmanagement.indexstatemanagement
 
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.indexmanagement.spi.indexstatemanagement.Status
-import org.opensearch.indexmanagement.spi.indexstatemanagement.StatusChecker
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.Status
+import com.colasoft.opensearch.indexmanagement.spi.indexstatemanagement.StatusChecker
 
 /**
  * Check the extension status check. The extension status should be used to represent if the extension is turned on or off,

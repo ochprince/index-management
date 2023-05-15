@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.util;
+package com.colasoft.opensearch.indexmanagement.util;
 
 /*
  * Need to have a java file, so licenseHeaders task can function

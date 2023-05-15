@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-package org.opensearch.indexmanagement.rollup
+package com.colasoft.opensearch.indexmanagement.rollup
 
 import com.nhaarman.mockitokotlin2.any
 import com.nhaarman.mockitokotlin2.anyVararg
@@ -13,18 +13,18 @@ import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.whenever
 import kotlinx.coroutines.runBlocking
 import org.mockito.ArgumentMatchers.anyBoolean
-import org.opensearch.action.ActionListener
-import org.opensearch.action.admin.indices.mapping.get.GetMappingsResponse
-import org.opensearch.client.AdminClient
-import org.opensearch.client.Client
-import org.opensearch.client.IndicesAdminClient
-import org.opensearch.cluster.metadata.IndexNameExpressionResolver
-import org.opensearch.cluster.metadata.MappingMetadata
-import org.opensearch.cluster.service.ClusterService
-import org.opensearch.common.collect.ImmutableOpenMap
-import org.opensearch.common.xcontent.XContentType
-import org.opensearch.indexmanagement.rollup.model.RollupJobValidationResult
-import org.opensearch.test.OpenSearchTestCase
+import com.colasoft.opensearch.action.ActionListener
+import com.colasoft.opensearch.action.admin.indices.mapping.get.GetMappingsResponse
+import com.colasoft.opensearch.client.AdminClient
+import com.colasoft.opensearch.client.Client
+import com.colasoft.opensearch.client.IndicesAdminClient
+import com.colasoft.opensearch.cluster.metadata.IndexNameExpressionResolver
+import com.colasoft.opensearch.cluster.metadata.MappingMetadata
+import com.colasoft.opensearch.cluster.service.ClusterService
+import com.colasoft.opensearch.common.collect.ImmutableOpenMap
+import com.colasoft.opensearch.common.xcontent.XContentType
+import com.colasoft.opensearch.indexmanagement.rollup.model.RollupJobValidationResult
+import com.colasoft.opensearch.test.OpenSearchTestCase
 import java.time.Instant
 
 class RollupMapperServiceTests : OpenSearchTestCase() {
